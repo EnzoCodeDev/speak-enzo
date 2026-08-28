@@ -1,0 +1,130 @@
+{
+  "topics": [
+    {
+      "id": "present_simple",
+      "emoji": "☀️",
+      "name_es": "Presente simple",
+      "name_en": "Present Simple",
+      "description_es": "Rutinas, hechos y hábitos: I work, she works, do/does.",
+      "description_en": "Routines, facts and habits: I work, she works, do/does",
+      "group": "Tiempos verbales"
+    },
+    {
+      "id": "present_continuous",
+      "emoji": "🏃",
+      "name_es": "Presente continuo",
+      "name_en": "Present Continuous",
+      "description_es": "Lo que pasa ahora mismo: I am working, they are eating.",
+      "description_en": "What is happening right now: I am working, they are eating",
+      "group": "Tiempos verbales"
+    },
+    {
+      "id": "past_simple",
+      "emoji": "⏪",
+      "name_es": "Pasado simple",
+      "name_en": "Past Simple",
+      "description_es": "Acciones terminadas: I worked, she went, did you...?",
+      "description_en": "Finished actions: I worked, she went, did you...?",
+      "group": "Tiempos verbales"
+    },
+    {
+      "id": "past_continuous",
+      "emoji": "🌙",
+      "name_es": "Pasado continuo",
+      "name_en": "Past Continuous",
+      "description_es": "Acciones en progreso en el pasado: I was sleeping when...",
+      "description_en": "Actions in progress in the past: I was sleeping when...",
+      "group": "Tiempos verbales"
+    },
+    {
+      "id": "present_perfect",
+      "emoji": "🔗",
+      "name_es": "Presente perfecto",
+      "name_en": "Present Perfect",
+      "description_es": "Experiencias y acciones con efecto ahora: I have lived, have you ever...?",
+      "description_en": "Experiences and actions with present effect: I have lived, have you ever...?",
+      "group": "Tiempos verbales"
+    },
+    {
+      "id": "future",
+      "emoji": "🔮",
+      "name_es": "Futuro (will / going to)",
+      "name_en": "Future (will / going to)",
+      "description_es": "Planes y predicciones: I will call you, I'm going to travel.",
+      "description_en": "Plans and predictions: I will call you, I'm going to travel",
+      "group": "Tiempos verbales"
+    },
+    {
+      "id": "wh_questions",
+      "emoji": "❓",
+      "name_es": "Preguntas (WH y Yes/No)",
+      "name_en": "Questions (WH and Yes/No)",
+      "description_es": "What, where, when, who, why, how + do/does/did y preguntas de sí/no.",
+      "description_en": "What, where, when, who, why, how + do/does/did and yes/no questions",
+      "group": "Estructuras"
+    },
+    {
+      "id": "modals",
+      "emoji": "🧭",
+      "name_es": "Verbos modales",
+      "name_en": "Modal Verbs",
+      "description_es": "Can, could, should, must, may: permiso, consejo, obligación.",
+      "description_en": "Can, could, should, must, may: permission, advice, obligation",
+      "group": "Estructuras"
+    },
+    {
+      "id": "conditionals",
+      "emoji": "🎲",
+      "name_es": "Condicionales",
+      "name_en": "Conditionals",
+      "description_es": "If I study, I will pass / If I studied, I would pass.",
+      "description_en": "If I study, I will pass / If I studied, I would pass",
+      "group": "Estructuras"
+    },
+    {
+      "id": "comparatives",
+      "emoji": "⚖️",
+      "name_es": "Comparativos y superlativos",
+      "name_en": "Comparatives and Superlatives",
+      "description_es": "Bigger than, more interesting, the best, as good as.",
+      "description_en": "Bigger than, more interesting, the best, as good as",
+      "group": "Estructuras"
+    },
+    {
+      "id": "prepositions",
+      "emoji": "📍",
+      "name_es": "Preposiciones",
+      "name_en": "Prepositions",
+      "description_es": "In, on, at, under, between: lugar y tiempo.",
+      "description_en": "In, on, at, under, between: place and time",
+      "group": "Vocabulario y uso"
+    },
+    {
+      "id": "articles",
+      "emoji": "🅰️",
+      "name_es": "Artículos (a / an / the)",
+      "name_en": "Articles (a / an / the)",
+      "description_es": "Cuándo usar a, an, the o nada.",
+      "description_en": "When to use a, an, the or nothing",
+      "group": "Vocabulario y uso"
+    },
+    {
+      "id": "there_is_are",
+      "emoji": "🏠",
+      "name_es": "There is / There are",
+      "name_en": "There is / There are",
+      "description_es": "Describir qué hay: there is a cat, there are two rooms.",
+      "description_en": "Describing what exists: there is a cat, there are two rooms",
+      "group": "Estructuras"
+    },
+    {
+      "id": "phrasal_verbs",
+      "emoji": "🧩",
+      "name_es": "Phrasal verbs esenciales",
+      "name_en": "Essential Phrasal Verbs",
+      "description_es": "Get up, turn on, look for, give up: los más usados.",
+      "description_en": "Get up, turn on, look for, give up: the most common ones",
+      "group": "Vocabulario y uso"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+services:
+  enzo-backend:
+    build: .
+    container_name: enzo-speak
+    ports:
+      - "8100:8100"
+    volumes:
+      - ./data:/srv/enzo/data   # persiste los tokens de IA entre reinicios
+    restart: unless-stopped

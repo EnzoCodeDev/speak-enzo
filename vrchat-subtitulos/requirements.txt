@@ -1,0 +1,7 @@
+faster-whisper==1.2.1
+sherpa-onnx==1.13.6
+PySide6-Essentials>=6.7
+numpy>=2.0
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+pynput

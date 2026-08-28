@@ -1,0 +1,6166 @@
+{
+  "version": 1,
+  "total": 1000,
+  "categories": [
+    {
+      "id": "greetings",
+      "name_es": "Saludos",
+      "name_en": "Greetings",
+      "emoji": "👋",
+      "phrases": [
+        {
+          "id": 1,
+          "en": "Hello!",
+          "es": "¡Hola!",
+          "level": "A1"
+        },
+        {
+          "id": 2,
+          "en": "Good morning.",
+          "es": "Buenos días.",
+          "level": "A1"
+        },
+        {
+          "id": 3,
+          "en": "Good afternoon.",
+          "es": "Buenas tardes.",
+          "level": "A1"
+        },
+        {
+          "id": 4,
+          "en": "Good evening.",
+          "es": "Buenas noches.",
+          "level": "A1"
+        },
+        {
+          "id": 5,
+          "en": "Good night, sleep well.",
+          "es": "Buenas noches, que descanses.",
+          "level": "A1"
+        },
+        {
+          "id": 6,
+          "en": "How are you?",
+          "es": "¿Cómo estás?",
+          "level": "A1"
+        },
+        {
+          "id": 7,
+          "en": "I'm fine, thanks.",
+          "es": "Bien, gracias.",
+          "level": "A1"
+        },
+        {
+          "id": 8,
+          "en": "And you?",
+          "es": "¿Y tú?",
+          "level": "A1"
+        },
+        {
+          "id": 9,
+          "en": "Nice to meet you.",
+          "es": "Mucho gusto.",
+          "level": "A1"
+        },
+        {
+          "id": 10,
+          "en": "Nice to meet you too.",
+          "es": "Igualmente, mucho gusto.",
+          "level": "A1"
+        },
+        {
+          "id": 11,
+          "en": "Goodbye!",
+          "es": "¡Adiós!",
+          "level": "A1"
+        },
+        {
+          "id": 12,
+          "en": "Bye, take care!",
+          "es": "¡Bye, cuídate!",
+          "level": "A1"
+        },
+        {
+          "id": 13,
+          "en": "See you later.",
+          "es": "Nos vemos al rato.",
+          "level": "A1"
+        },
+        {
+          "id": 14,
+          "en": "See you tomorrow.",
+          "es": "Nos vemos mañana.",
+          "level": "A1"
+        },
+        {
+          "id": 15,
+          "en": "See you soon.",
+          "es": "Nos vemos pronto.",
+          "level": "A1"
+        },
+        {
+          "id": 16,
+          "en": "Have a nice day!",
+          "es": "¡Que tengas buen día!",
+          "level": "A1"
+        },
+        {
+          "id": 17,
+          "en": "Have a good weekend!",
+          "es": "¡Buen fin de semana!",
+          "level": "A1"
+        },
+        {
+          "id": 18,
+          "en": "Welcome!",
+          "es": "¡Bienvenido!",
+          "level": "A1"
+        },
+        {
+          "id": 19,
+          "en": "How's it going?",
+          "es": "¿Cómo te va?",
+          "level": "A2"
+        },
+        {
+          "id": 20,
+          "en": "What's up?",
+          "es": "¿Qué onda?",
+          "level": "A2"
+        },
+        {
+          "id": 21,
+          "en": "Not much, just here.",
+          "es": "Nada, aquí nomás.",
+          "level": "A2"
+        },
+        {
+          "id": 22,
+          "en": "How have you been?",
+          "es": "¿Cómo has estado?",
+          "level": "A2"
+        },
+        {
+          "id": 23,
+          "en": "I've been really busy.",
+          "es": "He andado muy ocupado.",
+          "level": "A2"
+        },
+        {
+          "id": 24,
+          "en": "Long time no see!",
+          "es": "¡Cuánto tiempo sin verte!",
+          "level": "A2"
+        },
+        {
+          "id": 25,
+          "en": "It's good to see you.",
+          "es": "Qué gusto verte.",
+          "level": "A2"
+        },
+        {
+          "id": 26,
+          "en": "How's everything?",
+          "es": "¿Cómo va todo?",
+          "level": "A2"
+        },
+        {
+          "id": 27,
+          "en": "Everything's fine.",
+          "es": "Todo bien.",
+          "level": "A2"
+        },
+        {
+          "id": 28,
+          "en": "How was your day?",
+          "es": "¿Cómo estuvo tu día?",
+          "level": "A2"
+        },
+        {
+          "id": 29,
+          "en": "Take care!",
+          "es": "¡Cuídate mucho!",
+          "level": "A2"
+        },
+        {
+          "id": 30,
+          "en": "Say hi to your family.",
+          "es": "Salúdame a tu familia.",
+          "level": "A2"
+        },
+        {
+          "id": 31,
+          "en": "Give my regards to your parents.",
+          "es": "Mándales saludos a tus papás.",
+          "level": "A2"
+        },
+        {
+          "id": 32,
+          "en": "I have to go now.",
+          "es": "Ya me tengo que ir.",
+          "level": "A2"
+        },
+        {
+          "id": 33,
+          "en": "It was nice talking to you.",
+          "es": "Fue un gusto platicar contigo.",
+          "level": "A2"
+        },
+        {
+          "id": 34,
+          "en": "Talk to you later.",
+          "es": "Luego hablamos.",
+          "level": "A2"
+        },
+        {
+          "id": 35,
+          "en": "Keep in touch.",
+          "es": "Seguimos en contacto.",
+          "level": "A2"
+        },
+        {
+          "id": 36,
+          "en": "How's your family?",
+          "es": "¿Cómo está tu familia?",
+          "level": "A2"
+        },
+        {
+          "id": 37,
+          "en": "What's new?",
+          "es": "¿Qué hay de nuevo?",
+          "level": "A2"
+        },
+        {
+          "id": 38,
+          "en": "Safe travels!",
+          "es": "¡Buen viaje!",
+          "level": "A2"
+        },
+        {
+          "id": 39,
+          "en": "Same as always.",
+          "es": "Lo mismo de siempre.",
+          "level": "B1"
+        },
+        {
+          "id": 40,
+          "en": "Good to have you back.",
+          "es": "Qué bueno que regresaste.",
+          "level": "B1"
+        },
+        {
+          "id": 41,
+          "en": "Look who's here!",
+          "es": "¡Mira quién llegó!",
+          "level": "B1"
+        },
+        {
+          "id": 42,
+          "en": "Fancy meeting you here!",
+          "es": "¡Qué sorpresa verte por aquí!",
+          "level": "B1"
+        },
+        {
+          "id": 43,
+          "en": "I was just thinking about you.",
+          "es": "Justo estaba pensando en ti.",
+          "level": "B1"
+        },
+        {
+          "id": 44,
+          "en": "Don't be a stranger.",
+          "es": "No te pierdas.",
+          "level": "B1"
+        },
+        {
+          "id": 45,
+          "en": "It's been a while.",
+          "es": "Ya tenía rato que no te veía.",
+          "level": "B1"
+        },
+        {
+          "id": 46,
+          "en": "I'm glad I ran into you.",
+          "es": "Qué bueno que me topé contigo.",
+          "level": "B1"
+        },
+        {
+          "id": 47,
+          "en": "It was great catching up.",
+          "es": "Estuvo muy padre ponernos al día.",
+          "level": "B1"
+        },
+        {
+          "id": 48,
+          "en": "Hope to see you again soon.",
+          "es": "Espero verte pronto otra vez.",
+          "level": "B1"
+        },
+        {
+          "id": 49,
+          "en": "Sorry, I have to run.",
+          "es": "Perdón, me tengo que ir volando.",
+          "level": "B1"
+        },
+        {
+          "id": 50,
+          "en": "Stop by whenever you want.",
+          "es": "Pasa por la casa cuando quieras.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "introductions",
+      "name_es": "Presentaciones",
+      "name_en": "Introductions",
+      "emoji": "🤝",
+      "phrases": [
+        {
+          "id": 51,
+          "en": "What's your name?",
+          "es": "¿Cómo te llamas?",
+          "level": "A1"
+        },
+        {
+          "id": 52,
+          "en": "My name is Sergio.",
+          "es": "Me llamo Sergio.",
+          "level": "A1"
+        },
+        {
+          "id": 53,
+          "en": "I'm Enzo.",
+          "es": "Yo soy Enzo.",
+          "level": "A1"
+        },
+        {
+          "id": 54,
+          "en": "This is my friend.",
+          "es": "Te presento a mi amigo.",
+          "level": "A1"
+        },
+        {
+          "id": 55,
+          "en": "Where are you from?",
+          "es": "¿De dónde eres?",
+          "level": "A1"
+        },
+        {
+          "id": 56,
+          "en": "I'm from Mexico.",
+          "es": "Soy de México.",
+          "level": "A1"
+        },
+        {
+          "id": 57,
+          "en": "I'm Mexican.",
+          "es": "Soy mexicano.",
+          "level": "A1"
+        },
+        {
+          "id": 58,
+          "en": "Where do you live?",
+          "es": "¿Dónde vives?",
+          "level": "A1"
+        },
+        {
+          "id": 59,
+          "en": "I live in Mexico City.",
+          "es": "Vivo en la Ciudad de México.",
+          "level": "A1"
+        },
+        {
+          "id": 60,
+          "en": "How old are you?",
+          "es": "¿Cuántos años tienes?",
+          "level": "A1"
+        },
+        {
+          "id": 61,
+          "en": "I'm thirty years old.",
+          "es": "Tengo treinta años.",
+          "level": "A1"
+        },
+        {
+          "id": 62,
+          "en": "What do you do?",
+          "es": "¿A qué te dedicas?",
+          "level": "A1"
+        },
+        {
+          "id": 63,
+          "en": "I'm a student.",
+          "es": "Soy estudiante.",
+          "level": "A1"
+        },
+        {
+          "id": 64,
+          "en": "I work in an office.",
+          "es": "Trabajo en una oficina.",
+          "level": "A1"
+        },
+        {
+          "id": 65,
+          "en": "Do you speak English?",
+          "es": "¿Hablas inglés?",
+          "level": "A1"
+        },
+        {
+          "id": 66,
+          "en": "I speak a little English.",
+          "es": "Hablo un poco de inglés.",
+          "level": "A1"
+        },
+        {
+          "id": 67,
+          "en": "I'm learning English.",
+          "es": "Estoy aprendiendo inglés.",
+          "level": "A1"
+        },
+        {
+          "id": 68,
+          "en": "Do you speak Spanish?",
+          "es": "¿Hablas español?",
+          "level": "A1"
+        },
+        {
+          "id": 69,
+          "en": "Sorry, I didn't catch your name.",
+          "es": "Perdón, no escuché tu nombre.",
+          "level": "A2"
+        },
+        {
+          "id": 70,
+          "en": "How do you spell your name?",
+          "es": "¿Cómo se escribe tu nombre?",
+          "level": "A2"
+        },
+        {
+          "id": 71,
+          "en": "Let me introduce myself.",
+          "es": "Déjame presentarme.",
+          "level": "A2"
+        },
+        {
+          "id": 72,
+          "en": "This is my boss, Mr. Smith.",
+          "es": "Le presento a mi jefe, el señor Smith.",
+          "level": "A2"
+        },
+        {
+          "id": 73,
+          "en": "Have we met before?",
+          "es": "¿Nos conocemos de antes?",
+          "level": "A2"
+        },
+        {
+          "id": 74,
+          "en": "You look familiar.",
+          "es": "Te me haces conocido.",
+          "level": "A2"
+        },
+        {
+          "id": 75,
+          "en": "I don't think we've met.",
+          "es": "Creo que no nos conocemos.",
+          "level": "A2"
+        },
+        {
+          "id": 76,
+          "en": "I'm here on vacation.",
+          "es": "Estoy aquí de vacaciones.",
+          "level": "A2"
+        },
+        {
+          "id": 77,
+          "en": "I'm here for work.",
+          "es": "Vine por trabajo.",
+          "level": "A2"
+        },
+        {
+          "id": 78,
+          "en": "How long have you been here?",
+          "es": "¿Cuánto tiempo llevas aquí?",
+          "level": "A2"
+        },
+        {
+          "id": 79,
+          "en": "I just arrived last week.",
+          "es": "Apenas llegué la semana pasada.",
+          "level": "A2"
+        },
+        {
+          "id": 80,
+          "en": "Are you married?",
+          "es": "¿Estás casado?",
+          "level": "A2"
+        },
+        {
+          "id": 81,
+          "en": "I'm single.",
+          "es": "Estoy soltero.",
+          "level": "A2"
+        },
+        {
+          "id": 82,
+          "en": "Do you have kids?",
+          "es": "¿Tienes hijos?",
+          "level": "A2"
+        },
+        {
+          "id": 83,
+          "en": "I have two kids.",
+          "es": "Tengo dos hijos.",
+          "level": "A2"
+        },
+        {
+          "id": 84,
+          "en": "What's your phone number?",
+          "es": "¿Cuál es tu número de teléfono?",
+          "level": "A2"
+        },
+        {
+          "id": 85,
+          "en": "Here's my card.",
+          "es": "Aquí tienes mi tarjeta.",
+          "level": "A2"
+        },
+        {
+          "id": 86,
+          "en": "Are you on WhatsApp?",
+          "es": "¿Tienes WhatsApp?",
+          "level": "A2"
+        },
+        {
+          "id": 87,
+          "en": "What do you study?",
+          "es": "¿Qué estudias?",
+          "level": "A2"
+        },
+        {
+          "id": 88,
+          "en": "I majored in engineering.",
+          "es": "Estudié ingeniería.",
+          "level": "B1"
+        },
+        {
+          "id": 89,
+          "en": "I was born in Guadalajara.",
+          "es": "Nací en Guadalajara.",
+          "level": "B1"
+        },
+        {
+          "id": 90,
+          "en": "I grew up in Monterrey.",
+          "es": "Crecí en Monterrey.",
+          "level": "B1"
+        },
+        {
+          "id": 91,
+          "en": "It's a pleasure to meet you.",
+          "es": "Es un placer conocerte.",
+          "level": "B1"
+        },
+        {
+          "id": 92,
+          "en": "The pleasure is mine.",
+          "es": "El placer es mío.",
+          "level": "B1"
+        },
+        {
+          "id": 93,
+          "en": "I've heard a lot about you.",
+          "es": "He oído mucho de ti.",
+          "level": "B1"
+        },
+        {
+          "id": 94,
+          "en": "Only good things, I hope.",
+          "es": "Espero que solo cosas buenas.",
+          "level": "B1"
+        },
+        {
+          "id": 95,
+          "en": "What brings you here?",
+          "es": "¿Qué te trae por aquí?",
+          "level": "B1"
+        },
+        {
+          "id": 96,
+          "en": "I moved here two years ago.",
+          "es": "Me mudé aquí hace dos años.",
+          "level": "B1"
+        },
+        {
+          "id": 97,
+          "en": "This is my first time in the United States.",
+          "es": "Es mi primera vez en Estados Unidos.",
+          "level": "B1"
+        },
+        {
+          "id": 98,
+          "en": "I'm still getting used to the language.",
+          "es": "Todavía me estoy acostumbrando al idioma.",
+          "level": "B1"
+        },
+        {
+          "id": 99,
+          "en": "Feel free to correct my English.",
+          "es": "Corrígeme el inglés con confianza.",
+          "level": "B1"
+        },
+        {
+          "id": 100,
+          "en": "It was great getting to know you.",
+          "es": "Me dio mucho gusto conocerte.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "daily_routines",
+      "name_es": "Rutinas diarias",
+      "name_en": "Daily Routines",
+      "emoji": "⏰",
+      "phrases": [
+        {
+          "id": 101,
+          "en": "I wake up at six.",
+          "es": "Me despierto a las seis.",
+          "level": "A1"
+        },
+        {
+          "id": 102,
+          "en": "I get up early.",
+          "es": "Me levanto temprano.",
+          "level": "A1"
+        },
+        {
+          "id": 103,
+          "en": "I take a shower every morning.",
+          "es": "Me baño todas las mañanas.",
+          "level": "A1"
+        },
+        {
+          "id": 104,
+          "en": "I brush my teeth.",
+          "es": "Me lavo los dientes.",
+          "level": "A1"
+        },
+        {
+          "id": 105,
+          "en": "I get dressed.",
+          "es": "Me visto.",
+          "level": "A1"
+        },
+        {
+          "id": 106,
+          "en": "I have breakfast at seven.",
+          "es": "Desayuno a las siete.",
+          "level": "A1"
+        },
+        {
+          "id": 107,
+          "en": "I drink coffee every day.",
+          "es": "Tomo café todos los días.",
+          "level": "A1"
+        },
+        {
+          "id": 108,
+          "en": "I go to work by bus.",
+          "es": "Voy al trabajo en camión.",
+          "level": "A1"
+        },
+        {
+          "id": 109,
+          "en": "I start work at nine.",
+          "es": "Entro a trabajar a las nueve.",
+          "level": "A1"
+        },
+        {
+          "id": 110,
+          "en": "I have lunch at noon.",
+          "es": "Como al mediodía.",
+          "level": "A1"
+        },
+        {
+          "id": 111,
+          "en": "I finish work at six.",
+          "es": "Salgo del trabajo a las seis.",
+          "level": "A1"
+        },
+        {
+          "id": 112,
+          "en": "I get home late.",
+          "es": "Llego tarde a la casa.",
+          "level": "A1"
+        },
+        {
+          "id": 113,
+          "en": "I make dinner.",
+          "es": "Preparo la cena.",
+          "level": "A1"
+        },
+        {
+          "id": 114,
+          "en": "I watch TV at night.",
+          "es": "Veo la tele en la noche.",
+          "level": "A1"
+        },
+        {
+          "id": 115,
+          "en": "I go to bed at eleven.",
+          "es": "Me acuesto a las once.",
+          "level": "A1"
+        },
+        {
+          "id": 116,
+          "en": "I sleep eight hours.",
+          "es": "Duermo ocho horas.",
+          "level": "A1"
+        },
+        {
+          "id": 117,
+          "en": "What time do you get up?",
+          "es": "¿A qué hora te levantas?",
+          "level": "A1"
+        },
+        {
+          "id": 118,
+          "en": "I check my phone when I wake up.",
+          "es": "Reviso el celular en cuanto me despierto.",
+          "level": "A2"
+        },
+        {
+          "id": 119,
+          "en": "I'm always in a hurry in the morning.",
+          "es": "Siempre ando con prisa en la mañana.",
+          "level": "A2"
+        },
+        {
+          "id": 120,
+          "en": "I walk my dog every evening.",
+          "es": "Saco a pasear a mi perro todas las tardes.",
+          "level": "A2"
+        },
+        {
+          "id": 121,
+          "en": "I do the dishes after dinner.",
+          "es": "Lavo los trastes después de cenar.",
+          "level": "A2"
+        },
+        {
+          "id": 122,
+          "en": "I clean the house on Saturdays.",
+          "es": "Hago la limpieza los sábados.",
+          "level": "A2"
+        },
+        {
+          "id": 123,
+          "en": "I do the laundry once a week.",
+          "es": "Lavo la ropa una vez a la semana.",
+          "level": "A2"
+        },
+        {
+          "id": 124,
+          "en": "I go grocery shopping on Sundays.",
+          "es": "Hago el súper los domingos.",
+          "level": "A2"
+        },
+        {
+          "id": 125,
+          "en": "I take a nap after lunch.",
+          "es": "Me echo una siesta después de comer.",
+          "level": "A2"
+        },
+        {
+          "id": 126,
+          "en": "I go to the gym three times a week.",
+          "es": "Voy al gimnasio tres veces a la semana.",
+          "level": "A2"
+        },
+        {
+          "id": 127,
+          "en": "I usually skip breakfast.",
+          "es": "Casi siempre me salto el desayuno.",
+          "level": "A2"
+        },
+        {
+          "id": 128,
+          "en": "I'm running late.",
+          "es": "Se me hizo tarde.",
+          "level": "A2"
+        },
+        {
+          "id": 129,
+          "en": "I have a lot to do today.",
+          "es": "Tengo mucho que hacer hoy.",
+          "level": "A2"
+        },
+        {
+          "id": 130,
+          "en": "What do you usually do after work?",
+          "es": "¿Qué haces normalmente después del trabajo?",
+          "level": "A2"
+        },
+        {
+          "id": 131,
+          "en": "I usually stay home on weekdays.",
+          "es": "Entre semana normalmente me quedo en casa.",
+          "level": "A2"
+        },
+        {
+          "id": 132,
+          "en": "I take the kids to school.",
+          "es": "Llevo a los niños a la escuela.",
+          "level": "A2"
+        },
+        {
+          "id": 133,
+          "en": "I pick up the kids at three.",
+          "es": "Recojo a los niños a las tres.",
+          "level": "A2"
+        },
+        {
+          "id": 134,
+          "en": "I work from home on Fridays.",
+          "es": "Los viernes trabajo desde casa.",
+          "level": "A2"
+        },
+        {
+          "id": 135,
+          "en": "I make my bed every morning.",
+          "es": "Tiendo mi cama todas las mañanas.",
+          "level": "A2"
+        },
+        {
+          "id": 136,
+          "en": "I water the plants.",
+          "es": "Riego las plantas.",
+          "level": "A2"
+        },
+        {
+          "id": 137,
+          "en": "I take out the trash.",
+          "es": "Saco la basura.",
+          "level": "A2"
+        },
+        {
+          "id": 138,
+          "en": "I iron my clothes on Sundays.",
+          "es": "Plancho mi ropa los domingos.",
+          "level": "A2"
+        },
+        {
+          "id": 139,
+          "en": "I like to read before bed.",
+          "es": "Me gusta leer antes de dormir.",
+          "level": "A2"
+        },
+        {
+          "id": 140,
+          "en": "I overslept this morning.",
+          "es": "Hoy se me pegaron las cobijas.",
+          "level": "B1"
+        },
+        {
+          "id": 141,
+          "en": "I set three alarms every night.",
+          "es": "Pongo tres alarmas cada noche.",
+          "level": "B1"
+        },
+        {
+          "id": 142,
+          "en": "I hit the snooze button too much.",
+          "es": "Le pico demasiado al botón de posponer.",
+          "level": "B1"
+        },
+        {
+          "id": 143,
+          "en": "I need my coffee to function.",
+          "es": "Necesito mi café para funcionar.",
+          "level": "B1"
+        },
+        {
+          "id": 144,
+          "en": "I get stuck in traffic every day.",
+          "es": "Me toca tráfico todos los días.",
+          "level": "B1"
+        },
+        {
+          "id": 145,
+          "en": "It takes me an hour to get to work.",
+          "es": "Hago una hora al trabajo.",
+          "level": "B1"
+        },
+        {
+          "id": 146,
+          "en": "I'm trying to get into a routine.",
+          "es": "Estoy tratando de agarrar una rutina.",
+          "level": "B1"
+        },
+        {
+          "id": 147,
+          "en": "I've been going to bed too late lately.",
+          "es": "Últimamente me he estado desvelando mucho.",
+          "level": "B1"
+        },
+        {
+          "id": 148,
+          "en": "On my days off, I sleep in.",
+          "es": "En mis días libres me levanto tarde.",
+          "level": "B1"
+        },
+        {
+          "id": 149,
+          "en": "I spend too much time on my phone.",
+          "es": "Paso demasiado tiempo en el celular.",
+          "level": "B1"
+        },
+        {
+          "id": 150,
+          "en": "My routine changed a lot this year.",
+          "es": "Mi rutina cambió mucho este año.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "restaurant",
+      "name_es": "Restaurante",
+      "name_en": "Restaurant",
+      "emoji": "🍽️",
+      "phrases": [
+        {
+          "id": 151,
+          "en": "A table for two, please.",
+          "es": "Una mesa para dos, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 152,
+          "en": "Can I see the menu?",
+          "es": "¿Me muestra el menú?",
+          "level": "A1"
+        },
+        {
+          "id": 153,
+          "en": "I'm ready to order.",
+          "es": "Estoy listo para ordenar.",
+          "level": "A1"
+        },
+        {
+          "id": 154,
+          "en": "I'll have the chicken.",
+          "es": "Voy a querer el pollo.",
+          "level": "A1"
+        },
+        {
+          "id": 155,
+          "en": "What do you recommend?",
+          "es": "¿Qué me recomienda?",
+          "level": "A1"
+        },
+        {
+          "id": 156,
+          "en": "I'd like a glass of water.",
+          "es": "Me da un vaso de agua, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 157,
+          "en": "Can I have a coffee, please?",
+          "es": "¿Me trae un café, por favor?",
+          "level": "A1"
+        },
+        {
+          "id": 158,
+          "en": "No ice, please.",
+          "es": "Sin hielo, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 159,
+          "en": "Is it spicy?",
+          "es": "¿Pica?",
+          "level": "A1"
+        },
+        {
+          "id": 160,
+          "en": "I love spicy food.",
+          "es": "Me encanta la comida picante.",
+          "level": "A1"
+        },
+        {
+          "id": 161,
+          "en": "What's today's special?",
+          "es": "¿Cuál es el platillo del día?",
+          "level": "A1"
+        },
+        {
+          "id": 162,
+          "en": "I'm vegetarian.",
+          "es": "Soy vegetariano.",
+          "level": "A1"
+        },
+        {
+          "id": 163,
+          "en": "Does it come with fries?",
+          "es": "¿Viene con papas?",
+          "level": "A1"
+        },
+        {
+          "id": 164,
+          "en": "Can I get extra sauce?",
+          "es": "¿Me da salsa extra?",
+          "level": "A1"
+        },
+        {
+          "id": 165,
+          "en": "To go, please.",
+          "es": "Para llevar, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 166,
+          "en": "For here, please.",
+          "es": "Para comer aquí, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 167,
+          "en": "The check, please.",
+          "es": "La cuenta, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 168,
+          "en": "This is delicious!",
+          "es": "¡Está delicioso!",
+          "level": "A1"
+        },
+        {
+          "id": 169,
+          "en": "I'm starving.",
+          "es": "Me muero de hambre.",
+          "level": "A2"
+        },
+        {
+          "id": 170,
+          "en": "I'm full.",
+          "es": "Ya estoy lleno.",
+          "level": "A2"
+        },
+        {
+          "id": 171,
+          "en": "I'm allergic to peanuts.",
+          "es": "Soy alérgico a los cacahuates.",
+          "level": "A2"
+        },
+        {
+          "id": 172,
+          "en": "Can we pay separately?",
+          "es": "¿Podemos pagar por separado?",
+          "level": "A2"
+        },
+        {
+          "id": 173,
+          "en": "Is the tip included?",
+          "es": "¿La propina está incluida?",
+          "level": "A2"
+        },
+        {
+          "id": 174,
+          "en": "Keep the change.",
+          "es": "Quédese con el cambio.",
+          "level": "A2"
+        },
+        {
+          "id": 175,
+          "en": "Everything was great, thank you.",
+          "es": "Todo estuvo muy rico, gracias.",
+          "level": "A2"
+        },
+        {
+          "id": 176,
+          "en": "Could we get more napkins?",
+          "es": "¿Nos trae más servilletas, por favor?",
+          "level": "A2"
+        },
+        {
+          "id": 177,
+          "en": "Excuse me, we're still waiting for our food.",
+          "es": "Disculpe, seguimos esperando la comida.",
+          "level": "A2"
+        },
+        {
+          "id": 178,
+          "en": "I didn't order this.",
+          "es": "Yo no ordené esto.",
+          "level": "A2"
+        },
+        {
+          "id": 179,
+          "en": "My food is cold.",
+          "es": "Mi comida está fría.",
+          "level": "A2"
+        },
+        {
+          "id": 180,
+          "en": "Could you heat it up, please?",
+          "es": "¿Me lo calienta, por favor?",
+          "level": "A2"
+        },
+        {
+          "id": 181,
+          "en": "Can I make a reservation for tonight?",
+          "es": "¿Puedo reservar para hoy en la noche?",
+          "level": "A2"
+        },
+        {
+          "id": 182,
+          "en": "We have a reservation under García.",
+          "es": "Tenemos reservación a nombre de García.",
+          "level": "A2"
+        },
+        {
+          "id": 183,
+          "en": "How long is the wait?",
+          "es": "¿Cuánto hay que esperar?",
+          "level": "A2"
+        },
+        {
+          "id": 184,
+          "en": "Can we sit by the window?",
+          "es": "¿Nos podemos sentar junto a la ventana?",
+          "level": "A2"
+        },
+        {
+          "id": 185,
+          "en": "What comes with that?",
+          "es": "¿Con qué viene acompañado?",
+          "level": "A2"
+        },
+        {
+          "id": 186,
+          "en": "Cheers!",
+          "es": "¡Salud!",
+          "level": "A2"
+        },
+        {
+          "id": 187,
+          "en": "How is that dish prepared?",
+          "es": "¿Cómo preparan ese platillo?",
+          "level": "B1"
+        },
+        {
+          "id": 188,
+          "en": "I'd like my steak well done.",
+          "es": "Quiero mi carne bien cocida.",
+          "level": "B1"
+        },
+        {
+          "id": 189,
+          "en": "Medium, please.",
+          "es": "Término medio, por favor.",
+          "level": "B1"
+        },
+        {
+          "id": 190,
+          "en": "Could I see the dessert menu?",
+          "es": "¿Me muestra la carta de postres?",
+          "level": "B1"
+        },
+        {
+          "id": 191,
+          "en": "I'll skip dessert.",
+          "es": "Yo paso del postre.",
+          "level": "B1"
+        },
+        {
+          "id": 192,
+          "en": "Could you pack this to go?",
+          "es": "¿Me lo empaca para llevar, por favor?",
+          "level": "B1"
+        },
+        {
+          "id": 193,
+          "en": "Is this dish gluten-free?",
+          "es": "¿Este platillo no tiene gluten?",
+          "level": "B1"
+        },
+        {
+          "id": 194,
+          "en": "What non-alcoholic drinks do you have?",
+          "es": "¿Qué bebidas sin alcohol tienen?",
+          "level": "B1"
+        },
+        {
+          "id": 195,
+          "en": "Another round, please.",
+          "es": "Otra ronda, por favor.",
+          "level": "B1"
+        },
+        {
+          "id": 196,
+          "en": "This place has great reviews.",
+          "es": "Este lugar tiene muy buenas reseñas.",
+          "level": "B1"
+        },
+        {
+          "id": 197,
+          "en": "The portions here are huge.",
+          "es": "Aquí las porciones son enormes.",
+          "level": "B1"
+        },
+        {
+          "id": 198,
+          "en": "Compliments to the chef.",
+          "es": "Felicite al chef de nuestra parte.",
+          "level": "B1"
+        },
+        {
+          "id": 199,
+          "en": "I think there's a mistake on the bill.",
+          "es": "Creo que hay un error en la cuenta.",
+          "level": "B1"
+        },
+        {
+          "id": 200,
+          "en": "We'd like to speak to the manager, please.",
+          "es": "Queremos hablar con el gerente, por favor.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "name_es": "Compras",
+      "name_en": "Shopping",
+      "emoji": "🛍️",
+      "phrases": [
+        {
+          "id": 201,
+          "en": "How much is this?",
+          "es": "¿Cuánto cuesta esto?",
+          "level": "A1"
+        },
+        {
+          "id": 202,
+          "en": "How much are these shoes?",
+          "es": "¿Cuánto cuestan estos zapatos?",
+          "level": "A1"
+        },
+        {
+          "id": 203,
+          "en": "I'm just looking, thanks.",
+          "es": "Solo estoy viendo, gracias.",
+          "level": "A1"
+        },
+        {
+          "id": 204,
+          "en": "Do you have this in another size?",
+          "es": "¿Tiene esto en otra talla?",
+          "level": "A1"
+        },
+        {
+          "id": 205,
+          "en": "Do you have it in blue?",
+          "es": "¿Lo tiene en azul?",
+          "level": "A1"
+        },
+        {
+          "id": 206,
+          "en": "Can I try it on?",
+          "es": "¿Me lo puedo probar?",
+          "level": "A1"
+        },
+        {
+          "id": 207,
+          "en": "Where are the fitting rooms?",
+          "es": "¿Dónde están los probadores?",
+          "level": "A1"
+        },
+        {
+          "id": 208,
+          "en": "It fits me well.",
+          "es": "Me queda bien.",
+          "level": "A1"
+        },
+        {
+          "id": 209,
+          "en": "It's too big.",
+          "es": "Me queda grande.",
+          "level": "A1"
+        },
+        {
+          "id": 210,
+          "en": "It's too small.",
+          "es": "Me queda chico.",
+          "level": "A1"
+        },
+        {
+          "id": 211,
+          "en": "It's too expensive.",
+          "es": "Está muy caro.",
+          "level": "A1"
+        },
+        {
+          "id": 212,
+          "en": "Do you have anything cheaper?",
+          "es": "¿Tiene algo más barato?",
+          "level": "A1"
+        },
+        {
+          "id": 213,
+          "en": "Is it on sale?",
+          "es": "¿Está en oferta?",
+          "level": "A1"
+        },
+        {
+          "id": 214,
+          "en": "Do you take credit cards?",
+          "es": "¿Aceptan tarjeta de crédito?",
+          "level": "A1"
+        },
+        {
+          "id": 215,
+          "en": "I'll pay in cash.",
+          "es": "Voy a pagar en efectivo.",
+          "level": "A1"
+        },
+        {
+          "id": 216,
+          "en": "Can I get a receipt?",
+          "es": "¿Me da mi ticket, por favor?",
+          "level": "A1"
+        },
+        {
+          "id": 217,
+          "en": "I'll take it.",
+          "es": "Me lo llevo.",
+          "level": "A1"
+        },
+        {
+          "id": 218,
+          "en": "Where can I find the milk?",
+          "es": "¿Dónde está la leche?",
+          "level": "A1"
+        },
+        {
+          "id": 219,
+          "en": "Do you have a bag?",
+          "es": "¿Tiene una bolsa?",
+          "level": "A1"
+        },
+        {
+          "id": 220,
+          "en": "What time do you close?",
+          "es": "¿A qué hora cierran?",
+          "level": "A1"
+        },
+        {
+          "id": 221,
+          "en": "What time do you open?",
+          "es": "¿A qué hora abren?",
+          "level": "A1"
+        },
+        {
+          "id": 222,
+          "en": "I'll think about it.",
+          "es": "Lo voy a pensar.",
+          "level": "A2"
+        },
+        {
+          "id": 223,
+          "en": "Is there a mall near here?",
+          "es": "¿Hay un centro comercial cerca de aquí?",
+          "level": "A2"
+        },
+        {
+          "id": 224,
+          "en": "Can I return this?",
+          "es": "¿Puedo devolver esto?",
+          "level": "A2"
+        },
+        {
+          "id": 225,
+          "en": "I'd like a refund.",
+          "es": "Quiero que me devuelvan mi dinero.",
+          "level": "A2"
+        },
+        {
+          "id": 226,
+          "en": "It doesn't work.",
+          "es": "No sirve.",
+          "level": "A2"
+        },
+        {
+          "id": 227,
+          "en": "I lost my receipt.",
+          "es": "Perdí mi ticket.",
+          "level": "A2"
+        },
+        {
+          "id": 228,
+          "en": "Can I exchange it for another one?",
+          "es": "¿Lo puedo cambiar por otro?",
+          "level": "A2"
+        },
+        {
+          "id": 229,
+          "en": "Is there a warranty?",
+          "es": "¿Tiene garantía?",
+          "level": "A2"
+        },
+        {
+          "id": 230,
+          "en": "Are these buy one, get one free?",
+          "es": "¿Estos están al dos por uno?",
+          "level": "A2"
+        },
+        {
+          "id": 231,
+          "en": "Is this the line to pay?",
+          "es": "¿Aquí es la fila para pagar?",
+          "level": "A2"
+        },
+        {
+          "id": 232,
+          "en": "Do you have this in stock?",
+          "es": "¿Lo tienen en existencia?",
+          "level": "A2"
+        },
+        {
+          "id": 233,
+          "en": "When will you get more?",
+          "es": "¿Cuándo les llega más?",
+          "level": "A2"
+        },
+        {
+          "id": 234,
+          "en": "Can you hold it for me until tomorrow?",
+          "es": "¿Me lo puede apartar hasta mañana?",
+          "level": "A2"
+        },
+        {
+          "id": 235,
+          "en": "Can you gift wrap it?",
+          "es": "¿Me lo envuelve para regalo?",
+          "level": "A2"
+        },
+        {
+          "id": 236,
+          "en": "It's a gift.",
+          "es": "Es para regalo.",
+          "level": "A2"
+        },
+        {
+          "id": 237,
+          "en": "I'm looking for a present for my mom.",
+          "es": "Busco un regalo para mi mamá.",
+          "level": "A2"
+        },
+        {
+          "id": 238,
+          "en": "This brand is really good.",
+          "es": "Esta marca es muy buena.",
+          "level": "A2"
+        },
+        {
+          "id": 239,
+          "en": "The price tag says twenty dollars.",
+          "es": "La etiqueta dice veinte dólares.",
+          "level": "A2"
+        },
+        {
+          "id": 240,
+          "en": "Do you ship to Mexico?",
+          "es": "¿Hacen envíos a México?",
+          "level": "B1"
+        },
+        {
+          "id": 241,
+          "en": "How long does delivery take?",
+          "es": "¿Cuánto tarda el envío?",
+          "level": "B1"
+        },
+        {
+          "id": 242,
+          "en": "Is there a discount if I pay in cash?",
+          "es": "¿Hay descuento si pago en efectivo?",
+          "level": "B1"
+        },
+        {
+          "id": 243,
+          "en": "Can you give me a better price?",
+          "es": "¿Me puede dar un mejor precio?",
+          "level": "B1"
+        },
+        {
+          "id": 244,
+          "en": "That's my final offer.",
+          "es": "Es mi última oferta.",
+          "level": "B1"
+        },
+        {
+          "id": 245,
+          "en": "What would you recommend for a teenager?",
+          "es": "¿Qué me recomienda para un adolescente?",
+          "level": "B1"
+        },
+        {
+          "id": 246,
+          "en": "These jeans are half off.",
+          "es": "Estos jeans están a mitad de precio.",
+          "level": "B1"
+        },
+        {
+          "id": 247,
+          "en": "It rang up at a different price.",
+          "es": "Me lo cobraron a otro precio.",
+          "level": "B1"
+        },
+        {
+          "id": 248,
+          "en": "Can you check the price for me?",
+          "es": "¿Me puede verificar el precio?",
+          "level": "B1"
+        },
+        {
+          "id": 249,
+          "en": "I'd like to speak to customer service.",
+          "es": "Quiero hablar con servicio al cliente.",
+          "level": "B1"
+        },
+        {
+          "id": 250,
+          "en": "You get what you pay for.",
+          "es": "Lo barato sale caro.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "travel_airport",
+      "name_es": "Viajes y aeropuerto",
+      "name_en": "Travel & Airport",
+      "emoji": "✈️",
+      "phrases": [
+        {
+          "id": 251,
+          "en": "I have a ticket to New York.",
+          "es": "Tengo un boleto a Nueva York.",
+          "level": "A1"
+        },
+        {
+          "id": 252,
+          "en": "Where is the check-in counter?",
+          "es": "¿Dónde está el mostrador de check-in?",
+          "level": "A1"
+        },
+        {
+          "id": 253,
+          "en": "Here's my passport.",
+          "es": "Aquí está mi pasaporte.",
+          "level": "A1"
+        },
+        {
+          "id": 254,
+          "en": "I have one suitcase.",
+          "es": "Llevo una maleta.",
+          "level": "A1"
+        },
+        {
+          "id": 255,
+          "en": "Can I carry this on?",
+          "es": "¿Puedo llevar esto como equipaje de mano?",
+          "level": "A1"
+        },
+        {
+          "id": 256,
+          "en": "Window seat, please.",
+          "es": "Asiento de ventanilla, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 257,
+          "en": "Aisle seat, please.",
+          "es": "Asiento de pasillo, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 258,
+          "en": "What gate is my flight?",
+          "es": "¿En qué puerta sale mi vuelo?",
+          "level": "A1"
+        },
+        {
+          "id": 259,
+          "en": "What time does boarding start?",
+          "es": "¿A qué hora empieza el abordaje?",
+          "level": "A1"
+        },
+        {
+          "id": 260,
+          "en": "My flight is delayed.",
+          "es": "Mi vuelo está retrasado.",
+          "level": "A1"
+        },
+        {
+          "id": 261,
+          "en": "Is this the line for security?",
+          "es": "¿Esta es la fila para seguridad?",
+          "level": "A1"
+        },
+        {
+          "id": 262,
+          "en": "Where is baggage claim?",
+          "es": "¿Dónde se recogen las maletas?",
+          "level": "A1"
+        },
+        {
+          "id": 263,
+          "en": "Where can I get a taxi?",
+          "es": "¿Dónde puedo tomar un taxi?",
+          "level": "A1"
+        },
+        {
+          "id": 264,
+          "en": "One ticket to Chicago, please.",
+          "es": "Un boleto a Chicago, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 265,
+          "en": "Is this seat taken?",
+          "es": "¿Está ocupado este asiento?",
+          "level": "A1"
+        },
+        {
+          "id": 266,
+          "en": "How long is the flight?",
+          "es": "¿Cuánto dura el vuelo?",
+          "level": "A1"
+        },
+        {
+          "id": 267,
+          "en": "I'm traveling for tourism.",
+          "es": "Vengo de turista.",
+          "level": "A2"
+        },
+        {
+          "id": 268,
+          "en": "I'll be here for two weeks.",
+          "es": "Voy a estar aquí dos semanas.",
+          "level": "A2"
+        },
+        {
+          "id": 269,
+          "en": "I'm staying at a hotel.",
+          "es": "Me voy a quedar en un hotel.",
+          "level": "A2"
+        },
+        {
+          "id": 270,
+          "en": "I have nothing to declare.",
+          "es": "No tengo nada que declarar.",
+          "level": "A2"
+        },
+        {
+          "id": 271,
+          "en": "My flight was canceled.",
+          "es": "Cancelaron mi vuelo.",
+          "level": "A2"
+        },
+        {
+          "id": 272,
+          "en": "I missed my flight.",
+          "es": "Perdí mi vuelo.",
+          "level": "A2"
+        },
+        {
+          "id": 273,
+          "en": "I have a connecting flight.",
+          "es": "Tengo un vuelo de conexión.",
+          "level": "A2"
+        },
+        {
+          "id": 274,
+          "en": "How long is the layover?",
+          "es": "¿Cuánto dura la escala?",
+          "level": "A2"
+        },
+        {
+          "id": 275,
+          "en": "My luggage didn't arrive.",
+          "es": "No llegó mi equipaje.",
+          "level": "A2"
+        },
+        {
+          "id": 276,
+          "en": "Where can I exchange money?",
+          "es": "¿Dónde puedo cambiar dinero?",
+          "level": "A2"
+        },
+        {
+          "id": 277,
+          "en": "Where can I rent a car?",
+          "es": "¿Dónde puedo rentar un coche?",
+          "level": "A2"
+        },
+        {
+          "id": 278,
+          "en": "How much is the fare to downtown?",
+          "es": "¿Cuánto cobra hasta el centro?",
+          "level": "A2"
+        },
+        {
+          "id": 279,
+          "en": "Is there a bus to the city?",
+          "es": "¿Hay autobús al centro de la ciudad?",
+          "level": "A2"
+        },
+        {
+          "id": 280,
+          "en": "Can I have a blanket, please?",
+          "es": "¿Me da una cobija, por favor?",
+          "level": "A2"
+        },
+        {
+          "id": 281,
+          "en": "What time do we land?",
+          "es": "¿A qué hora aterrizamos?",
+          "level": "A2"
+        },
+        {
+          "id": 282,
+          "en": "Fasten your seatbelt.",
+          "es": "Abróchese el cinturón.",
+          "level": "A2"
+        },
+        {
+          "id": 283,
+          "en": "My seat is 24B.",
+          "es": "Mi asiento es el 24B.",
+          "level": "A2"
+        },
+        {
+          "id": 284,
+          "en": "Is the flight on time?",
+          "es": "¿El vuelo va a tiempo?",
+          "level": "A2"
+        },
+        {
+          "id": 285,
+          "en": "Do I need a visa?",
+          "es": "¿Necesito visa?",
+          "level": "A2"
+        },
+        {
+          "id": 286,
+          "en": "I'm here to visit family.",
+          "es": "Vengo a visitar a mi familia.",
+          "level": "A2"
+        },
+        {
+          "id": 287,
+          "en": "How long are you staying?",
+          "es": "¿Cuánto tiempo se va a quedar?",
+          "level": "B1"
+        },
+        {
+          "id": 288,
+          "en": "What's the purpose of your trip?",
+          "es": "¿Cuál es el motivo de su viaje?",
+          "level": "B1"
+        },
+        {
+          "id": 289,
+          "en": "My suitcase is damaged.",
+          "es": "Mi maleta llegó dañada.",
+          "level": "B1"
+        },
+        {
+          "id": 290,
+          "en": "Can I switch seats with you?",
+          "es": "¿Podemos cambiar de asiento?",
+          "level": "B1"
+        },
+        {
+          "id": 291,
+          "en": "Excuse me, I think you're in my seat.",
+          "es": "Disculpe, creo que está en mi asiento.",
+          "level": "B1"
+        },
+        {
+          "id": 292,
+          "en": "Where do I catch my connection?",
+          "es": "¿Dónde tomo mi vuelo de conexión?",
+          "level": "B1"
+        },
+        {
+          "id": 293,
+          "en": "I get airsick.",
+          "es": "Me mareo en el avión.",
+          "level": "B1"
+        },
+        {
+          "id": 294,
+          "en": "I'd like to change my flight.",
+          "es": "Quiero cambiar mi vuelo.",
+          "level": "B1"
+        },
+        {
+          "id": 295,
+          "en": "Are there any earlier flights?",
+          "es": "¿Hay vuelos más temprano?",
+          "level": "B1"
+        },
+        {
+          "id": 296,
+          "en": "Is there any chance of an upgrade?",
+          "es": "¿Habrá manera de subir de clase?",
+          "level": "B1"
+        },
+        {
+          "id": 297,
+          "en": "Where's the duty-free shop?",
+          "es": "¿Dónde está la tienda duty-free?",
+          "level": "B1"
+        },
+        {
+          "id": 298,
+          "en": "I need to charge my phone before boarding.",
+          "es": "Necesito cargar mi celular antes de abordar.",
+          "level": "B1"
+        },
+        {
+          "id": 299,
+          "en": "I lost my boarding pass.",
+          "es": "Perdí mi pase de abordar.",
+          "level": "B1"
+        },
+        {
+          "id": 300,
+          "en": "Traveling stresses me out, but I love it.",
+          "es": "Viajar me estresa, pero me encanta.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "hotel",
+      "name_es": "Hotel",
+      "name_en": "Hotel",
+      "emoji": "🏨",
+      "phrases": [
+        {
+          "id": 301,
+          "en": "I have a reservation.",
+          "es": "Tengo una reservación.",
+          "level": "A1"
+        },
+        {
+          "id": 302,
+          "en": "Do you have any rooms available?",
+          "es": "¿Tienen habitaciones disponibles?",
+          "level": "A1"
+        },
+        {
+          "id": 303,
+          "en": "How much is a room per night?",
+          "es": "¿Cuánto cuesta la habitación por noche?",
+          "level": "A1"
+        },
+        {
+          "id": 304,
+          "en": "I'd like a room for two nights.",
+          "es": "Quiero una habitación por dos noches.",
+          "level": "A1"
+        },
+        {
+          "id": 305,
+          "en": "Does the room have Wi-Fi?",
+          "es": "¿La habitación tiene wifi?",
+          "level": "A1"
+        },
+        {
+          "id": 306,
+          "en": "What's the Wi-Fi password?",
+          "es": "¿Cuál es la contraseña del wifi?",
+          "level": "A1"
+        },
+        {
+          "id": 307,
+          "en": "Is breakfast included?",
+          "es": "¿Incluye el desayuno?",
+          "level": "A1"
+        },
+        {
+          "id": 308,
+          "en": "What time is check-in?",
+          "es": "¿A qué hora es el check-in?",
+          "level": "A1"
+        },
+        {
+          "id": 309,
+          "en": "What time is check-out?",
+          "es": "¿A qué hora hay que dejar la habitación?",
+          "level": "A1"
+        },
+        {
+          "id": 310,
+          "en": "What floor is my room on?",
+          "es": "¿En qué piso está mi habitación?",
+          "level": "A1"
+        },
+        {
+          "id": 311,
+          "en": "Where's the elevator?",
+          "es": "¿Dónde está el elevador?",
+          "level": "A1"
+        },
+        {
+          "id": 312,
+          "en": "Is there a pool?",
+          "es": "¿Hay alberca?",
+          "level": "A1"
+        },
+        {
+          "id": 313,
+          "en": "Is there parking?",
+          "es": "¿Hay estacionamiento?",
+          "level": "A1"
+        },
+        {
+          "id": 314,
+          "en": "My room key doesn't work.",
+          "es": "Mi llave no funciona.",
+          "level": "A1"
+        },
+        {
+          "id": 315,
+          "en": "Could I have another key?",
+          "es": "¿Me da otra llave?",
+          "level": "A1"
+        },
+        {
+          "id": 316,
+          "en": "Could I get extra towels?",
+          "es": "¿Me pueden traer más toallas?",
+          "level": "A2"
+        },
+        {
+          "id": 317,
+          "en": "Could I get an extra pillow?",
+          "es": "¿Me traen otra almohada, por favor?",
+          "level": "A2"
+        },
+        {
+          "id": 318,
+          "en": "The air conditioning isn't working.",
+          "es": "El aire acondicionado no sirve.",
+          "level": "A2"
+        },
+        {
+          "id": 319,
+          "en": "There's no hot water.",
+          "es": "No hay agua caliente.",
+          "level": "A2"
+        },
+        {
+          "id": 320,
+          "en": "Can you send someone to fix it?",
+          "es": "¿Puede mandar a alguien a arreglarlo?",
+          "level": "A2"
+        },
+        {
+          "id": 321,
+          "en": "The room is very noisy.",
+          "es": "La habitación es muy ruidosa.",
+          "level": "A2"
+        },
+        {
+          "id": 322,
+          "en": "Can I change rooms?",
+          "es": "¿Me pueden cambiar de habitación?",
+          "level": "A2"
+        },
+        {
+          "id": 323,
+          "en": "What time does the pool close?",
+          "es": "¿A qué hora cierra la alberca?",
+          "level": "A2"
+        },
+        {
+          "id": 324,
+          "en": "Is there a gym in the hotel?",
+          "es": "¿El hotel tiene gimnasio?",
+          "level": "A2"
+        },
+        {
+          "id": 325,
+          "en": "Can I leave my luggage here?",
+          "es": "¿Puedo dejar mis maletas aquí?",
+          "level": "A2"
+        },
+        {
+          "id": 326,
+          "en": "Could you call me a taxi?",
+          "es": "¿Me puede pedir un taxi?",
+          "level": "A2"
+        },
+        {
+          "id": 327,
+          "en": "Do you have a map of the city?",
+          "es": "¿Tiene un mapa de la ciudad?",
+          "level": "A2"
+        },
+        {
+          "id": 328,
+          "en": "What do you recommend visiting nearby?",
+          "es": "¿Qué me recomienda visitar por aquí cerca?",
+          "level": "A2"
+        },
+        {
+          "id": 329,
+          "en": "Is parking included?",
+          "es": "¿El estacionamiento está incluido?",
+          "level": "A2"
+        },
+        {
+          "id": 330,
+          "en": "Can I pay when I check out?",
+          "es": "¿Puedo pagar a la salida?",
+          "level": "A2"
+        },
+        {
+          "id": 331,
+          "en": "I'd like to check out, please.",
+          "es": "Quiero hacer el check-out, por favor.",
+          "level": "A2"
+        },
+        {
+          "id": 332,
+          "en": "Room service, please.",
+          "es": "Servicio a la habitación, por favor.",
+          "level": "A2"
+        },
+        {
+          "id": 333,
+          "en": "What time is breakfast served?",
+          "es": "¿A qué hora sirven el desayuno?",
+          "level": "A2"
+        },
+        {
+          "id": 334,
+          "en": "Please don't disturb.",
+          "es": "No molestar, por favor.",
+          "level": "A2"
+        },
+        {
+          "id": 335,
+          "en": "Could you clean my room, please?",
+          "es": "¿Pueden limpiar mi habitación, por favor?",
+          "level": "A2"
+        },
+        {
+          "id": 336,
+          "en": "Is there a safe in the room?",
+          "es": "¿Hay caja fuerte en la habitación?",
+          "level": "A2"
+        },
+        {
+          "id": 337,
+          "en": "Are pets allowed?",
+          "es": "¿Aceptan mascotas?",
+          "level": "A2"
+        },
+        {
+          "id": 338,
+          "en": "Can I have a late check-out?",
+          "es": "¿Puedo hacer el check-out más tarde?",
+          "level": "B1"
+        },
+        {
+          "id": 339,
+          "en": "I'd like to order breakfast to my room.",
+          "es": "Quiero pedir el desayuno a mi habitación.",
+          "level": "B1"
+        },
+        {
+          "id": 340,
+          "en": "I forgot something in my room.",
+          "es": "Se me olvidó algo en la habitación.",
+          "level": "B1"
+        },
+        {
+          "id": 341,
+          "en": "The TV remote is missing.",
+          "es": "No está el control de la tele.",
+          "level": "B1"
+        },
+        {
+          "id": 342,
+          "en": "Can I extend my stay one more night?",
+          "es": "¿Me puedo quedar una noche más?",
+          "level": "B1"
+        },
+        {
+          "id": 343,
+          "en": "Do you have a crib for the baby?",
+          "es": "¿Tienen cuna para el bebé?",
+          "level": "B1"
+        },
+        {
+          "id": 344,
+          "en": "There's a charge I don't recognize.",
+          "es": "Hay un cargo que no reconozco.",
+          "level": "B1"
+        },
+        {
+          "id": 345,
+          "en": "Could you break down the bill for me?",
+          "es": "¿Me desglosa la cuenta, por favor?",
+          "level": "B1"
+        },
+        {
+          "id": 346,
+          "en": "I was charged twice.",
+          "es": "Me cobraron doble.",
+          "level": "B1"
+        },
+        {
+          "id": 347,
+          "en": "The view from the room is amazing.",
+          "es": "La vista desde la habitación está increíble.",
+          "level": "B1"
+        },
+        {
+          "id": 348,
+          "en": "This hotel is very well located.",
+          "es": "El hotel está muy bien ubicado.",
+          "level": "B1"
+        },
+        {
+          "id": 349,
+          "en": "I booked through an app.",
+          "es": "Reservé por una aplicación.",
+          "level": "B1"
+        },
+        {
+          "id": 350,
+          "en": "Could I get an invoice for my company?",
+          "es": "¿Me puede dar factura para mi empresa?",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "directions",
+      "name_es": "Direcciones",
+      "name_en": "Directions",
+      "emoji": "🗺️",
+      "phrases": [
+        {
+          "id": 351,
+          "en": "Where is the bathroom?",
+          "es": "¿Dónde está el baño?",
+          "level": "A1"
+        },
+        {
+          "id": 352,
+          "en": "Excuse me, where is the subway?",
+          "es": "Disculpe, ¿dónde está el metro?",
+          "level": "A1"
+        },
+        {
+          "id": 353,
+          "en": "How do I get to the museum?",
+          "es": "¿Cómo llego al museo?",
+          "level": "A1"
+        },
+        {
+          "id": 354,
+          "en": "Is it far from here?",
+          "es": "¿Está lejos de aquí?",
+          "level": "A1"
+        },
+        {
+          "id": 355,
+          "en": "Is it close by?",
+          "es": "¿Está cerca?",
+          "level": "A1"
+        },
+        {
+          "id": 356,
+          "en": "Can I walk there?",
+          "es": "¿Puedo ir caminando?",
+          "level": "A1"
+        },
+        {
+          "id": 357,
+          "en": "Turn left.",
+          "es": "Da vuelta a la izquierda.",
+          "level": "A1"
+        },
+        {
+          "id": 358,
+          "en": "Turn right.",
+          "es": "Da vuelta a la derecha.",
+          "level": "A1"
+        },
+        {
+          "id": 359,
+          "en": "Go straight ahead.",
+          "es": "Sigue derecho.",
+          "level": "A1"
+        },
+        {
+          "id": 360,
+          "en": "It's on the corner.",
+          "es": "Está en la esquina.",
+          "level": "A1"
+        },
+        {
+          "id": 361,
+          "en": "It's across the street.",
+          "es": "Está cruzando la calle.",
+          "level": "A1"
+        },
+        {
+          "id": 362,
+          "en": "It's next to the bank.",
+          "es": "Está junto al banco.",
+          "level": "A1"
+        },
+        {
+          "id": 363,
+          "en": "It's in front of the park.",
+          "es": "Está enfrente del parque.",
+          "level": "A1"
+        },
+        {
+          "id": 364,
+          "en": "It's behind the church.",
+          "es": "Está detrás de la iglesia.",
+          "level": "A1"
+        },
+        {
+          "id": 365,
+          "en": "It's two blocks away.",
+          "es": "Está a dos cuadras.",
+          "level": "A1"
+        },
+        {
+          "id": 366,
+          "en": "I'm lost.",
+          "es": "Estoy perdido.",
+          "level": "A1"
+        },
+        {
+          "id": 367,
+          "en": "What street is this?",
+          "es": "¿Qué calle es esta?",
+          "level": "A1"
+        },
+        {
+          "id": 368,
+          "en": "Where's the nearest ATM?",
+          "es": "¿Dónde está el cajero más cercano?",
+          "level": "A1"
+        },
+        {
+          "id": 369,
+          "en": "Where's the nearest pharmacy?",
+          "es": "¿Dónde hay una farmacia cerca?",
+          "level": "A1"
+        },
+        {
+          "id": 370,
+          "en": "Can you show me on the map?",
+          "es": "¿Me puede enseñar en el mapa?",
+          "level": "A2"
+        },
+        {
+          "id": 371,
+          "en": "Where can I catch the bus?",
+          "es": "¿Dónde puedo tomar el camión?",
+          "level": "A2"
+        },
+        {
+          "id": 372,
+          "en": "Which bus goes downtown?",
+          "es": "¿Qué camión va al centro?",
+          "level": "A2"
+        },
+        {
+          "id": 373,
+          "en": "Is this the right way to the station?",
+          "es": "¿Voy bien para la estación?",
+          "level": "A2"
+        },
+        {
+          "id": 374,
+          "en": "How long does it take to get there?",
+          "es": "¿Cuánto se hace hasta allá?",
+          "level": "A2"
+        },
+        {
+          "id": 375,
+          "en": "It's about ten minutes away.",
+          "es": "Está como a diez minutos.",
+          "level": "A2"
+        },
+        {
+          "id": 376,
+          "en": "Follow the signs.",
+          "es": "Sigue los letreros.",
+          "level": "A2"
+        },
+        {
+          "id": 377,
+          "en": "Take the second street on the right.",
+          "es": "Toma la segunda calle a la derecha.",
+          "level": "A2"
+        },
+        {
+          "id": 378,
+          "en": "Cross the bridge.",
+          "es": "Cruza el puente.",
+          "level": "A2"
+        },
+        {
+          "id": 379,
+          "en": "Go past the gas station.",
+          "es": "Pasa la gasolinera y sigue.",
+          "level": "A2"
+        },
+        {
+          "id": 380,
+          "en": "It's right there.",
+          "es": "Está ahí mero.",
+          "level": "A2"
+        },
+        {
+          "id": 381,
+          "en": "You're going the wrong way.",
+          "es": "Vas por el lado equivocado.",
+          "level": "A2"
+        },
+        {
+          "id": 382,
+          "en": "Go back the way you came.",
+          "es": "Regrésate por donde viniste.",
+          "level": "A2"
+        },
+        {
+          "id": 383,
+          "en": "Get off at the next stop.",
+          "es": "Bájate en la siguiente parada.",
+          "level": "A2"
+        },
+        {
+          "id": 384,
+          "en": "How many stops until downtown?",
+          "es": "¿Cuántas paradas faltan para el centro?",
+          "level": "A2"
+        },
+        {
+          "id": 385,
+          "en": "Does this train go to the airport?",
+          "es": "¿Este tren va al aeropuerto?",
+          "level": "A2"
+        },
+        {
+          "id": 386,
+          "en": "Where do I transfer?",
+          "es": "¿Dónde hago transbordo?",
+          "level": "A2"
+        },
+        {
+          "id": 387,
+          "en": "Excuse me, I'm looking for this address.",
+          "es": "Disculpe, busco esta dirección.",
+          "level": "A2"
+        },
+        {
+          "id": 388,
+          "en": "Can you write down the address for me?",
+          "es": "¿Me puede anotar la dirección?",
+          "level": "A2"
+        },
+        {
+          "id": 389,
+          "en": "You can't miss it.",
+          "es": "No tiene pierde.",
+          "level": "B1"
+        },
+        {
+          "id": 390,
+          "en": "Where does this street lead?",
+          "es": "¿A dónde lleva esta calle?",
+          "level": "B1"
+        },
+        {
+          "id": 391,
+          "en": "Is there a shortcut?",
+          "es": "¿Hay algún atajo?",
+          "level": "B1"
+        },
+        {
+          "id": 392,
+          "en": "Which exit do I take?",
+          "es": "¿Qué salida tomo?",
+          "level": "B1"
+        },
+        {
+          "id": 393,
+          "en": "My GPS isn't working.",
+          "es": "No me funciona el GPS.",
+          "level": "B1"
+        },
+        {
+          "id": 394,
+          "en": "According to the map, it's this way.",
+          "es": "Según el mapa, es por aquí.",
+          "level": "B1"
+        },
+        {
+          "id": 395,
+          "en": "Let's ask someone.",
+          "es": "Vamos a preguntarle a alguien.",
+          "level": "B1"
+        },
+        {
+          "id": 396,
+          "en": "We're going around in circles.",
+          "es": "Estamos dando vueltas en círculos.",
+          "level": "B1"
+        },
+        {
+          "id": 397,
+          "en": "I think we took a wrong turn.",
+          "es": "Creo que nos equivocamos de calle.",
+          "level": "B1"
+        },
+        {
+          "id": 398,
+          "en": "It's on the outskirts of the city.",
+          "es": "Está en las afueras de la ciudad.",
+          "level": "B1"
+        },
+        {
+          "id": 399,
+          "en": "It's within walking distance.",
+          "es": "Se puede llegar a pie.",
+          "level": "B1"
+        },
+        {
+          "id": 400,
+          "en": "If you get lost, just call me.",
+          "es": "Si te pierdes, márcame.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "work_office",
+      "name_es": "Trabajo y oficina",
+      "name_en": "Work & Office",
+      "emoji": "💼",
+      "phrases": [
+        {
+          "id": 401,
+          "en": "I have a meeting at ten.",
+          "es": "Tengo una junta a las diez.",
+          "level": "A1"
+        },
+        {
+          "id": 402,
+          "en": "The meeting was canceled.",
+          "es": "Se canceló la junta.",
+          "level": "A1"
+        },
+        {
+          "id": 403,
+          "en": "I'll send you an email.",
+          "es": "Te mando un correo.",
+          "level": "A1"
+        },
+        {
+          "id": 404,
+          "en": "Did you get my email?",
+          "es": "¿Te llegó mi correo?",
+          "level": "A1"
+        },
+        {
+          "id": 405,
+          "en": "I'm busy right now.",
+          "es": "Ahorita estoy ocupado.",
+          "level": "A1"
+        },
+        {
+          "id": 406,
+          "en": "Can we talk later?",
+          "es": "¿Podemos hablar más tarde?",
+          "level": "A1"
+        },
+        {
+          "id": 407,
+          "en": "I'm working on it.",
+          "es": "Estoy en eso.",
+          "level": "A1"
+        },
+        {
+          "id": 408,
+          "en": "It's almost done.",
+          "es": "Ya casi está listo.",
+          "level": "A1"
+        },
+        {
+          "id": 409,
+          "en": "Good job!",
+          "es": "¡Buen trabajo!",
+          "level": "A1"
+        },
+        {
+          "id": 410,
+          "en": "Let's take a break.",
+          "es": "Vamos a tomar un descanso.",
+          "level": "A1"
+        },
+        {
+          "id": 411,
+          "en": "I'm off tomorrow.",
+          "es": "Mañana descanso.",
+          "level": "A1"
+        },
+        {
+          "id": 412,
+          "en": "I'm on vacation next week.",
+          "es": "La próxima semana estoy de vacaciones.",
+          "level": "A1"
+        },
+        {
+          "id": 413,
+          "en": "Any questions?",
+          "es": "¿Alguna pregunta?",
+          "level": "A1"
+        },
+        {
+          "id": 414,
+          "en": "Let's get started.",
+          "es": "Empecemos.",
+          "level": "A1"
+        },
+        {
+          "id": 415,
+          "en": "Can we reschedule?",
+          "es": "¿Lo podemos reagendar?",
+          "level": "A2"
+        },
+        {
+          "id": 416,
+          "en": "Let me check my calendar.",
+          "es": "Déjame revisar mi agenda.",
+          "level": "A2"
+        },
+        {
+          "id": 417,
+          "en": "I have a deadline tomorrow.",
+          "es": "Tengo una entrega mañana.",
+          "level": "A2"
+        },
+        {
+          "id": 418,
+          "en": "I'll have it ready by Friday.",
+          "es": "Lo tengo listo para el viernes.",
+          "level": "A2"
+        },
+        {
+          "id": 419,
+          "en": "Who's in charge of this project?",
+          "es": "¿Quién está a cargo de este proyecto?",
+          "level": "A2"
+        },
+        {
+          "id": 420,
+          "en": "Can you help me with this report?",
+          "es": "¿Me ayudas con este reporte?",
+          "level": "A2"
+        },
+        {
+          "id": 421,
+          "en": "Let's set up a call.",
+          "es": "Agendemos una llamada.",
+          "level": "A2"
+        },
+        {
+          "id": 422,
+          "en": "What time works for you?",
+          "es": "¿A qué hora te queda bien?",
+          "level": "A2"
+        },
+        {
+          "id": 423,
+          "en": "Does Monday work for you?",
+          "es": "¿Te funciona el lunes?",
+          "level": "A2"
+        },
+        {
+          "id": 424,
+          "en": "I'll share my screen.",
+          "es": "Voy a compartir mi pantalla.",
+          "level": "A2"
+        },
+        {
+          "id": 425,
+          "en": "You're on mute.",
+          "es": "Tienes el micrófono apagado.",
+          "level": "A2"
+        },
+        {
+          "id": 426,
+          "en": "Can everyone see my screen?",
+          "es": "¿Todos ven mi pantalla?",
+          "level": "A2"
+        },
+        {
+          "id": 427,
+          "en": "Can you forward me that file?",
+          "es": "¿Me reenvías ese archivo?",
+          "level": "A2"
+        },
+        {
+          "id": 428,
+          "en": "We're behind schedule.",
+          "es": "Vamos atrasados.",
+          "level": "A2"
+        },
+        {
+          "id": 429,
+          "en": "We're ahead of schedule.",
+          "es": "Vamos adelantados.",
+          "level": "A2"
+        },
+        {
+          "id": 430,
+          "en": "The client approved the proposal.",
+          "es": "El cliente aprobó la propuesta.",
+          "level": "A2"
+        },
+        {
+          "id": 431,
+          "en": "I need this ASAP.",
+          "es": "Necesito esto lo antes posible.",
+          "level": "A2"
+        },
+        {
+          "id": 432,
+          "en": "It's a top priority.",
+          "es": "Es prioridad número uno.",
+          "level": "A2"
+        },
+        {
+          "id": 433,
+          "en": "I have a job interview on Thursday.",
+          "es": "Tengo una entrevista de trabajo el jueves.",
+          "level": "A2"
+        },
+        {
+          "id": 434,
+          "en": "I'm looking for a new job.",
+          "es": "Estoy buscando un nuevo trabajo.",
+          "level": "A2"
+        },
+        {
+          "id": 435,
+          "en": "Let me get back to you on that.",
+          "es": "Déjame checarlo y te digo.",
+          "level": "B1"
+        },
+        {
+          "id": 436,
+          "en": "I'll keep you posted.",
+          "es": "Te mantengo al tanto.",
+          "level": "B1"
+        },
+        {
+          "id": 437,
+          "en": "Let's touch base next week.",
+          "es": "Nos ponemos al corriente la próxima semana.",
+          "level": "B1"
+        },
+        {
+          "id": 438,
+          "en": "I'll CC you on the email.",
+          "es": "Te pongo en copia en el correo.",
+          "level": "B1"
+        },
+        {
+          "id": 439,
+          "en": "Let's schedule a follow-up.",
+          "es": "Agendemos una junta de seguimiento.",
+          "level": "B1"
+        },
+        {
+          "id": 440,
+          "en": "I have back-to-back meetings today.",
+          "es": "Hoy tengo juntas una tras otra.",
+          "level": "B1"
+        },
+        {
+          "id": 441,
+          "en": "Sorry I'm late, my last meeting ran over.",
+          "es": "Perdón por la demora, se alargó mi otra junta.",
+          "level": "B1"
+        },
+        {
+          "id": 442,
+          "en": "Let's move on to the next topic.",
+          "es": "Pasemos al siguiente tema.",
+          "level": "B1"
+        },
+        {
+          "id": 443,
+          "en": "Let's wrap up the meeting.",
+          "es": "Vamos cerrando la junta.",
+          "level": "B1"
+        },
+        {
+          "id": 444,
+          "en": "I got a promotion!",
+          "es": "¡Me ascendieron!",
+          "level": "B1"
+        },
+        {
+          "id": 445,
+          "en": "What are your salary expectations?",
+          "es": "¿Cuál es tu expectativa de sueldo?",
+          "level": "B1"
+        },
+        {
+          "id": 446,
+          "en": "I work well under pressure.",
+          "es": "Trabajo bien bajo presión.",
+          "level": "B1"
+        },
+        {
+          "id": 447,
+          "en": "I'd like to ask for a raise.",
+          "es": "Quiero pedir un aumento.",
+          "level": "B1"
+        },
+        {
+          "id": 448,
+          "en": "I quit my job.",
+          "es": "Renuncié a mi trabajo.",
+          "level": "B1"
+        },
+        {
+          "id": 449,
+          "en": "They laid off twenty people.",
+          "es": "Recortaron a veinte personas.",
+          "level": "B1"
+        },
+        {
+          "id": 450,
+          "en": "Work-life balance is important to me.",
+          "es": "El equilibrio entre el trabajo y la vida personal es importante para mí.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "phone_messages",
+      "name_es": "Teléfono y mensajes",
+      "name_en": "Phone & Messages",
+      "emoji": "📱",
+      "phrases": [
+        {
+          "id": 451,
+          "en": "Hello? Who's calling?",
+          "es": "¿Bueno? ¿Quién habla?",
+          "level": "A1"
+        },
+        {
+          "id": 452,
+          "en": "Hi, this is Sergio.",
+          "es": "Hola, habla Sergio.",
+          "level": "A1"
+        },
+        {
+          "id": 453,
+          "en": "Can I speak to Anna?",
+          "es": "¿Me comunica con Anna?",
+          "level": "A1"
+        },
+        {
+          "id": 454,
+          "en": "Hold on a second.",
+          "es": "Espérame tantito.",
+          "level": "A1"
+        },
+        {
+          "id": 455,
+          "en": "He's not here right now.",
+          "es": "Ahorita no está.",
+          "level": "A1"
+        },
+        {
+          "id": 456,
+          "en": "Can I leave a message?",
+          "es": "¿Puedo dejarle un recado?",
+          "level": "A1"
+        },
+        {
+          "id": 457,
+          "en": "I'll call back later.",
+          "es": "Llamo más tarde.",
+          "level": "A1"
+        },
+        {
+          "id": 458,
+          "en": "Call me back, please.",
+          "es": "Regrésame la llamada, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 459,
+          "en": "Sorry, wrong number.",
+          "es": "Perdón, me equivoqué de número.",
+          "level": "A1"
+        },
+        {
+          "id": 460,
+          "en": "The line is busy.",
+          "es": "Está ocupada la línea.",
+          "level": "A1"
+        },
+        {
+          "id": 461,
+          "en": "I can't hear you well.",
+          "es": "No te escucho bien.",
+          "level": "A1"
+        },
+        {
+          "id": 462,
+          "en": "Who is this?",
+          "es": "¿Quién es?",
+          "level": "A1"
+        },
+        {
+          "id": 463,
+          "en": "Text me when you get home.",
+          "es": "Mándame mensaje cuando llegues a tu casa.",
+          "level": "A1"
+        },
+        {
+          "id": 464,
+          "en": "Did you get my message?",
+          "es": "¿Te llegó mi mensaje?",
+          "level": "A1"
+        },
+        {
+          "id": 465,
+          "en": "Save my number.",
+          "es": "Guarda mi número.",
+          "level": "A1"
+        },
+        {
+          "id": 466,
+          "en": "Can I take a message?",
+          "es": "¿Quiere dejar algún recado?",
+          "level": "A2"
+        },
+        {
+          "id": 467,
+          "en": "You're breaking up.",
+          "es": "Se está cortando la llamada.",
+          "level": "A2"
+        },
+        {
+          "id": 468,
+          "en": "The signal is really bad here.",
+          "es": "Aquí la señal está muy mala.",
+          "level": "A2"
+        },
+        {
+          "id": 469,
+          "en": "My phone is about to die.",
+          "es": "Ya casi no tengo batería.",
+          "level": "A2"
+        },
+        {
+          "id": 470,
+          "en": "Can I call you back in five minutes?",
+          "es": "¿Te puedo marcar en cinco minutos?",
+          "level": "A2"
+        },
+        {
+          "id": 471,
+          "en": "I'll text you the address.",
+          "es": "Te mando la dirección por mensaje.",
+          "level": "A2"
+        },
+        {
+          "id": 472,
+          "en": "Sorry, I just saw your message.",
+          "es": "Perdón, apenas vi tu mensaje.",
+          "level": "A2"
+        },
+        {
+          "id": 473,
+          "en": "I'll send you the photos on WhatsApp.",
+          "es": "Te paso las fotos por WhatsApp.",
+          "level": "A2"
+        },
+        {
+          "id": 474,
+          "en": "Send me a voice message.",
+          "es": "Mándame un audio.",
+          "level": "A2"
+        },
+        {
+          "id": 475,
+          "en": "My phone was on silent.",
+          "es": "Tenía el celular en silencio.",
+          "level": "A2"
+        },
+        {
+          "id": 476,
+          "en": "I missed your call.",
+          "es": "Vi tu llamada perdida.",
+          "level": "A2"
+        },
+        {
+          "id": 477,
+          "en": "You have the wrong number.",
+          "es": "Está equivocado de número.",
+          "level": "A2"
+        },
+        {
+          "id": 478,
+          "en": "Speaking.",
+          "es": "Sí, él habla.",
+          "level": "A2"
+        },
+        {
+          "id": 479,
+          "en": "I'll put you on speaker.",
+          "es": "Te voy a poner en altavoz.",
+          "level": "A2"
+        },
+        {
+          "id": 480,
+          "en": "Can you hear me now?",
+          "es": "¿Ya me escuchas?",
+          "level": "A2"
+        },
+        {
+          "id": 481,
+          "en": "The call dropped.",
+          "es": "Se cortó la llamada.",
+          "level": "A2"
+        },
+        {
+          "id": 482,
+          "en": "Are you connected to the Wi-Fi?",
+          "es": "¿Estás conectado al wifi?",
+          "level": "A2"
+        },
+        {
+          "id": 483,
+          "en": "My phone won't charge.",
+          "es": "Mi celular no carga.",
+          "level": "A2"
+        },
+        {
+          "id": 484,
+          "en": "I got a new number.",
+          "es": "Tengo número nuevo.",
+          "level": "A2"
+        },
+        {
+          "id": 485,
+          "en": "I'll add you to the group chat.",
+          "es": "Te agrego al grupo.",
+          "level": "A2"
+        },
+        {
+          "id": 486,
+          "en": "I'll video call you tonight.",
+          "es": "Te hago videollamada en la noche.",
+          "level": "A2"
+        },
+        {
+          "id": 487,
+          "en": "Turn on your location.",
+          "es": "Prende tu ubicación.",
+          "level": "A2"
+        },
+        {
+          "id": 488,
+          "en": "Share your location with me.",
+          "es": "Compárteme tu ubicación.",
+          "level": "A2"
+        },
+        {
+          "id": 489,
+          "en": "Please leave a message after the tone.",
+          "es": "Por favor deje su mensaje después del tono.",
+          "level": "B1"
+        },
+        {
+          "id": 490,
+          "en": "I'm running out of data.",
+          "es": "Ya casi no tengo datos.",
+          "level": "B1"
+        },
+        {
+          "id": 491,
+          "en": "I dropped my phone and the screen cracked.",
+          "es": "Se me cayó el celular y se estrelló la pantalla.",
+          "level": "B1"
+        },
+        {
+          "id": 492,
+          "en": "Stop sending memes to the group.",
+          "es": "Ya dejen de mandar memes al grupo.",
+          "level": "B1"
+        },
+        {
+          "id": 493,
+          "en": "Don't leave me on read.",
+          "es": "No me dejes en visto.",
+          "level": "B1"
+        },
+        {
+          "id": 494,
+          "en": "He left me on read.",
+          "es": "Me dejó en visto.",
+          "level": "B1"
+        },
+        {
+          "id": 495,
+          "en": "My phone froze.",
+          "es": "Se me trabó el celular.",
+          "level": "B1"
+        },
+        {
+          "id": 496,
+          "en": "I have to update the app.",
+          "es": "Tengo que actualizar la aplicación.",
+          "level": "B1"
+        },
+        {
+          "id": 497,
+          "en": "I blocked that number.",
+          "es": "Bloqueé ese número.",
+          "level": "B1"
+        },
+        {
+          "id": 498,
+          "en": "I keep getting spam calls.",
+          "es": "Me siguen llegando llamadas de spam.",
+          "level": "B1"
+        },
+        {
+          "id": 499,
+          "en": "Sorry for texting so late.",
+          "es": "Perdón por escribirte tan tarde.",
+          "level": "B1"
+        },
+        {
+          "id": 500,
+          "en": "Let's talk on the phone; it's easier.",
+          "es": "Mejor hablamos por teléfono, es más fácil.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "health_doctor",
+      "name_es": "Salud y médico",
+      "name_en": "Health & Doctor",
+      "emoji": "🩺",
+      "phrases": [
+        {
+          "id": 501,
+          "en": "I don't feel well.",
+          "es": "No me siento bien.",
+          "level": "A1"
+        },
+        {
+          "id": 502,
+          "en": "I'm sick.",
+          "es": "Estoy enfermo.",
+          "level": "A1"
+        },
+        {
+          "id": 503,
+          "en": "I have a headache.",
+          "es": "Me duele la cabeza.",
+          "level": "A1"
+        },
+        {
+          "id": 504,
+          "en": "I have a stomachache.",
+          "es": "Me duele el estómago.",
+          "level": "A1"
+        },
+        {
+          "id": 505,
+          "en": "I have a sore throat.",
+          "es": "Me duele la garganta.",
+          "level": "A1"
+        },
+        {
+          "id": 506,
+          "en": "I have a fever.",
+          "es": "Tengo calentura.",
+          "level": "A1"
+        },
+        {
+          "id": 507,
+          "en": "I have a cough.",
+          "es": "Tengo tos.",
+          "level": "A1"
+        },
+        {
+          "id": 508,
+          "en": "I have a cold.",
+          "es": "Estoy resfriado.",
+          "level": "A1"
+        },
+        {
+          "id": 509,
+          "en": "I have the flu.",
+          "es": "Tengo gripa.",
+          "level": "A1"
+        },
+        {
+          "id": 510,
+          "en": "My back hurts.",
+          "es": "Me duele la espalda.",
+          "level": "A1"
+        },
+        {
+          "id": 511,
+          "en": "It hurts here.",
+          "es": "Me duele aquí.",
+          "level": "A1"
+        },
+        {
+          "id": 512,
+          "en": "I feel dizzy.",
+          "es": "Me siento mareado.",
+          "level": "A1"
+        },
+        {
+          "id": 513,
+          "en": "I need to see a doctor.",
+          "es": "Necesito ver a un doctor.",
+          "level": "A1"
+        },
+        {
+          "id": 514,
+          "en": "I'd like to make an appointment.",
+          "es": "Quiero hacer una cita.",
+          "level": "A1"
+        },
+        {
+          "id": 515,
+          "en": "You need to rest.",
+          "es": "Necesitas descansar.",
+          "level": "A1"
+        },
+        {
+          "id": 516,
+          "en": "Get well soon!",
+          "es": "¡Que te mejores pronto!",
+          "level": "A1"
+        },
+        {
+          "id": 517,
+          "en": "I feel nauseous.",
+          "es": "Tengo náuseas.",
+          "level": "A2"
+        },
+        {
+          "id": 518,
+          "en": "I threw up.",
+          "es": "Vomité.",
+          "level": "A2"
+        },
+        {
+          "id": 519,
+          "en": "Do you have anything for a headache?",
+          "es": "¿Tiene algo para el dolor de cabeza?",
+          "level": "A2"
+        },
+        {
+          "id": 520,
+          "en": "Where can I buy this medicine?",
+          "es": "¿Dónde puedo comprar esta medicina?",
+          "level": "A2"
+        },
+        {
+          "id": 521,
+          "en": "Do I need a prescription?",
+          "es": "¿Necesito receta?",
+          "level": "A2"
+        },
+        {
+          "id": 522,
+          "en": "Take one pill every eight hours.",
+          "es": "Tómese una pastilla cada ocho horas.",
+          "level": "A2"
+        },
+        {
+          "id": 523,
+          "en": "Are you allergic to any medication?",
+          "es": "¿Es alérgico a algún medicamento?",
+          "level": "A2"
+        },
+        {
+          "id": 524,
+          "en": "I'm allergic to penicillin.",
+          "es": "Soy alérgico a la penicilina.",
+          "level": "A2"
+        },
+        {
+          "id": 525,
+          "en": "How long have you felt this way?",
+          "es": "¿Desde cuándo se siente así?",
+          "level": "A2"
+        },
+        {
+          "id": 526,
+          "en": "It started two days ago.",
+          "es": "Empezó hace dos días.",
+          "level": "A2"
+        },
+        {
+          "id": 527,
+          "en": "Is it serious?",
+          "es": "¿Es grave?",
+          "level": "A2"
+        },
+        {
+          "id": 528,
+          "en": "It's nothing serious.",
+          "es": "No es nada grave.",
+          "level": "A2"
+        },
+        {
+          "id": 529,
+          "en": "Drink plenty of fluids.",
+          "es": "Tome muchos líquidos.",
+          "level": "A2"
+        },
+        {
+          "id": 530,
+          "en": "I twisted my ankle.",
+          "es": "Me torcí el tobillo.",
+          "level": "A2"
+        },
+        {
+          "id": 531,
+          "en": "I cut my finger.",
+          "es": "Me corté el dedo.",
+          "level": "A2"
+        },
+        {
+          "id": 532,
+          "en": "It's swollen.",
+          "es": "Está hinchado.",
+          "level": "A2"
+        },
+        {
+          "id": 533,
+          "en": "I can't sleep at night.",
+          "es": "No puedo dormir en las noches.",
+          "level": "A2"
+        },
+        {
+          "id": 534,
+          "en": "I've been very stressed.",
+          "es": "He estado muy estresado.",
+          "level": "A2"
+        },
+        {
+          "id": 535,
+          "en": "How much is the consultation?",
+          "es": "¿Cuánto cuesta la consulta?",
+          "level": "A2"
+        },
+        {
+          "id": 536,
+          "en": "I need to see a dentist.",
+          "es": "Necesito ir al dentista.",
+          "level": "A2"
+        },
+        {
+          "id": 537,
+          "en": "I have high blood pressure.",
+          "es": "Tengo la presión alta.",
+          "level": "B1"
+        },
+        {
+          "id": 538,
+          "en": "I'm diabetic.",
+          "es": "Soy diabético.",
+          "level": "B1"
+        },
+        {
+          "id": 539,
+          "en": "I'm pregnant.",
+          "es": "Estoy embarazada.",
+          "level": "B1"
+        },
+        {
+          "id": 540,
+          "en": "Do you take my insurance?",
+          "es": "¿Aceptan mi seguro?",
+          "level": "B1"
+        },
+        {
+          "id": 541,
+          "en": "I don't have insurance.",
+          "es": "No tengo seguro.",
+          "level": "B1"
+        },
+        {
+          "id": 542,
+          "en": "The doctor will see you now.",
+          "es": "El doctor lo va a atender ahora.",
+          "level": "B1"
+        },
+        {
+          "id": 543,
+          "en": "Roll up your sleeve, please.",
+          "es": "Súbase la manga, por favor.",
+          "level": "B1"
+        },
+        {
+          "id": 544,
+          "en": "Take a deep breath.",
+          "es": "Respire profundo.",
+          "level": "B1"
+        },
+        {
+          "id": 545,
+          "en": "You need some blood tests.",
+          "es": "Necesita unos análisis de sangre.",
+          "level": "B1"
+        },
+        {
+          "id": 546,
+          "en": "When will I get the results?",
+          "es": "¿Cuándo me entregan los resultados?",
+          "level": "B1"
+        },
+        {
+          "id": 547,
+          "en": "Is it contagious?",
+          "es": "¿Es contagioso?",
+          "level": "B1"
+        },
+        {
+          "id": 548,
+          "en": "I feel much better now.",
+          "es": "Ya me siento mucho mejor.",
+          "level": "B1"
+        },
+        {
+          "id": 549,
+          "en": "I'm still feeling under the weather.",
+          "es": "Todavía me siento medio mal.",
+          "level": "B1"
+        },
+        {
+          "id": 550,
+          "en": "My tooth is killing me.",
+          "es": "Me está matando el dolor de muela.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "emergencies",
+      "name_es": "Emergencias",
+      "name_en": "Emergencies",
+      "emoji": "🚨",
+      "phrases": [
+        {
+          "id": 551,
+          "en": "Help!",
+          "es": "¡Auxilio!",
+          "level": "A1"
+        },
+        {
+          "id": 552,
+          "en": "Call the police!",
+          "es": "¡Llamen a la policía!",
+          "level": "A1"
+        },
+        {
+          "id": 553,
+          "en": "Call an ambulance!",
+          "es": "¡Llamen a una ambulancia!",
+          "level": "A1"
+        },
+        {
+          "id": 554,
+          "en": "It's an emergency.",
+          "es": "Es una emergencia.",
+          "level": "A1"
+        },
+        {
+          "id": 555,
+          "en": "There's been an accident.",
+          "es": "Hubo un accidente.",
+          "level": "A1"
+        },
+        {
+          "id": 556,
+          "en": "Someone is hurt.",
+          "es": "Hay una persona herida.",
+          "level": "A1"
+        },
+        {
+          "id": 557,
+          "en": "Are you okay?",
+          "es": "¿Estás bien?",
+          "level": "A1"
+        },
+        {
+          "id": 558,
+          "en": "I need help.",
+          "es": "Necesito ayuda.",
+          "level": "A1"
+        },
+        {
+          "id": 559,
+          "en": "Fire!",
+          "es": "¡Fuego!",
+          "level": "A1"
+        },
+        {
+          "id": 560,
+          "en": "Get out of the building!",
+          "es": "¡Salgan del edificio!",
+          "level": "A1"
+        },
+        {
+          "id": 561,
+          "en": "Where's the emergency exit?",
+          "es": "¿Dónde está la salida de emergencia?",
+          "level": "A1"
+        },
+        {
+          "id": 562,
+          "en": "Call 911.",
+          "es": "Marca al 911.",
+          "level": "A1"
+        },
+        {
+          "id": 563,
+          "en": "I lost my passport.",
+          "es": "Perdí mi pasaporte.",
+          "level": "A1"
+        },
+        {
+          "id": 564,
+          "en": "Where's the police station?",
+          "es": "¿Dónde está la estación de policía?",
+          "level": "A1"
+        },
+        {
+          "id": 565,
+          "en": "Stay calm.",
+          "es": "Mantén la calma.",
+          "level": "A1"
+        },
+        {
+          "id": 566,
+          "en": "Everything's going to be okay.",
+          "es": "Todo va a estar bien.",
+          "level": "A1"
+        },
+        {
+          "id": 567,
+          "en": "What's your emergency?",
+          "es": "¿Cuál es su emergencia?",
+          "level": "A2"
+        },
+        {
+          "id": 568,
+          "en": "I've been robbed.",
+          "es": "Me asaltaron.",
+          "level": "A2"
+        },
+        {
+          "id": 569,
+          "en": "Someone stole my wallet.",
+          "es": "Me robaron la cartera.",
+          "level": "A2"
+        },
+        {
+          "id": 570,
+          "en": "My phone was stolen.",
+          "es": "Me robaron el celular.",
+          "level": "A2"
+        },
+        {
+          "id": 571,
+          "en": "Stop, thief!",
+          "es": "¡Agárrenlo, es un ladrón!",
+          "level": "A2"
+        },
+        {
+          "id": 572,
+          "en": "I need to go to the embassy.",
+          "es": "Necesito ir a la embajada.",
+          "level": "A2"
+        },
+        {
+          "id": 573,
+          "en": "He ran that way.",
+          "es": "Corrió para allá.",
+          "level": "A2"
+        },
+        {
+          "id": 574,
+          "en": "I don't feel safe here.",
+          "es": "No me siento seguro aquí.",
+          "level": "A2"
+        },
+        {
+          "id": 575,
+          "en": "Leave me alone!",
+          "es": "¡Déjame en paz!",
+          "level": "A2"
+        },
+        {
+          "id": 576,
+          "en": "She fainted.",
+          "es": "Se desmayó.",
+          "level": "A2"
+        },
+        {
+          "id": 577,
+          "en": "He's not breathing.",
+          "es": "No está respirando.",
+          "level": "A2"
+        },
+        {
+          "id": 578,
+          "en": "She's choking!",
+          "es": "¡Se está atragantando!",
+          "level": "A2"
+        },
+        {
+          "id": 579,
+          "en": "Don't move him.",
+          "es": "No lo muevan.",
+          "level": "A2"
+        },
+        {
+          "id": 580,
+          "en": "Which hospital are you taking him to?",
+          "es": "¿A qué hospital lo llevan?",
+          "level": "A2"
+        },
+        {
+          "id": 581,
+          "en": "I need to contact my family.",
+          "es": "Necesito avisarle a mi familia.",
+          "level": "A2"
+        },
+        {
+          "id": 582,
+          "en": "I have a flat tire.",
+          "es": "Se me ponchó una llanta.",
+          "level": "A2"
+        },
+        {
+          "id": 583,
+          "en": "I ran out of gas.",
+          "es": "Me quedé sin gasolina.",
+          "level": "A2"
+        },
+        {
+          "id": 584,
+          "en": "The power went out.",
+          "es": "Se fue la luz.",
+          "level": "A2"
+        },
+        {
+          "id": 585,
+          "en": "It's an earthquake!",
+          "es": "¡Está temblando!",
+          "level": "A2"
+        },
+        {
+          "id": 586,
+          "en": "Take cover!",
+          "es": "¡Cúbranse!",
+          "level": "A2"
+        },
+        {
+          "id": 587,
+          "en": "I want to report a crime.",
+          "es": "Quiero levantar una denuncia.",
+          "level": "B1"
+        },
+        {
+          "id": 588,
+          "en": "Can you describe the person?",
+          "es": "¿Puede describir a la persona?",
+          "level": "B1"
+        },
+        {
+          "id": 589,
+          "en": "Someone is following me.",
+          "es": "Alguien me viene siguiendo.",
+          "level": "B1"
+        },
+        {
+          "id": 590,
+          "en": "He's having a heart attack.",
+          "es": "Le está dando un infarto.",
+          "level": "B1"
+        },
+        {
+          "id": 591,
+          "en": "Does anyone know first aid?",
+          "es": "¿Alguien sabe primeros auxilios?",
+          "level": "B1"
+        },
+        {
+          "id": 592,
+          "en": "My car broke down on the highway.",
+          "es": "Se me descompuso el coche en la carretera.",
+          "level": "B1"
+        },
+        {
+          "id": 593,
+          "en": "I locked my keys in the car.",
+          "es": "Dejé las llaves adentro del coche.",
+          "level": "B1"
+        },
+        {
+          "id": 594,
+          "en": "Can you send a tow truck?",
+          "es": "¿Pueden mandar una grúa?",
+          "level": "B1"
+        },
+        {
+          "id": 595,
+          "en": "There's a gas leak.",
+          "es": "Hay una fuga de gas.",
+          "level": "B1"
+        },
+        {
+          "id": 596,
+          "en": "There's a flood on my street.",
+          "es": "Se inundó mi calle.",
+          "level": "B1"
+        },
+        {
+          "id": 597,
+          "en": "I got locked out of my house.",
+          "es": "Me quedé afuera de la casa sin llaves.",
+          "level": "B1"
+        },
+        {
+          "id": 598,
+          "en": "My child is missing.",
+          "es": "No encuentro a mi hijo.",
+          "level": "B1"
+        },
+        {
+          "id": 599,
+          "en": "I'm lost and my phone is dead.",
+          "es": "Estoy perdido y mi celular no tiene pila.",
+          "level": "B1"
+        },
+        {
+          "id": 600,
+          "en": "Is everyone accounted for?",
+          "es": "¿No falta nadie?",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "feelings_opinions",
+      "name_es": "Sentimientos y opiniones",
+      "name_en": "Feelings & Opinions",
+      "emoji": "💭",
+      "phrases": [
+        {
+          "id": 601,
+          "en": "I'm happy.",
+          "es": "Estoy feliz.",
+          "level": "A1"
+        },
+        {
+          "id": 602,
+          "en": "I'm sad.",
+          "es": "Estoy triste.",
+          "level": "A1"
+        },
+        {
+          "id": 603,
+          "en": "I'm tired.",
+          "es": "Estoy cansado.",
+          "level": "A1"
+        },
+        {
+          "id": 604,
+          "en": "I'm bored.",
+          "es": "Estoy aburrido.",
+          "level": "A1"
+        },
+        {
+          "id": 605,
+          "en": "I'm excited!",
+          "es": "¡Estoy muy emocionado!",
+          "level": "A1"
+        },
+        {
+          "id": 606,
+          "en": "I'm nervous.",
+          "es": "Estoy nervioso.",
+          "level": "A1"
+        },
+        {
+          "id": 607,
+          "en": "I'm angry.",
+          "es": "Estoy enojado.",
+          "level": "A1"
+        },
+        {
+          "id": 608,
+          "en": "I'm scared.",
+          "es": "Tengo miedo.",
+          "level": "A1"
+        },
+        {
+          "id": 609,
+          "en": "I'm surprised.",
+          "es": "Estoy sorprendido.",
+          "level": "A1"
+        },
+        {
+          "id": 610,
+          "en": "I like it.",
+          "es": "Me gusta.",
+          "level": "A1"
+        },
+        {
+          "id": 611,
+          "en": "I don't like it.",
+          "es": "No me gusta.",
+          "level": "A1"
+        },
+        {
+          "id": 612,
+          "en": "I love it!",
+          "es": "¡Me encanta!",
+          "level": "A1"
+        },
+        {
+          "id": 613,
+          "en": "I hate it.",
+          "es": "Lo odio.",
+          "level": "A1"
+        },
+        {
+          "id": 614,
+          "en": "I think so.",
+          "es": "Creo que sí.",
+          "level": "A1"
+        },
+        {
+          "id": 615,
+          "en": "I don't think so.",
+          "es": "Creo que no.",
+          "level": "A1"
+        },
+        {
+          "id": 616,
+          "en": "I agree.",
+          "es": "Estoy de acuerdo.",
+          "level": "A1"
+        },
+        {
+          "id": 617,
+          "en": "I disagree.",
+          "es": "No estoy de acuerdo.",
+          "level": "A1"
+        },
+        {
+          "id": 618,
+          "en": "You're right.",
+          "es": "Tienes razón.",
+          "level": "A1"
+        },
+        {
+          "id": 619,
+          "en": "I'm not sure.",
+          "es": "No estoy seguro.",
+          "level": "A1"
+        },
+        {
+          "id": 620,
+          "en": "How do you feel?",
+          "es": "¿Cómo te sientes?",
+          "level": "A1"
+        },
+        {
+          "id": 621,
+          "en": "In my opinion...",
+          "es": "En mi opinión...",
+          "level": "A2"
+        },
+        {
+          "id": 622,
+          "en": "What do you think?",
+          "es": "¿Tú qué opinas?",
+          "level": "A2"
+        },
+        {
+          "id": 623,
+          "en": "I feel great.",
+          "es": "Me siento de maravilla.",
+          "level": "A2"
+        },
+        {
+          "id": 624,
+          "en": "I'm in a good mood.",
+          "es": "Ando de buenas.",
+          "level": "A2"
+        },
+        {
+          "id": 625,
+          "en": "I'm in a bad mood.",
+          "es": "Ando de malas.",
+          "level": "A2"
+        },
+        {
+          "id": 626,
+          "en": "I'm worried about you.",
+          "es": "Estoy preocupado por ti.",
+          "level": "A2"
+        },
+        {
+          "id": 627,
+          "en": "Don't worry.",
+          "es": "No te preocupes.",
+          "level": "A2"
+        },
+        {
+          "id": 628,
+          "en": "That makes me happy.",
+          "es": "Eso me da mucho gusto.",
+          "level": "A2"
+        },
+        {
+          "id": 629,
+          "en": "That's annoying.",
+          "es": "Qué lata.",
+          "level": "A2"
+        },
+        {
+          "id": 630,
+          "en": "That's so frustrating.",
+          "es": "Qué frustrante.",
+          "level": "A2"
+        },
+        {
+          "id": 631,
+          "en": "I miss you.",
+          "es": "Te extraño.",
+          "level": "A2"
+        },
+        {
+          "id": 632,
+          "en": "I miss my family.",
+          "es": "Extraño a mi familia.",
+          "level": "A2"
+        },
+        {
+          "id": 633,
+          "en": "I'm proud of you.",
+          "es": "Estoy orgulloso de ti.",
+          "level": "A2"
+        },
+        {
+          "id": 634,
+          "en": "It depends.",
+          "es": "Depende.",
+          "level": "A2"
+        },
+        {
+          "id": 635,
+          "en": "I changed my mind.",
+          "es": "Cambié de opinión.",
+          "level": "A2"
+        },
+        {
+          "id": 636,
+          "en": "It's not a big deal.",
+          "es": "No es para tanto.",
+          "level": "A2"
+        },
+        {
+          "id": 637,
+          "en": "I can't complain.",
+          "es": "No me puedo quejar.",
+          "level": "B1"
+        },
+        {
+          "id": 638,
+          "en": "I have mixed feelings.",
+          "es": "Tengo sentimientos encontrados.",
+          "level": "B1"
+        },
+        {
+          "id": 639,
+          "en": "To be honest...",
+          "es": "La verdad...",
+          "level": "B1"
+        },
+        {
+          "id": 640,
+          "en": "Honestly, I don't care.",
+          "es": "La neta, me da igual.",
+          "level": "B1"
+        },
+        {
+          "id": 641,
+          "en": "That hurt my feelings.",
+          "es": "Eso me dolió.",
+          "level": "B1"
+        },
+        {
+          "id": 642,
+          "en": "I didn't mean to upset you.",
+          "es": "No quise hacerte sentir mal.",
+          "level": "B1"
+        },
+        {
+          "id": 643,
+          "en": "I understand how you feel.",
+          "es": "Entiendo cómo te sientes.",
+          "level": "B1"
+        },
+        {
+          "id": 644,
+          "en": "That's a good point.",
+          "es": "Buen punto.",
+          "level": "B1"
+        },
+        {
+          "id": 645,
+          "en": "I see it differently.",
+          "es": "Yo lo veo diferente.",
+          "level": "B1"
+        },
+        {
+          "id": 646,
+          "en": "I'm overwhelmed.",
+          "es": "Ando muy saturado.",
+          "level": "B1"
+        },
+        {
+          "id": 647,
+          "en": "I need some time to think.",
+          "es": "Necesito tiempo para pensarlo.",
+          "level": "B1"
+        },
+        {
+          "id": 648,
+          "en": "I'm really looking forward to it.",
+          "es": "Tengo muchas ganas de que llegue.",
+          "level": "B1"
+        },
+        {
+          "id": 649,
+          "en": "It exceeded my expectations.",
+          "es": "Superó mis expectativas.",
+          "level": "B1"
+        },
+        {
+          "id": 650,
+          "en": "Deep down, I know it's for the best.",
+          "es": "En el fondo, sé que es lo mejor.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "name_es": "Preguntas",
+      "name_en": "Questions",
+      "emoji": "❓",
+      "phrases": [
+        {
+          "id": 651,
+          "en": "What is this?",
+          "es": "¿Qué es esto?",
+          "level": "A1"
+        },
+        {
+          "id": 652,
+          "en": "What's that?",
+          "es": "¿Qué es eso?",
+          "level": "A1"
+        },
+        {
+          "id": 653,
+          "en": "Who is he?",
+          "es": "¿Quién es él?",
+          "level": "A1"
+        },
+        {
+          "id": 654,
+          "en": "Who are they?",
+          "es": "¿Quiénes son ellos?",
+          "level": "A1"
+        },
+        {
+          "id": 655,
+          "en": "Where is it?",
+          "es": "¿Dónde está?",
+          "level": "A1"
+        },
+        {
+          "id": 656,
+          "en": "When is it?",
+          "es": "¿Cuándo es?",
+          "level": "A1"
+        },
+        {
+          "id": 657,
+          "en": "Why?",
+          "es": "¿Por qué?",
+          "level": "A1"
+        },
+        {
+          "id": 658,
+          "en": "Why not?",
+          "es": "¿Por qué no?",
+          "level": "A1"
+        },
+        {
+          "id": 659,
+          "en": "How?",
+          "es": "¿Cómo?",
+          "level": "A1"
+        },
+        {
+          "id": 660,
+          "en": "Which one?",
+          "es": "¿Cuál?",
+          "level": "A1"
+        },
+        {
+          "id": 661,
+          "en": "How many?",
+          "es": "¿Cuántos?",
+          "level": "A1"
+        },
+        {
+          "id": 662,
+          "en": "How much?",
+          "es": "¿Cuánto?",
+          "level": "A1"
+        },
+        {
+          "id": 663,
+          "en": "What does this mean?",
+          "es": "¿Qué significa esto?",
+          "level": "A1"
+        },
+        {
+          "id": 664,
+          "en": "How do you say this in English?",
+          "es": "¿Cómo se dice esto en inglés?",
+          "level": "A1"
+        },
+        {
+          "id": 665,
+          "en": "What does that word mean?",
+          "es": "¿Qué significa esa palabra?",
+          "level": "A1"
+        },
+        {
+          "id": 666,
+          "en": "Can you help me?",
+          "es": "¿Me puedes ayudar?",
+          "level": "A1"
+        },
+        {
+          "id": 667,
+          "en": "What happened?",
+          "es": "¿Qué pasó?",
+          "level": "A1"
+        },
+        {
+          "id": 668,
+          "en": "Where are you?",
+          "es": "¿Dónde estás?",
+          "level": "A1"
+        },
+        {
+          "id": 669,
+          "en": "Where are we going?",
+          "es": "¿A dónde vamos?",
+          "level": "A1"
+        },
+        {
+          "id": 670,
+          "en": "What are you doing?",
+          "es": "¿Qué estás haciendo?",
+          "level": "A1"
+        },
+        {
+          "id": 671,
+          "en": "What's going on?",
+          "es": "¿Qué está pasando?",
+          "level": "A2"
+        },
+        {
+          "id": 672,
+          "en": "When do we leave?",
+          "es": "¿A qué hora nos vamos?",
+          "level": "A2"
+        },
+        {
+          "id": 673,
+          "en": "Are you sure?",
+          "es": "¿Estás seguro?",
+          "level": "A2"
+        },
+        {
+          "id": 674,
+          "en": "Really?",
+          "es": "¿En serio?",
+          "level": "A2"
+        },
+        {
+          "id": 675,
+          "en": "Are you serious?",
+          "es": "¿Es en serio?",
+          "level": "A2"
+        },
+        {
+          "id": 676,
+          "en": "What do you mean?",
+          "es": "¿A qué te refieres?",
+          "level": "A2"
+        },
+        {
+          "id": 677,
+          "en": "Can I ask you something?",
+          "es": "¿Te puedo preguntar algo?",
+          "level": "A2"
+        },
+        {
+          "id": 678,
+          "en": "What are you up to?",
+          "es": "¿Qué andas haciendo?",
+          "level": "A2"
+        },
+        {
+          "id": 679,
+          "en": "Is everything okay?",
+          "es": "¿Todo bien?",
+          "level": "A2"
+        },
+        {
+          "id": 680,
+          "en": "What's wrong?",
+          "es": "¿Qué tienes?",
+          "level": "A2"
+        },
+        {
+          "id": 681,
+          "en": "How does this work?",
+          "es": "¿Cómo funciona esto?",
+          "level": "A2"
+        },
+        {
+          "id": 682,
+          "en": "Whose is this?",
+          "es": "¿De quién es esto?",
+          "level": "A2"
+        },
+        {
+          "id": 683,
+          "en": "What's the difference?",
+          "es": "¿Cuál es la diferencia?",
+          "level": "A2"
+        },
+        {
+          "id": 684,
+          "en": "What's it for?",
+          "es": "¿Para qué sirve?",
+          "level": "A2"
+        },
+        {
+          "id": 685,
+          "en": "How was it?",
+          "es": "¿Cómo estuvo?",
+          "level": "A2"
+        },
+        {
+          "id": 686,
+          "en": "How long will it take?",
+          "es": "¿Cuánto va a tardar?",
+          "level": "A2"
+        },
+        {
+          "id": 687,
+          "en": "What time does it start?",
+          "es": "¿A qué hora empieza?",
+          "level": "A2"
+        },
+        {
+          "id": 688,
+          "en": "Where did you buy that?",
+          "es": "¿Dónde compraste eso?",
+          "level": "A2"
+        },
+        {
+          "id": 689,
+          "en": "Who told you that?",
+          "es": "¿Quién te dijo eso?",
+          "level": "A2"
+        },
+        {
+          "id": 690,
+          "en": "Did I say something wrong?",
+          "es": "¿Dije algo malo?",
+          "level": "B1"
+        },
+        {
+          "id": 691,
+          "en": "What if it doesn't work?",
+          "es": "¿Y si no funciona?",
+          "level": "B1"
+        },
+        {
+          "id": 692,
+          "en": "How come?",
+          "es": "¿Y eso por qué?",
+          "level": "B1"
+        },
+        {
+          "id": 693,
+          "en": "Guess what?",
+          "es": "¿Qué crees?",
+          "level": "B1"
+        },
+        {
+          "id": 694,
+          "en": "What would you do in my place?",
+          "es": "¿Tú qué harías en mi lugar?",
+          "level": "B1"
+        },
+        {
+          "id": 695,
+          "en": "Do you mind if I open the window?",
+          "es": "¿Te importa si abro la ventana?",
+          "level": "B1"
+        },
+        {
+          "id": 696,
+          "en": "Have you ever tried Mexican food?",
+          "es": "¿Has probado la comida mexicana?",
+          "level": "B1"
+        },
+        {
+          "id": 697,
+          "en": "What's the point?",
+          "es": "¿Qué caso tiene?",
+          "level": "B1"
+        },
+        {
+          "id": 698,
+          "en": "What's the catch?",
+          "es": "¿Dónde está el truco?",
+          "level": "B1"
+        },
+        {
+          "id": 699,
+          "en": "What am I supposed to do now?",
+          "es": "¿Y ahora qué se supone que haga?",
+          "level": "B1"
+        },
+        {
+          "id": 700,
+          "en": "Mind if I ask why?",
+          "es": "¿Puedo preguntar por qué?",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "time_dates_weather",
+      "name_es": "Hora, fechas y clima",
+      "name_en": "Time, Dates & Weather",
+      "emoji": "🌤️",
+      "phrases": [
+        {
+          "id": 701,
+          "en": "What time is it?",
+          "es": "¿Qué hora es?",
+          "level": "A1"
+        },
+        {
+          "id": 702,
+          "en": "It's three o'clock.",
+          "es": "Son las tres.",
+          "level": "A1"
+        },
+        {
+          "id": 703,
+          "en": "It's half past two.",
+          "es": "Son las dos y media.",
+          "level": "A1"
+        },
+        {
+          "id": 704,
+          "en": "It's a quarter past five.",
+          "es": "Son las cinco y cuarto.",
+          "level": "A1"
+        },
+        {
+          "id": 705,
+          "en": "It's a quarter to six.",
+          "es": "Es un cuarto para las seis.",
+          "level": "A1"
+        },
+        {
+          "id": 706,
+          "en": "What day is today?",
+          "es": "¿Qué día es hoy?",
+          "level": "A1"
+        },
+        {
+          "id": 707,
+          "en": "Today is Monday.",
+          "es": "Hoy es lunes.",
+          "level": "A1"
+        },
+        {
+          "id": 708,
+          "en": "What's the date today?",
+          "es": "¿A qué fecha estamos?",
+          "level": "A1"
+        },
+        {
+          "id": 709,
+          "en": "Today is August 26th.",
+          "es": "Hoy es 26 de agosto.",
+          "level": "A1"
+        },
+        {
+          "id": 710,
+          "en": "My birthday is in May.",
+          "es": "Mi cumpleaños es en mayo.",
+          "level": "A1"
+        },
+        {
+          "id": 711,
+          "en": "The party is on Saturday.",
+          "es": "La fiesta es el sábado.",
+          "level": "A1"
+        },
+        {
+          "id": 712,
+          "en": "It's early.",
+          "es": "Es temprano.",
+          "level": "A1"
+        },
+        {
+          "id": 713,
+          "en": "It's late.",
+          "es": "Ya es tarde.",
+          "level": "A1"
+        },
+        {
+          "id": 714,
+          "en": "What's the weather like?",
+          "es": "¿Cómo está el clima?",
+          "level": "A1"
+        },
+        {
+          "id": 715,
+          "en": "It's sunny.",
+          "es": "Hace sol.",
+          "level": "A1"
+        },
+        {
+          "id": 716,
+          "en": "It's cloudy.",
+          "es": "Está nublado.",
+          "level": "A1"
+        },
+        {
+          "id": 717,
+          "en": "It's raining.",
+          "es": "Está lloviendo.",
+          "level": "A1"
+        },
+        {
+          "id": 718,
+          "en": "It's hot today.",
+          "es": "Hoy hace calor.",
+          "level": "A1"
+        },
+        {
+          "id": 719,
+          "en": "It's cold today.",
+          "es": "Hoy hace frío.",
+          "level": "A1"
+        },
+        {
+          "id": 720,
+          "en": "It's windy.",
+          "es": "Hace mucho aire.",
+          "level": "A1"
+        },
+        {
+          "id": 721,
+          "en": "It's snowing.",
+          "es": "Está nevando.",
+          "level": "A1"
+        },
+        {
+          "id": 722,
+          "en": "What a beautiful day!",
+          "es": "¡Qué bonito día!",
+          "level": "A1"
+        },
+        {
+          "id": 723,
+          "en": "I'm on time.",
+          "es": "Voy a tiempo.",
+          "level": "A2"
+        },
+        {
+          "id": 724,
+          "en": "It looks like rain.",
+          "es": "Parece que va a llover.",
+          "level": "A2"
+        },
+        {
+          "id": 725,
+          "en": "Take an umbrella.",
+          "es": "Llévate un paraguas.",
+          "level": "A2"
+        },
+        {
+          "id": 726,
+          "en": "I'm freezing!",
+          "es": "¡Me estoy congelando!",
+          "level": "A2"
+        },
+        {
+          "id": 727,
+          "en": "It's boiling hot.",
+          "es": "Hace un calorón.",
+          "level": "A2"
+        },
+        {
+          "id": 728,
+          "en": "What's the forecast for tomorrow?",
+          "es": "¿Cómo va a estar el clima mañana?",
+          "level": "A2"
+        },
+        {
+          "id": 729,
+          "en": "There's a storm coming.",
+          "es": "Viene una tormenta.",
+          "level": "A2"
+        },
+        {
+          "id": 730,
+          "en": "What time should we meet?",
+          "es": "¿A qué hora nos vemos?",
+          "level": "A2"
+        },
+        {
+          "id": 731,
+          "en": "Let's meet at seven thirty.",
+          "es": "Nos vemos a las siete y media.",
+          "level": "A2"
+        },
+        {
+          "id": 732,
+          "en": "Don't be late.",
+          "es": "No llegues tarde.",
+          "level": "A2"
+        },
+        {
+          "id": 733,
+          "en": "I'll be there in ten minutes.",
+          "es": "Llego en diez minutos.",
+          "level": "A2"
+        },
+        {
+          "id": 734,
+          "en": "I'm five minutes away.",
+          "es": "Estoy a cinco minutos.",
+          "level": "A2"
+        },
+        {
+          "id": 735,
+          "en": "It's getting dark.",
+          "es": "Ya está oscureciendo.",
+          "level": "A2"
+        },
+        {
+          "id": 736,
+          "en": "What time is it there?",
+          "es": "¿Qué hora es allá?",
+          "level": "A2"
+        },
+        {
+          "id": 737,
+          "en": "It rained all night.",
+          "es": "Llovió toda la noche.",
+          "level": "A2"
+        },
+        {
+          "id": 738,
+          "en": "Spring is my favorite season.",
+          "es": "La primavera es mi estación favorita.",
+          "level": "A2"
+        },
+        {
+          "id": 739,
+          "en": "The weather is crazy today.",
+          "es": "El clima está bien loco hoy.",
+          "level": "B1"
+        },
+        {
+          "id": 740,
+          "en": "The rainy season is starting.",
+          "es": "Ya va a empezar la temporada de lluvias.",
+          "level": "B1"
+        },
+        {
+          "id": 741,
+          "en": "Time flies.",
+          "es": "El tiempo se pasa volando.",
+          "level": "B1"
+        },
+        {
+          "id": 742,
+          "en": "The days are getting shorter.",
+          "es": "Los días se están haciendo más cortos.",
+          "level": "B1"
+        },
+        {
+          "id": 743,
+          "en": "There's a two-hour time difference.",
+          "es": "Hay dos horas de diferencia.",
+          "level": "B1"
+        },
+        {
+          "id": 744,
+          "en": "Daylight saving time starts on Sunday.",
+          "es": "El horario de verano empieza el domingo.",
+          "level": "B1"
+        },
+        {
+          "id": 745,
+          "en": "It's supposed to clear up this afternoon.",
+          "es": "Se supone que despeja en la tarde.",
+          "level": "B1"
+        },
+        {
+          "id": 746,
+          "en": "Winter is almost here.",
+          "es": "Ya mero llega el invierno.",
+          "level": "B1"
+        },
+        {
+          "id": 747,
+          "en": "The heat is unbearable.",
+          "es": "El calor está insoportable.",
+          "level": "B1"
+        },
+        {
+          "id": 748,
+          "en": "It hailed this morning.",
+          "es": "Cayó granizo en la mañana.",
+          "level": "B1"
+        },
+        {
+          "id": 749,
+          "en": "The weekend went by so fast.",
+          "es": "El fin de semana se fue volando.",
+          "level": "B1"
+        },
+        {
+          "id": 750,
+          "en": "We're running out of time.",
+          "es": "Se nos acaba el tiempo.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "family_friends",
+      "name_es": "Familia y amigos",
+      "name_en": "Family & Friends",
+      "emoji": "👨‍👩‍👧",
+      "phrases": [
+        {
+          "id": 751,
+          "en": "This is my mom.",
+          "es": "Ella es mi mamá.",
+          "level": "A1"
+        },
+        {
+          "id": 752,
+          "en": "This is my dad.",
+          "es": "Él es mi papá.",
+          "level": "A1"
+        },
+        {
+          "id": 753,
+          "en": "I have two brothers.",
+          "es": "Tengo dos hermanos.",
+          "level": "A1"
+        },
+        {
+          "id": 754,
+          "en": "I have an older sister.",
+          "es": "Tengo una hermana mayor.",
+          "level": "A1"
+        },
+        {
+          "id": 755,
+          "en": "I'm the youngest.",
+          "es": "Soy el más chico.",
+          "level": "A1"
+        },
+        {
+          "id": 756,
+          "en": "I'm the oldest.",
+          "es": "Soy el mayor.",
+          "level": "A1"
+        },
+        {
+          "id": 757,
+          "en": "Do you have siblings?",
+          "es": "¿Tienes hermanos?",
+          "level": "A1"
+        },
+        {
+          "id": 758,
+          "en": "My grandmother lives with us.",
+          "es": "Mi abuelita vive con nosotros.",
+          "level": "A1"
+        },
+        {
+          "id": 759,
+          "en": "I visit my grandparents on Sundays.",
+          "es": "Visito a mis abuelos los domingos.",
+          "level": "A1"
+        },
+        {
+          "id": 760,
+          "en": "He's my best friend.",
+          "es": "Es mi mejor amigo.",
+          "level": "A1"
+        },
+        {
+          "id": 761,
+          "en": "We're a big family.",
+          "es": "Somos una familia grande.",
+          "level": "A1"
+        },
+        {
+          "id": 762,
+          "en": "My wife is from Puebla.",
+          "es": "Mi esposa es de Puebla.",
+          "level": "A1"
+        },
+        {
+          "id": 763,
+          "en": "My husband works nights.",
+          "es": "Mi esposo trabaja de noche.",
+          "level": "A1"
+        },
+        {
+          "id": 764,
+          "en": "My cousin is my best friend.",
+          "es": "Mi prima es mi mejor amiga.",
+          "level": "A1"
+        },
+        {
+          "id": 765,
+          "en": "I look like my dad.",
+          "es": "Me parezco a mi papá.",
+          "level": "A2"
+        },
+        {
+          "id": 766,
+          "en": "My parents are very strict.",
+          "es": "Mis papás son muy estrictos.",
+          "level": "A2"
+        },
+        {
+          "id": 767,
+          "en": "My mom is a great cook.",
+          "es": "Mi mamá cocina delicioso.",
+          "level": "A2"
+        },
+        {
+          "id": 768,
+          "en": "We've been friends since school.",
+          "es": "Somos amigos desde la escuela.",
+          "level": "A2"
+        },
+        {
+          "id": 769,
+          "en": "We grew up together.",
+          "es": "Crecimos juntos.",
+          "level": "A2"
+        },
+        {
+          "id": 770,
+          "en": "She's like a sister to me.",
+          "es": "Es como mi hermana.",
+          "level": "A2"
+        },
+        {
+          "id": 771,
+          "en": "My brother just got married.",
+          "es": "Mi hermano se acaba de casar.",
+          "level": "A2"
+        },
+        {
+          "id": 772,
+          "en": "My sister is expecting a baby.",
+          "es": "Mi hermana está esperando bebé.",
+          "level": "A2"
+        },
+        {
+          "id": 773,
+          "en": "I'm going to be an uncle!",
+          "es": "¡Voy a ser tío!",
+          "level": "A2"
+        },
+        {
+          "id": 774,
+          "en": "My niece just turned five.",
+          "es": "Mi sobrina acaba de cumplir cinco años.",
+          "level": "A2"
+        },
+        {
+          "id": 775,
+          "en": "The whole family gets together at Christmas.",
+          "es": "Toda la familia se junta en Navidad.",
+          "level": "A2"
+        },
+        {
+          "id": 776,
+          "en": "My son is learning to walk.",
+          "es": "Mi hijo está aprendiendo a caminar.",
+          "level": "A2"
+        },
+        {
+          "id": 777,
+          "en": "My daughter starts school this year.",
+          "es": "Mi hija entra a la escuela este año.",
+          "level": "A2"
+        },
+        {
+          "id": 778,
+          "en": "The kids are growing up so fast.",
+          "es": "Los niños están creciendo bien rápido.",
+          "level": "A2"
+        },
+        {
+          "id": 779,
+          "en": "How did you two meet?",
+          "es": "¿Cómo se conocieron?",
+          "level": "A2"
+        },
+        {
+          "id": 780,
+          "en": "We met through friends.",
+          "es": "Nos conocimos por unos amigos.",
+          "level": "A2"
+        },
+        {
+          "id": 781,
+          "en": "We've been together for ten years.",
+          "es": "Llevamos diez años juntos.",
+          "level": "A2"
+        },
+        {
+          "id": 782,
+          "en": "Family comes first.",
+          "es": "La familia es primero.",
+          "level": "A2"
+        },
+        {
+          "id": 783,
+          "en": "The wedding is in December.",
+          "es": "La boda es en diciembre.",
+          "level": "A2"
+        },
+        {
+          "id": 784,
+          "en": "The baby is due in March.",
+          "es": "El bebé nace en marzo.",
+          "level": "B1"
+        },
+        {
+          "id": 785,
+          "en": "He takes after his mother.",
+          "es": "Salió igualito a su mamá.",
+          "level": "B1"
+        },
+        {
+          "id": 786,
+          "en": "We're having a family reunion.",
+          "es": "Vamos a hacer una reunión familiar.",
+          "level": "B1"
+        },
+        {
+          "id": 787,
+          "en": "My in-laws are visiting this weekend.",
+          "es": "Mis suegros vienen de visita este fin de semana.",
+          "level": "B1"
+        },
+        {
+          "id": 788,
+          "en": "I get along well with my mother-in-law.",
+          "es": "Me llevo bien con mi suegra.",
+          "level": "B1"
+        },
+        {
+          "id": 789,
+          "en": "We don't always agree, but we love each other.",
+          "es": "No siempre estamos de acuerdo, pero nos queremos.",
+          "level": "B1"
+        },
+        {
+          "id": 790,
+          "en": "Are you seeing anyone?",
+          "es": "¿Andas con alguien?",
+          "level": "B1"
+        },
+        {
+          "id": 791,
+          "en": "We just started dating.",
+          "es": "Apenas empezamos a salir.",
+          "level": "B1"
+        },
+        {
+          "id": 792,
+          "en": "He proposed last month!",
+          "es": "¡Le pidió matrimonio el mes pasado!",
+          "level": "B1"
+        },
+        {
+          "id": 793,
+          "en": "They named the baby after his grandfather.",
+          "es": "Le pusieron al bebé el nombre de su abuelo.",
+          "level": "B1"
+        },
+        {
+          "id": 794,
+          "en": "I trust him with my life.",
+          "es": "Le confiaría mi vida.",
+          "level": "B1"
+        },
+        {
+          "id": 795,
+          "en": "Friends are the family you choose.",
+          "es": "Los amigos son la familia que uno escoge.",
+          "level": "B1"
+        },
+        {
+          "id": 796,
+          "en": "We lost touch over the years.",
+          "es": "Con los años perdimos el contacto.",
+          "level": "B1"
+        },
+        {
+          "id": 797,
+          "en": "We reconnected on social media.",
+          "es": "Nos reencontramos por redes sociales.",
+          "level": "B1"
+        },
+        {
+          "id": 798,
+          "en": "She's always there for me.",
+          "es": "Ella siempre está ahí para mí.",
+          "level": "B1"
+        },
+        {
+          "id": 799,
+          "en": "I'd do anything for my family.",
+          "es": "Haría lo que fuera por mi familia.",
+          "level": "B1"
+        },
+        {
+          "id": 800,
+          "en": "Blood is thicker than water.",
+          "es": "La familia es la familia.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "hobbies_freetime",
+      "name_es": "Pasatiempos y tiempo libre",
+      "name_en": "Hobbies & Free Time",
+      "emoji": "🎨",
+      "phrases": [
+        {
+          "id": 801,
+          "en": "What do you do in your free time?",
+          "es": "¿Qué haces en tu tiempo libre?",
+          "level": "A1"
+        },
+        {
+          "id": 802,
+          "en": "I like to read.",
+          "es": "Me gusta leer.",
+          "level": "A1"
+        },
+        {
+          "id": 803,
+          "en": "I like listening to music.",
+          "es": "Me gusta escuchar música.",
+          "level": "A1"
+        },
+        {
+          "id": 804,
+          "en": "I play soccer on weekends.",
+          "es": "Juego futbol los fines de semana.",
+          "level": "A1"
+        },
+        {
+          "id": 805,
+          "en": "I like watching movies.",
+          "es": "Me gusta ver películas.",
+          "level": "A1"
+        },
+        {
+          "id": 806,
+          "en": "Do you like sports?",
+          "es": "¿Te gustan los deportes?",
+          "level": "A1"
+        },
+        {
+          "id": 807,
+          "en": "I play the guitar.",
+          "es": "Toco la guitarra.",
+          "level": "A1"
+        },
+        {
+          "id": 808,
+          "en": "I'm learning to cook.",
+          "es": "Estoy aprendiendo a cocinar.",
+          "level": "A1"
+        },
+        {
+          "id": 809,
+          "en": "I love dancing.",
+          "es": "Me encanta bailar.",
+          "level": "A1"
+        },
+        {
+          "id": 810,
+          "en": "Let's go to the movies.",
+          "es": "Vamos al cine.",
+          "level": "A1"
+        },
+        {
+          "id": 811,
+          "en": "What movie do you want to see?",
+          "es": "¿Qué película quieres ver?",
+          "level": "A1"
+        },
+        {
+          "id": 812,
+          "en": "Let's grab a coffee.",
+          "es": "Vamos por un café.",
+          "level": "A1"
+        },
+        {
+          "id": 813,
+          "en": "Are you free on Saturday?",
+          "es": "¿Estás libre el sábado?",
+          "level": "A1"
+        },
+        {
+          "id": 814,
+          "en": "I like taking photos.",
+          "es": "Me gusta tomar fotos.",
+          "level": "A1"
+        },
+        {
+          "id": 815,
+          "en": "Do you want to play video games?",
+          "es": "¿Quieres jugar videojuegos?",
+          "level": "A1"
+        },
+        {
+          "id": 816,
+          "en": "Put on some music.",
+          "es": "Pon música.",
+          "level": "A1"
+        },
+        {
+          "id": 817,
+          "en": "Do you want to hang out this weekend?",
+          "es": "¿Quieres salir este fin de semana?",
+          "level": "A2"
+        },
+        {
+          "id": 818,
+          "en": "I'm in!",
+          "es": "¡Cuenta conmigo!",
+          "level": "A2"
+        },
+        {
+          "id": 819,
+          "en": "Maybe next time.",
+          "es": "Quizá para la próxima.",
+          "level": "A2"
+        },
+        {
+          "id": 820,
+          "en": "I can't make it.",
+          "es": "No voy a poder ir.",
+          "level": "A2"
+        },
+        {
+          "id": 821,
+          "en": "Sorry, I have plans.",
+          "es": "Perdón, ya tengo planes.",
+          "level": "A2"
+        },
+        {
+          "id": 822,
+          "en": "The tickets are on me.",
+          "es": "Yo invito los boletos.",
+          "level": "A2"
+        },
+        {
+          "id": 823,
+          "en": "My favorite team lost again.",
+          "es": "Mi equipo favorito volvió a perder.",
+          "level": "A2"
+        },
+        {
+          "id": 824,
+          "en": "What are you watching these days?",
+          "es": "¿Qué series estás viendo últimamente?",
+          "level": "A2"
+        },
+        {
+          "id": 825,
+          "en": "Turn it up!",
+          "es": "¡Súbele!",
+          "level": "A2"
+        },
+        {
+          "id": 826,
+          "en": "I got tickets to the concert.",
+          "es": "Conseguí boletos para el concierto.",
+          "level": "A2"
+        },
+        {
+          "id": 827,
+          "en": "The concert was sold out.",
+          "es": "Se agotaron los boletos del concierto.",
+          "level": "A2"
+        },
+        {
+          "id": 828,
+          "en": "I'm taking English classes online.",
+          "es": "Estoy tomando clases de inglés en línea.",
+          "level": "A2"
+        },
+        {
+          "id": 829,
+          "en": "I practice English every day.",
+          "es": "Practico inglés todos los días.",
+          "level": "A2"
+        },
+        {
+          "id": 830,
+          "en": "I go for a run in the mornings.",
+          "es": "Salgo a correr en las mañanas.",
+          "level": "A2"
+        },
+        {
+          "id": 831,
+          "en": "One more game and that's it.",
+          "es": "Una partida más y ya.",
+          "level": "A2"
+        },
+        {
+          "id": 832,
+          "en": "We're throwing a party on Friday.",
+          "es": "Vamos a hacer una fiesta el viernes.",
+          "level": "A2"
+        },
+        {
+          "id": 833,
+          "en": "Bring something to drink.",
+          "es": "Trae algo de tomar.",
+          "level": "A2"
+        },
+        {
+          "id": 834,
+          "en": "I stayed home and did nothing.",
+          "es": "Me quedé en casa sin hacer nada.",
+          "level": "A2"
+        },
+        {
+          "id": 835,
+          "en": "Sometimes I just want to relax.",
+          "es": "A veces solo quiero relajarme.",
+          "level": "A2"
+        },
+        {
+          "id": 836,
+          "en": "We went camping last weekend.",
+          "es": "Fuimos a acampar el fin de semana pasado.",
+          "level": "A2"
+        },
+        {
+          "id": 837,
+          "en": "I'm binge-watching a new series.",
+          "es": "Estoy maratoneando una serie nueva.",
+          "level": "B1"
+        },
+        {
+          "id": 838,
+          "en": "No spoilers, please!",
+          "es": "¡Sin spoilers, por favor!",
+          "level": "B1"
+        },
+        {
+          "id": 839,
+          "en": "This song is stuck in my head.",
+          "es": "Traigo esta canción pegada.",
+          "level": "B1"
+        },
+        {
+          "id": 840,
+          "en": "I'm hooked on this game.",
+          "es": "Estoy bien clavado con este juego.",
+          "level": "B1"
+        },
+        {
+          "id": 841,
+          "en": "Let's have a barbecue on Sunday.",
+          "es": "Hagamos carne asada el domingo.",
+          "level": "B1"
+        },
+        {
+          "id": 842,
+          "en": "The party got out of hand.",
+          "es": "La fiesta se salió de control.",
+          "level": "B1"
+        },
+        {
+          "id": 843,
+          "en": "I need a break from screens.",
+          "es": "Necesito un descanso de las pantallas.",
+          "level": "B1"
+        },
+        {
+          "id": 844,
+          "en": "I love hiking in the mountains.",
+          "es": "Me encanta ir de caminata a la montaña.",
+          "level": "B1"
+        },
+        {
+          "id": 845,
+          "en": "Let's plan a road trip.",
+          "es": "Planeemos un viaje en carretera.",
+          "level": "B1"
+        },
+        {
+          "id": 846,
+          "en": "I collect vinyl records.",
+          "es": "Colecciono discos de vinilo.",
+          "level": "B1"
+        },
+        {
+          "id": 847,
+          "en": "I'm trying to learn chess.",
+          "es": "Estoy tratando de aprender ajedrez.",
+          "level": "B1"
+        },
+        {
+          "id": 848,
+          "en": "Painting helps me relax.",
+          "es": "Pintar me relaja.",
+          "level": "B1"
+        },
+        {
+          "id": 849,
+          "en": "I signed up for salsa classes.",
+          "es": "Me inscribí a clases de salsa.",
+          "level": "B1"
+        },
+        {
+          "id": 850,
+          "en": "Life is short; enjoy it.",
+          "es": "La vida es corta; hay que disfrutarla.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "connectors_fillers",
+      "name_es": "Conectores y muletillas",
+      "name_en": "Connectors & Fillers",
+      "emoji": "🔗",
+      "phrases": [
+        {
+          "id": 851,
+          "en": "Well...",
+          "es": "Pues...",
+          "level": "A1"
+        },
+        {
+          "id": 852,
+          "en": "So...",
+          "es": "Entonces...",
+          "level": "A1"
+        },
+        {
+          "id": 853,
+          "en": "But...",
+          "es": "Pero...",
+          "level": "A1"
+        },
+        {
+          "id": 854,
+          "en": "Because...",
+          "es": "Porque...",
+          "level": "A1"
+        },
+        {
+          "id": 855,
+          "en": "Also...",
+          "es": "También...",
+          "level": "A1"
+        },
+        {
+          "id": 856,
+          "en": "Then...",
+          "es": "Luego...",
+          "level": "A1"
+        },
+        {
+          "id": 857,
+          "en": "First of all...",
+          "es": "Antes que nada...",
+          "level": "A1"
+        },
+        {
+          "id": 858,
+          "en": "For example...",
+          "es": "Por ejemplo...",
+          "level": "A1"
+        },
+        {
+          "id": 859,
+          "en": "Of course.",
+          "es": "Claro que sí.",
+          "level": "A1"
+        },
+        {
+          "id": 860,
+          "en": "Maybe.",
+          "es": "A lo mejor.",
+          "level": "A1"
+        },
+        {
+          "id": 861,
+          "en": "Let me think.",
+          "es": "Déjame pensar.",
+          "level": "A1"
+        },
+        {
+          "id": 862,
+          "en": "I mean...",
+          "es": "O sea...",
+          "level": "A2"
+        },
+        {
+          "id": 863,
+          "en": "You know...",
+          "es": "Ya sabes...",
+          "level": "A2"
+        },
+        {
+          "id": 864,
+          "en": "Like...",
+          "es": "Como que...",
+          "level": "A2"
+        },
+        {
+          "id": 865,
+          "en": "Actually...",
+          "es": "De hecho...",
+          "level": "A2"
+        },
+        {
+          "id": 866,
+          "en": "By the way...",
+          "es": "Por cierto...",
+          "level": "A2"
+        },
+        {
+          "id": 867,
+          "en": "Anyway...",
+          "es": "En fin...",
+          "level": "A2"
+        },
+        {
+          "id": 868,
+          "en": "In other words...",
+          "es": "En otras palabras...",
+          "level": "A2"
+        },
+        {
+          "id": 869,
+          "en": "On the other hand...",
+          "es": "Por otro lado...",
+          "level": "A2"
+        },
+        {
+          "id": 870,
+          "en": "However...",
+          "es": "Sin embargo...",
+          "level": "A2"
+        },
+        {
+          "id": 871,
+          "en": "Although...",
+          "es": "Aunque...",
+          "level": "A2"
+        },
+        {
+          "id": 872,
+          "en": "Therefore...",
+          "es": "Por lo tanto...",
+          "level": "A2"
+        },
+        {
+          "id": 873,
+          "en": "In fact...",
+          "es": "Es más...",
+          "level": "A2"
+        },
+        {
+          "id": 874,
+          "en": "At least...",
+          "es": "Por lo menos...",
+          "level": "A2"
+        },
+        {
+          "id": 875,
+          "en": "Besides...",
+          "es": "Además...",
+          "level": "A2"
+        },
+        {
+          "id": 876,
+          "en": "Even though...",
+          "es": "A pesar de que...",
+          "level": "A2"
+        },
+        {
+          "id": 877,
+          "en": "That is to say...",
+          "es": "Es decir...",
+          "level": "A2"
+        },
+        {
+          "id": 878,
+          "en": "In short...",
+          "es": "En resumen...",
+          "level": "A2"
+        },
+        {
+          "id": 879,
+          "en": "All of a sudden...",
+          "es": "De repente...",
+          "level": "A2"
+        },
+        {
+          "id": 880,
+          "en": "Little by little.",
+          "es": "Poco a poco.",
+          "level": "A2"
+        },
+        {
+          "id": 881,
+          "en": "Sooner or later...",
+          "es": "Tarde o temprano...",
+          "level": "A2"
+        },
+        {
+          "id": 882,
+          "en": "Once in a while...",
+          "es": "De vez en cuando...",
+          "level": "A2"
+        },
+        {
+          "id": 883,
+          "en": "Above all...",
+          "es": "Sobre todo...",
+          "level": "A2"
+        },
+        {
+          "id": 884,
+          "en": "In the meantime...",
+          "es": "Mientras tanto...",
+          "level": "A2"
+        },
+        {
+          "id": 885,
+          "en": "Just in case...",
+          "es": "Por si acaso...",
+          "level": "A2"
+        },
+        {
+          "id": 886,
+          "en": "What was I saying?",
+          "es": "¿En qué me quedé?",
+          "level": "B1"
+        },
+        {
+          "id": 887,
+          "en": "How can I put this?",
+          "es": "¿Cómo te lo explico?",
+          "level": "B1"
+        },
+        {
+          "id": 888,
+          "en": "It's on the tip of my tongue.",
+          "es": "Lo tengo en la punta de la lengua.",
+          "level": "B1"
+        },
+        {
+          "id": 889,
+          "en": "Long story short...",
+          "es": "Para no hacerte el cuento largo...",
+          "level": "B1"
+        },
+        {
+          "id": 890,
+          "en": "The thing is...",
+          "es": "Lo que pasa es que...",
+          "level": "B1"
+        },
+        {
+          "id": 891,
+          "en": "To be fair...",
+          "es": "Para ser justos...",
+          "level": "B1"
+        },
+        {
+          "id": 892,
+          "en": "As far as I know...",
+          "es": "Hasta donde yo sé...",
+          "level": "B1"
+        },
+        {
+          "id": 893,
+          "en": "If I remember correctly...",
+          "es": "Si mal no recuerdo...",
+          "level": "B1"
+        },
+        {
+          "id": 894,
+          "en": "Speaking of which...",
+          "es": "Hablando de eso...",
+          "level": "B1"
+        },
+        {
+          "id": 895,
+          "en": "That reminds me...",
+          "es": "Eso me recuerda...",
+          "level": "B1"
+        },
+        {
+          "id": 896,
+          "en": "Believe it or not...",
+          "es": "Aunque no lo creas...",
+          "level": "B1"
+        },
+        {
+          "id": 897,
+          "en": "Between you and me...",
+          "es": "Aquí entre nos...",
+          "level": "B1"
+        },
+        {
+          "id": 898,
+          "en": "At the end of the day...",
+          "es": "A fin de cuentas...",
+          "level": "B1"
+        },
+        {
+          "id": 899,
+          "en": "It's a long story.",
+          "es": "Es una larga historia.",
+          "level": "B1"
+        },
+        {
+          "id": 900,
+          "en": "Anyway, as I was saying...",
+          "es": "Bueno, como te iba diciendo...",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "politeness_requests",
+      "name_es": "Cortesía y peticiones",
+      "name_en": "Politeness & Requests",
+      "emoji": "🙏",
+      "phrases": [
+        {
+          "id": 901,
+          "en": "Please.",
+          "es": "Por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 902,
+          "en": "Thank you.",
+          "es": "Gracias.",
+          "level": "A1"
+        },
+        {
+          "id": 903,
+          "en": "Thank you very much.",
+          "es": "Muchas gracias.",
+          "level": "A1"
+        },
+        {
+          "id": 904,
+          "en": "You're welcome.",
+          "es": "De nada.",
+          "level": "A1"
+        },
+        {
+          "id": 905,
+          "en": "Excuse me.",
+          "es": "Disculpe.",
+          "level": "A1"
+        },
+        {
+          "id": 906,
+          "en": "I'm sorry.",
+          "es": "Lo siento.",
+          "level": "A1"
+        },
+        {
+          "id": 907,
+          "en": "No problem.",
+          "es": "No hay problema.",
+          "level": "A1"
+        },
+        {
+          "id": 908,
+          "en": "May I come in?",
+          "es": "¿Puedo pasar?",
+          "level": "A1"
+        },
+        {
+          "id": 909,
+          "en": "Come in, please.",
+          "es": "Pásale, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 910,
+          "en": "Have a seat.",
+          "es": "Toma asiento.",
+          "level": "A1"
+        },
+        {
+          "id": 911,
+          "en": "Could you repeat that, please?",
+          "es": "¿Me lo repite, por favor?",
+          "level": "A1"
+        },
+        {
+          "id": 912,
+          "en": "Could you speak more slowly?",
+          "es": "¿Puede hablar más despacio, por favor?",
+          "level": "A1"
+        },
+        {
+          "id": 913,
+          "en": "Sorry, I don't understand.",
+          "es": "Perdón, no entiendo.",
+          "level": "A1"
+        },
+        {
+          "id": 914,
+          "en": "One moment, please.",
+          "es": "Un momento, por favor.",
+          "level": "A1"
+        },
+        {
+          "id": 915,
+          "en": "Go ahead.",
+          "es": "Adelante.",
+          "level": "A1"
+        },
+        {
+          "id": 916,
+          "en": "Congratulations!",
+          "es": "¡Felicidades!",
+          "level": "A1"
+        },
+        {
+          "id": 917,
+          "en": "Happy birthday!",
+          "es": "¡Feliz cumpleaños!",
+          "level": "A1"
+        },
+        {
+          "id": 918,
+          "en": "Bless you!",
+          "es": "¡Salud!",
+          "level": "A1"
+        },
+        {
+          "id": 919,
+          "en": "Could you write it down?",
+          "es": "¿Me lo puede escribir?",
+          "level": "A2"
+        },
+        {
+          "id": 920,
+          "en": "Sorry to bother you.",
+          "es": "Perdón por la molestia.",
+          "level": "A2"
+        },
+        {
+          "id": 921,
+          "en": "Sorry I'm late.",
+          "es": "Perdón por llegar tarde.",
+          "level": "A2"
+        },
+        {
+          "id": 922,
+          "en": "Excuse me, coming through.",
+          "es": "Con permiso.",
+          "level": "A2"
+        },
+        {
+          "id": 923,
+          "en": "After you.",
+          "es": "Pase usted primero.",
+          "level": "A2"
+        },
+        {
+          "id": 924,
+          "en": "Could you do me a favor?",
+          "es": "¿Me haces un favor?",
+          "level": "A2"
+        },
+        {
+          "id": 925,
+          "en": "Of course, with pleasure.",
+          "es": "Claro, con mucho gusto.",
+          "level": "A2"
+        },
+        {
+          "id": 926,
+          "en": "Could you give me a hand?",
+          "es": "¿Me echas una mano?",
+          "level": "A2"
+        },
+        {
+          "id": 927,
+          "en": "Thanks in advance.",
+          "es": "Gracias de antemano.",
+          "level": "A2"
+        },
+        {
+          "id": 928,
+          "en": "Thank you for your time.",
+          "es": "Gracias por su tiempo.",
+          "level": "A2"
+        },
+        {
+          "id": 929,
+          "en": "Thanks for everything.",
+          "es": "Gracias por todo.",
+          "level": "A2"
+        },
+        {
+          "id": 930,
+          "en": "Thanks for having me.",
+          "es": "Gracias por invitarme.",
+          "level": "A2"
+        },
+        {
+          "id": 931,
+          "en": "It was my pleasure.",
+          "es": "Fue un placer.",
+          "level": "A2"
+        },
+        {
+          "id": 932,
+          "en": "That's very kind of you.",
+          "es": "Es muy amable de tu parte.",
+          "level": "A2"
+        },
+        {
+          "id": 933,
+          "en": "Do you mind if I sit here?",
+          "es": "¿Le importa si me siento aquí?",
+          "level": "A2"
+        },
+        {
+          "id": 934,
+          "en": "Could I borrow your pen?",
+          "es": "¿Me prestas tu pluma?",
+          "level": "A2"
+        },
+        {
+          "id": 935,
+          "en": "Can I get you anything?",
+          "es": "¿Te ofrezco algo?",
+          "level": "A2"
+        },
+        {
+          "id": 936,
+          "en": "Help yourself.",
+          "es": "Sírvete con confianza.",
+          "level": "A2"
+        },
+        {
+          "id": 937,
+          "en": "Make yourself at home.",
+          "es": "Estás en tu casa.",
+          "level": "A2"
+        },
+        {
+          "id": 938,
+          "en": "Don't mention it.",
+          "es": "No hay de qué.",
+          "level": "A2"
+        },
+        {
+          "id": 939,
+          "en": "Excuse me for interrupting.",
+          "es": "Perdón por interrumpir.",
+          "level": "B1"
+        },
+        {
+          "id": 940,
+          "en": "Would you mind closing the door?",
+          "es": "¿Te molestaría cerrar la puerta?",
+          "level": "B1"
+        },
+        {
+          "id": 941,
+          "en": "I'd appreciate it.",
+          "es": "Te lo agradecería mucho.",
+          "level": "B1"
+        },
+        {
+          "id": 942,
+          "en": "I owe you one.",
+          "es": "Te debo una.",
+          "level": "B1"
+        },
+        {
+          "id": 943,
+          "en": "I apologize for the inconvenience.",
+          "es": "Una disculpa por las molestias.",
+          "level": "B1"
+        },
+        {
+          "id": 944,
+          "en": "No offense, but...",
+          "es": "No te ofendas, pero...",
+          "level": "B1"
+        },
+        {
+          "id": 945,
+          "en": "None taken.",
+          "es": "Para nada, no me ofende.",
+          "level": "B1"
+        },
+        {
+          "id": 946,
+          "en": "With all due respect...",
+          "es": "Con todo respeto...",
+          "level": "B1"
+        },
+        {
+          "id": 947,
+          "en": "If it's not too much trouble...",
+          "es": "Si no es mucha molestia...",
+          "level": "B1"
+        },
+        {
+          "id": 948,
+          "en": "Whenever you have a chance.",
+          "es": "Cuando tengas oportunidad.",
+          "level": "B1"
+        },
+        {
+          "id": 949,
+          "en": "I really appreciate everything you've done.",
+          "es": "De verdad agradezco todo lo que has hecho.",
+          "level": "B1"
+        },
+        {
+          "id": 950,
+          "en": "My deepest condolences.",
+          "es": "Mi más sentido pésame.",
+          "level": "B1"
+        }
+      ]
+    },
+    {
+      "id": "slang_expressions",
+      "name_es": "Jerga y expresiones",
+      "name_en": "Slang & Expressions",
+      "emoji": "😎",
+      "phrases": [
+        {
+          "id": 951,
+          "en": "Cool!",
+          "es": "¡Qué padre!",
+          "level": "A1"
+        },
+        {
+          "id": 952,
+          "en": "Awesome!",
+          "es": "¡Qué chido!",
+          "level": "A1"
+        },
+        {
+          "id": 953,
+          "en": "No way!",
+          "es": "¡No manches!",
+          "level": "A1"
+        },
+        {
+          "id": 954,
+          "en": "That's crazy!",
+          "es": "¡Qué locura!",
+          "level": "A1"
+        },
+        {
+          "id": 955,
+          "en": "Oh my God!",
+          "es": "¡No inventes!",
+          "level": "A1"
+        },
+        {
+          "id": 956,
+          "en": "Just kidding!",
+          "es": "¡Es broma!",
+          "level": "A1"
+        },
+        {
+          "id": 957,
+          "en": "Good luck!",
+          "es": "¡Mucha suerte!",
+          "level": "A1"
+        },
+        {
+          "id": 958,
+          "en": "Hurry up!",
+          "es": "¡Apúrate!",
+          "level": "A1"
+        },
+        {
+          "id": 959,
+          "en": "I'm on my way.",
+          "es": "Ya voy en camino.",
+          "level": "A1"
+        },
+        {
+          "id": 960,
+          "en": "Let's do it!",
+          "es": "¡Órale, vamos!",
+          "level": "A1"
+        },
+        {
+          "id": 961,
+          "en": "Sounds good.",
+          "es": "Va, suena bien.",
+          "level": "A1"
+        },
+        {
+          "id": 962,
+          "en": "Same here.",
+          "es": "Igual yo.",
+          "level": "A1"
+        },
+        {
+          "id": 963,
+          "en": "Keep it up!",
+          "es": "¡Sigue así!",
+          "level": "A1"
+        },
+        {
+          "id": 964,
+          "en": "It's up to you.",
+          "es": "Como tú quieras.",
+          "level": "A1"
+        },
+        {
+          "id": 965,
+          "en": "What's the plan?",
+          "es": "¿Cuál es el plan?",
+          "level": "A1"
+        },
+        {
+          "id": 966,
+          "en": "For real?",
+          "es": "¿Neta?",
+          "level": "A2"
+        },
+        {
+          "id": 967,
+          "en": "Are you kidding me?",
+          "es": "¿Me estás vacilando?",
+          "level": "A2"
+        },
+        {
+          "id": 968,
+          "en": "What the heck?",
+          "es": "¿Qué rayos?",
+          "level": "A2"
+        },
+        {
+          "id": 969,
+          "en": "I swear.",
+          "es": "Te lo juro.",
+          "level": "A2"
+        },
+        {
+          "id": 970,
+          "en": "My bad.",
+          "es": "Fue mi error, perdón.",
+          "level": "A2"
+        },
+        {
+          "id": 971,
+          "en": "Chill out.",
+          "es": "Relájate.",
+          "level": "A2"
+        },
+        {
+          "id": 972,
+          "en": "Take it easy.",
+          "es": "Tómatelo con calma.",
+          "level": "A2"
+        },
+        {
+          "id": 973,
+          "en": "Hang in there.",
+          "es": "Aguanta, échale ganas.",
+          "level": "A2"
+        },
+        {
+          "id": 974,
+          "en": "I'm down.",
+          "es": "Va, le entro.",
+          "level": "A2"
+        },
+        {
+          "id": 975,
+          "en": "Whatever.",
+          "es": "Como sea.",
+          "level": "A2"
+        },
+        {
+          "id": 976,
+          "en": "That sucks.",
+          "es": "Qué gacho.",
+          "level": "A2"
+        },
+        {
+          "id": 977,
+          "en": "Bummer.",
+          "es": "Qué bajón.",
+          "level": "A2"
+        },
+        {
+          "id": 978,
+          "en": "I messed up.",
+          "es": "La regué.",
+          "level": "A2"
+        },
+        {
+          "id": 979,
+          "en": "You nailed it!",
+          "es": "¡Te la rifaste!",
+          "level": "A2"
+        },
+        {
+          "id": 980,
+          "en": "Show off!",
+          "es": "¡Presumido!",
+          "level": "A2"
+        },
+        {
+          "id": 981,
+          "en": "I'm broke.",
+          "es": "Ando sin un peso.",
+          "level": "A2"
+        },
+        {
+          "id": 982,
+          "en": "I'm beat.",
+          "es": "Estoy molido.",
+          "level": "A2"
+        },
+        {
+          "id": 983,
+          "en": "Better late than never.",
+          "es": "Más vale tarde que nunca.",
+          "level": "A2"
+        },
+        {
+          "id": 984,
+          "en": "It's on the house.",
+          "es": "Va por cuenta de la casa.",
+          "level": "B1"
+        },
+        {
+          "id": 985,
+          "en": "I slept like a log.",
+          "es": "Dormí como piedra.",
+          "level": "B1"
+        },
+        {
+          "id": 986,
+          "en": "That's a rip-off.",
+          "es": "¡Es un robo!",
+          "level": "B1"
+        },
+        {
+          "id": 987,
+          "en": "It cost me an arm and a leg.",
+          "es": "Me costó un ojo de la cara.",
+          "level": "B1"
+        },
+        {
+          "id": 988,
+          "en": "Don't push your luck.",
+          "es": "No te pases de lanza.",
+          "level": "B1"
+        },
+        {
+          "id": 989,
+          "en": "You're pulling my leg.",
+          "es": "Me estás tomando el pelo.",
+          "level": "B1"
+        },
+        {
+          "id": 990,
+          "en": "Piece of cake.",
+          "es": "Pan comido.",
+          "level": "B1"
+        },
+        {
+          "id": 991,
+          "en": "It's not rocket science.",
+          "es": "No es nada del otro mundo.",
+          "level": "B1"
+        },
+        {
+          "id": 992,
+          "en": "Break a leg!",
+          "es": "¡Éxito, te va a ir increíble!",
+          "level": "B1"
+        },
+        {
+          "id": 993,
+          "en": "No pain, no gain.",
+          "es": "El que quiere azul celeste, que le cueste.",
+          "level": "B1"
+        },
+        {
+          "id": 994,
+          "en": "Easier said than done.",
+          "es": "Del dicho al hecho hay mucho trecho.",
+          "level": "B1"
+        },
+        {
+          "id": 995,
+          "en": "When pigs fly.",
+          "es": "Cuando las ranas críen pelo.",
+          "level": "B1"
+        },
+        {
+          "id": 996,
+          "en": "Speak of the devil!",
+          "es": "¡Hablando del rey de Roma!",
+          "level": "B1"
+        },
+        {
+          "id": 997,
+          "en": "It is what it is.",
+          "es": "Ni modo, es lo que hay.",
+          "level": "B1"
+        },
+        {
+          "id": 998,
+          "en": "Suit yourself.",
+          "es": "Allá tú.",
+          "level": "B1"
+        },
+        {
+          "id": 999,
+          "en": "You rock!",
+          "es": "¡Eres lo máximo!",
+          "level": "B1"
+        },
+        {
+          "id": 1000,
+          "en": "Let's call it a day.",
+          "es": "Ya dejémoslo por hoy.",
+          "level": "B1"
+        }
+      ]
+    }
+  ]
+}

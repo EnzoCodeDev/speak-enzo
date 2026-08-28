@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# Subtítulos en tiempo real (inglés) para VRChat — instala Y ejecuta con un solo comando.
+set -e
+DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+VENV="$DIR/.venv"
+MARKER="$VENV/.deps-ok"
+
+log() { echo "[vrchat-subtitulos] $*"; }
+
+# ---------- 1. entorno de Python + dependencias ----------
+if [ ! -x "$VENV/bin/python" ]; then
+    log "Primera ejecución: creando entorno de Python…"
+    python3 -m venv "$VENV"
+fi
+if [ ! -f "$MARKER" ]; then
+    log "Instalando dependencias (puede tardar unos minutos)…"
+    "$VENV/bin/pip" install --upgrade pip -q
+    "$VENV/bin/pip" install -q -r "$DIR/requirements.txt"
+    touch "$MARKER"
+    log "Dependencias instaladas ✓"
+fi
+
+# ---------- 2. modelos de voz ----------
+mkdir -p "$DIR/models"
+if [ ! -f "$DIR/models/silero_vad.onnx" ]; then
+    log "Descargando modelo de detección de voz…"
+    wget -q -O "$DIR/models/silero_vad.onnx" \
+      https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/silero_vad.onnx
+fi
+if [ ! -f "$DIR/models/nemo_en_titanet_small.onnx" ]; then
+    log "Descargando modelo de huella de voz…"
+    wget -q -O "$DIR/models/nemo_en_titanet_small.onnx" \
+      https://github.com/k2-fsa/sherpa-onnx/releases/download/speaker-recongition-models/nemo_en_titanet_small.onnx
+fi
+
+# ---------- 3. libxcb-cursor (Qt) si el sistema no la tiene ----------
+if ! ldconfig -p | grep -q libxcb-cursor.so.0 && [ ! -f "$DIR/lib/libxcb-cursor.so.0" ]; then
+    log "Obteniendo libxcb-cursor0…"
+    mkdir -p "$DIR/lib"
+    tmp=$(mktemp -d)
+    (cd "$tmp" && apt-get download libxcb-cursor0 >/dev/null 2>&1 \
+        && dpkg-deb -x libxcb-cursor0*.deb x \
+        && cp -a x/usr/lib/*/libxcb-cursor.so.0* "$DIR/lib/") \
+      || log "AVISO: no pude obtenerla; instala con: sudo apt install libxcb-cursor0"
+    rm -rf "$tmp"
+fi
+
+# ---------- 4. IA local: arrancar Ollama si está apagado ----------
+if command -v ollama >/dev/null 2>&1; then
+    if ! curl -s -m 2 http://localhost:11434/api/tags >/dev/null 2>&1; then
+        log "Arrancando Ollama (IA local)…"
+        nohup ollama serve >/dev/null 2>&1 &
+        disown || true
+        for _ in $(seq 1 15); do
+            curl -s -m 1 http://localhost:11434/api/tags >/dev/null 2>&1 && break
+            sleep 1
+        done
+    fi
+fi
+
+# ---------- 5. lanzar ----------
+NV_LIBS="$("$VENV/bin/python" - <<'EOF'
+import glob, os, site
+paths = []
+for sp in site.getsitepackages():
+    paths += glob.glob(os.path.join(sp, "nvidia", "*", "lib"))
+print(":".join(paths))
+EOF
+)"
+export LD_LIBRARY_PATH="$DIR/lib:$NV_LIBS${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
+cd "$DIR"
+exec "$VENV/bin/python" -m app.main "$@"

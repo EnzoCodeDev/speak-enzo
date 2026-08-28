@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speak Enzo</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💙</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --indigo:#5B5FE9; --indigo-dark:#4247C9;
+    --teal:#17B5A4; --teal-dark:#0F9184;
+    --green:#2FBE6B; --green-dark:#25995A;
+    --red:#FF5257; --red-dark:#DD3A44;
+    --ink:#33355C; --ink-soft:#767BA3; --hint:#ABAECB;
+    --line:#E6E7F2; --bg:#FDFDFF; --bg-soft:#F5F6FB;
+    --sel-bg:#EBECFF; --sel-border:#C5C7FF; --sel-text:#4247C9;
+    --yellow-bg:#FFF5D8; --yellow-border:#FFE38A; --yellow-text:#C28E02;
+    --green-bg:#E1F8EB; --green-border:#A9E7C4; --green-text:#1F9D57;
+    --red-bg:#FFE4E4; --red-border:#FFB9B9; --red-text:#E04048;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{
+    font-family:'Nunito',system-ui,sans-serif; background:var(--bg); color:var(--ink);
+    display:flex; flex-direction:column; overflow:hidden;
+  }
+
+  /* ------------------------------------------------ barra superior */
+  header{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    padding:10px 18px; background:#fff; border-bottom:2px solid var(--line);
+  }
+  .wordmark{font-weight:900; font-size:24px; color:var(--indigo); letter-spacing:-.5px}
+  .spacer{flex:1}
+  .pill-group{display:flex; gap:6px}
+  .pill{
+    border:2px solid var(--line); background:#fff; color:var(--ink-soft);
+    border-radius:12px; padding:6px 12px; font:800 13px 'Nunito'; cursor:pointer;
+    box-shadow:0 2px 0 var(--line); user-select:none;
+  }
+  .pill.sel{background:var(--sel-bg); border-color:var(--sel-border);
+    color:var(--sel-text); box-shadow:0 2px 0 var(--sel-border)}
+  .pill:active{transform:translateY(2px); box-shadow:none}
+  .strict{display:flex; align-items:center; gap:7px; font:800 13px 'Nunito'; color:var(--ink-soft);
+    border:2px solid var(--line); border-radius:12px; padding:6px 12px; cursor:pointer;
+    box-shadow:0 2px 0 var(--line); user-select:none; background:#fff}
+  .strict.on{background:var(--red-bg); border-color:var(--red-border); color:var(--red-text);
+    box-shadow:0 2px 0 var(--red-border)}
+  select{
+    border:2px solid var(--line); border-radius:12px; padding:6px 10px;
+    font:700 13px 'Nunito'; color:var(--ink-soft); background:#fff; cursor:pointer;
+  }
+  .dot{width:12px; height:12px; border-radius:50%; background:var(--hint)}
+  .dot.ok{background:var(--green)} .dot.bad{background:var(--red)}
+
+  /* ------------------------------------------------ chat */
+  main{flex:1; overflow-y:auto; padding:18px; background:var(--bg-soft)}
+  .row{display:flex; margin:6px 0; align-items:flex-end; gap:8px}
+  .row.user{justify-content:flex-end}
+  .avatar{
+    width:34px; height:34px; border-radius:50%; flex:0 0 34px;
+    background:linear-gradient(135deg,#5B5FE9,#8B5CF6); color:#fff;
+    display:flex; align-items:center; justify-content:center; font:800 16px 'Nunito';
+  }
+  .bubble{
+    max-width:68%; padding:12px 15px; border-radius:18px; font-size:15.5px; line-height:1.4;
+    font-weight:600; white-space:pre-wrap;
+  }
+  .bubble.enzo{background:#fff; border:2px solid var(--line); border-bottom-left-radius:4px;
+    box-shadow:0 3px 0 var(--line)}
+  .bubble.user{background:var(--indigo); color:#fff; border-bottom-right-radius:4px;
+    box-shadow:0 3px 0 var(--indigo-dark)}
+  .hint-es{font-size:12.5px; font-style:italic; color:var(--ink-soft); margin-top:5px; font-weight:500}
+  .bubble.user .hint-es{color:rgba(255,255,255,.85)}
+  .speak-btn{border:none; background:none; cursor:pointer; font-size:18px; color:var(--indigo); padding:2px}
+
+  .card{
+    margin:4px 0 10px; padding:12px 14px; border-radius:14px; font-size:13px; line-height:1.4;
+    max-width:78%; font-weight:600;
+  }
+  .card.warn{background:var(--yellow-bg); border:2px solid var(--yellow-border); color:var(--yellow-text)}
+  .card.err{background:var(--red-bg); border:2px solid var(--red-border); color:var(--red-text)}
+  .card div+div{margin-top:5px}
+  .row.user + .card-holder{display:flex; justify-content:flex-end}
+
+  .typing{display:flex; align-items:center; gap:8px; color:var(--ink-soft); font:700 13px 'Nunito'; margin:8px 0}
+  .spinner{width:15px; height:15px; border:2.5px solid var(--line); border-top-color:var(--indigo);
+    border-radius:50%; animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ------------------------------------------------ modo estricto */
+  #practice{
+    display:none; padding:14px 18px; background:var(--yellow-bg);
+    border-top:2px solid var(--yellow-border);
+  }
+  #practice.show{display:block}
+  #practice.passed{background:var(--green-bg); border-top-color:var(--green-border)}
+  .practice-title{font:800 13px 'Nunito'; color:var(--yellow-text); letter-spacing:.5px; margin-bottom:6px}
+  .practice-phrase{font:800 19px 'Nunito'; color:var(--ink); margin-bottom:4px}
+  .practice-tip{font:600 13.5px 'Nunito'; color:var(--yellow-text); line-height:1.4; margin-bottom:10px}
+  .practice-row{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .chips{display:flex; gap:6px; flex-wrap:wrap; margin-top:10px}
+  .chip{padding:4px 10px; border-radius:10px; font:800 12.5px 'Nunito'; border:2px solid}
+  .chip.ok{background:var(--green-bg); border-color:var(--green-border); color:var(--green-text)}
+  .chip.ko{background:var(--red-bg); border-color:var(--red-border); color:var(--red-text)}
+  .skip{font:700 12px 'Nunito'; color:var(--ink-soft); cursor:pointer; text-decoration:underline;
+    margin-left:auto; display:none}
+
+  /* ------------------------------------------------ botones 3D */
+  .btn{
+    border:none; border-radius:14px; padding:10px 18px; cursor:pointer;
+    font:800 13px 'Nunito'; letter-spacing:.6px; text-transform:uppercase; color:#fff;
+    background:var(--indigo); box-shadow:0 4px 0 var(--indigo-dark);
+  }
+  .btn:active{transform:translateY(4px); box-shadow:none}
+  .btn.outline{background:#fff; color:var(--indigo); border:2px solid var(--line);
+    box-shadow:0 4px 0 var(--line)}
+  .btn:disabled{background:var(--line); color:var(--hint); box-shadow:none; cursor:not-allowed}
+
+  /* ------------------------------------------------ entrada */
+  footer{background:#fff; border-top:2px solid var(--line)}
+  .input-row{display:flex; align-items:center; gap:10px; padding:12px 18px}
+  #text{
+    flex:1; border:2px solid var(--line); border-radius:16px; padding:13px 16px;
+    font:600 15px 'Nunito'; color:var(--ink); background:var(--bg-soft); outline:none;
+  }
+  #text:focus{border-color:var(--indigo)}
+  #text:disabled{opacity:.55}
+  .mic{
+    width:58px; height:58px; border-radius:50%; border:none; cursor:pointer; flex:0 0 58px;
+    background:var(--indigo); box-shadow:0 5px 0 var(--indigo-dark);
+    display:flex; align-items:center; justify-content:center; position:relative;
+  }
+  .mic:active{transform:translateY(5px); box-shadow:none}
+  .mic.rec{background:var(--red); box-shadow:0 5px 0 var(--red-dark)}
+  .mic.rec::before{
+    content:''; position:absolute; inset:-8px; border-radius:50%;
+    background:rgba(255,82,87,.3); animation:pulse 1.3s ease-out infinite;
+  }
+  @keyframes pulse{from{transform:scale(.8); opacity:1} to{transform:scale(1.5); opacity:0}}
+  .mic:disabled{background:var(--line); box-shadow:none; cursor:not-allowed}
+  .mic svg{width:26px; height:26px; fill:#fff; position:relative; z-index:1}
+  .listening-note{text-align:center; font:600 13px 'Nunito'; color:var(--ink-soft);
+    font-style:italic; padding:0 18px 6px; min-height:18px}
+
+  /* ------------------------------------------------ sección VRChat */
+  #vr{display:none; flex:1; overflow-y:auto; padding:18px; background:var(--bg-soft)}
+  .vr-head{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px}
+  .vr-title{font:900 20px 'Nunito'; color:var(--indigo)}
+  .vr-box{background:#fff; border:2px solid var(--line); border-radius:16px;
+    box-shadow:0 3px 0 var(--line); padding:14px 16px; margin-bottom:14px}
+  .vr-box h3{font:800 13px 'Nunito'; color:var(--ink-soft); text-transform:uppercase;
+    letter-spacing:.6px; margin-bottom:10px}
+  .vr-chips{display:flex; gap:6px; flex-wrap:wrap}
+  .vr-word{padding:5px 11px; border-radius:10px; font:800 13px 'Nunito';
+    background:var(--sel-bg); border:2px solid var(--sel-border); color:var(--sel-text)}
+  .vr-word small{font-weight:700; opacity:.65}
+  .vr-gram{background:var(--green-bg); border-color:var(--green-border); color:var(--green-text)}
+  .vr-stats{display:flex; gap:18px; flex-wrap:wrap; font:700 13.5px 'Nunito'; color:var(--ink-soft)}
+  .vr-stats b{color:var(--ink); font-size:19px; display:block}
+  .vr-pair-say{font:800 19px 'Nunito'; color:var(--ink); margin-bottom:2px}
+  .vr-pair-es{font:600 13px 'Nunito'; font-style:italic; color:var(--ink-soft); margin-bottom:10px}
+  .vr-reply{background:var(--green-bg); border:2px solid var(--green-border);
+    border-radius:12px; padding:10px 13px; margin-bottom:10px}
+  .vr-reply .en{font:800 17px 'Nunito'; color:var(--green-text)}
+  .vr-reply .es{font:600 12.5px 'Nunito'; font-style:italic; color:var(--ink-soft)}
+  .vr-reply .ph{font:700 13px 'Nunito'; color:#C28E02; margin-top:3px}
+  .vr-progress{font:800 12.5px 'Nunito'; color:var(--ink-soft); margin-left:auto}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="wordmark">speak enzo</span>
+  <span class="spacer"></span>
+  <div class="pill-group" id="levels">
+    <button class="pill sel" data-level="beginner">🌱 Principiante</button>
+    <button class="pill" data-level="intermediate">🌿 Intermedio</button>
+    <button class="pill" data-level="advanced">🌳 Avanzado</button>
+  </div>
+  <button class="strict" id="strict" title="No avanzas hasta pronunciar bien la corrección">
+    🔒 Modo estricto: <span id="strictState">OFF</span>
+  </button>
+  <button class="pill" id="vrBtn" title="Practica con las palabras reales que escuchaste en VRChat">🎮 VRChat</button>
+  <select id="model" title="Modelo de Ollama"></select>
+  <span class="dot" id="dot" title="Estado de Ollama"></span>
+</header>
+
+<main id="chat"></main>
+
+<section id="vr">
+  <div class="vr-head">
+    <span class="vr-title">🎮 Lo que se habla en VRChat</span>
+    <select id="vrWeek" title="Semana"></select>
+    <button class="btn outline" id="vrReload">🔁</button>
+    <span class="spacer"></span>
+    <button class="btn outline" id="vrClose">✕ Volver al chat</button>
+  </div>
+  <div id="vrBody"></div>
+</section>
+
+<div id="practice">
+  <div class="practice-title" id="practiceTitle">🔒 MODO ESTRICTO — REPITE LA FRASE PARA CONTINUAR</div>
+  <div class="practice-phrase" id="practicePhrase"></div>
+  <div class="practice-tip" id="practiceTip"></div>
+  <div class="practice-row">
+    <button class="btn outline" id="pListen">🔊 Escuchar</button>
+    <button class="btn outline" id="pSlow">🐢 Lento</button>
+    <button class="btn" id="pMic">🎙️ Decirla</button>
+    <span id="pAttempts" style="font:700 12.5px 'Nunito'; color:var(--ink-soft)"></span>
+    <span class="skip" id="pSkip">continuar de todos modos</span>
+  </div>
+  <div class="chips" id="pChips"></div>
+</div>
+
+<footer>
+  <div class="listening-note" id="note"></div>
+  <div class="input-row">
+    <input id="text" placeholder="Escribe en inglés... o usa el micrófono" autocomplete="off">
+    <button class="btn" id="send">Enviar</button>
+    <button class="mic" id="mic" title="Hablar">
+      <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5.3-3a5.3 5.3 0 0 1-10.6 0H4.7a7.3 7.3 0 0 0 6.3 7.2V21h2v-2.8a7.3 7.3 0 0 0 6.3-7.2h-2z"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script>
+'use strict';
+
+// ------------------------------------------------------------------ estado
+const S = {
+  url: localStorage.getItem('ollama_url') || 'http://localhost:11434',
+  model: localStorage.getItem('model') || '',
+  level: localStorage.getItem('level') || 'beginner',
+  strict: localStorage.getItem('strict') === '1',
+  msgs: [],            // historial para el modelo [{role, content}]
+  busy: false,         // esperando respuesta del modelo
+  blocked: false,      // modo estricto: práctica pendiente
+  practice: null,      // {phrase, tip, attempts}
+  voiceMode: false,    // el último mensaje fue por voz → manos libres
+};
+
+const $ = id => document.getElementById(id);
+const chat = $('chat');
+
+const LEVELS = {
+  beginner: 'principiante (A1-A2): usa vocabulario simple y frases cortas',
+  intermediate: 'intermedio (B1-B2): conversación natural, vocabulario variado',
+  advanced: 'avanzado (C1): habla como un nativo, usa expresiones idiomáticas',
+};
+
+function systemPrompt() {
+  return `Eres "Enzo", un tutor de inglés amigable y carismático conversando con un
+estudiante hispanohablante de nivel ${LEVELS[S.level]}.
+
+Reglas:
+- Habla SIEMPRE en inglés: respuestas cortas (1-3 frases), naturales, con una
+  pregunta de seguimiento para mantener viva la conversación.
+- Adapta vocabulario y complejidad al nivel del estudiante.
+- Si el mensaje llega marcado como [VOZ], fue transcrito por reconocimiento de
+  voz: palabras raras o incoherentes delatan mala pronunciación, no errores de
+  escritura. Ten esto en cuenta para el campo de acento.
+- Corrige errores de gramática/vocabulario con cariño, en campos aparte.
+- Si un mensaje [VOZ] es un galimatías sin sentido (palabras al azar que no
+  forman una idea), NO lo corrijas ni inventes nada: en tu reply pídele con
+  humor que lo repita en inglés, más despacio. Deja correction, better_phrase
+  y practice_phrase en null.
+
+Responde SIEMPRE con SOLO un objeto JSON válido, con esta forma exacta:
+{
+  "reply": "tu respuesta hablada en inglés",
+  "translation_hint": "traducción al español de tu reply",
+  "correction": "si hubo error: qué dijo mal y cómo se dice bien, EN ESPAÑOL; si no: null",
+  "better_phrase": "forma más natural de decir lo que intentó, en inglés; si ya estuvo bien: null",
+  "accent_tip_es": "si llegó por [VOZ] y la transcripción sugiere mala pronunciación: UN consejo concreto de pronunciación en español; si no: null",
+  "practice_phrase": "si hubo error (correction o better_phrase): la frase corta y correcta en inglés que el estudiante debería decir; si no hubo error: null",
+  "pronunciation_tip_es": "si practice_phrase no es null: cómo pronunciarla, en español, con aproximación fonética simple (ej: 'what suena como uót'); si no: null"
+}`;
+}
+
+// ------------------------------------------------------------------ ollama
+async function ollamaTags() {
+  const r = await fetch(S.url + '/api/tags');
+  if (!r.ok) throw new Error('Ollama respondió ' + r.status);
+  return (await r.json()).models.map(m => m.name);
+}
+
+async function ollamaChat(messages) {
+  const r = await fetch(S.url + '/api/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      model: S.model, stream: false, format: 'json', think: false,
+      options: {temperature: 0.7},
+      messages: [{role: 'system', content: systemPrompt()}, ...messages],
+    }),
+  });
+  if (!r.ok) throw new Error('Ollama respondió ' + r.status + ': ' + (await r.text()).slice(0, 200));
+  const raw = (await r.json()).message.content;
+  try { return JSON.parse(raw); }
+  catch { return {reply: raw, translation_hint: null}; }
+}
+
+// ------------------------------------------------------------------ voz (TTS)
+let voice = null;
+function pickVoice() {
+  const en = speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+  voice = en.find(v => /Google US English/i.test(v.name))
+       || en.find(v => v.lang === 'en-US') || en[0] || null;
+}
+speechSynthesis.onvoiceschanged = pickVoice; pickVoice();
+
+// [then] se ejecuta cuando la voz termina SIN ser interrumpida por otra
+// (sirve para encender el micrófono solo, modo manos libres).
+let ttsGen = 0;
+function speak(text, rate = 1.0, then = null) {
+  speechSynthesis.cancel();
+  const gen = ++ttsGen;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = rate;
+  u.onend = () => { if (gen === ttsGen && then) setTimeout(then, 250); };
+  speechSynthesis.speak(u);
+}
+
+
+// ------------------------------------------------------------------ voz (STT)
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec = null, recTarget = null; // recTarget: 'chat' | 'practice'
+if (!SR) { $('mic').disabled = true; $('mic').title = 'Tu navegador no soporta reconocimiento de voz — usa Google Chrome'; }
+
+// Silencio (ms) tras haber hablado algo antes de cerrar solo el micrófono.
+const SILENCE_MS = 2000;
+let silenceTimer = null;
+
+function startRec(target, auto = false) {
+  if (!SR || rec) return;
+  speechSynthesis.cancel();
+  const wasAuto = auto;
+  rec = new SR();
+  // Modo continuo: no corta a la primera pausa. Paras tú con el botón,
+  // o solo tras varios segundos de silencio habiendo dicho algo.
+  rec.lang = 'en-US';
+  rec.interimResults = true; rec.continuous = true;
+  recTarget = target;
+  let final = '';
+  const armSilence = () => {
+    clearTimeout(silenceTimer);
+    if (final.trim()) silenceTimer = setTimeout(() => { try { rec && rec.stop(); } catch (_) {} }, SILENCE_MS);
+  };
+  rec.onresult = e => {
+    let interim = '';
+    final = '';
+    for (const res of e.results) (res.isFinal ? final += res[0].transcript + ' ' : interim += res[0].transcript);
+    $('note').textContent = '🎙️ ' + ((final + interim).trim() || 'Te escucho... (toca el micro para terminar)');
+    armSilence();
+  };
+  rec.onerror = e => {
+    $('note').textContent = '';
+    if (e.error === 'not-allowed') toast('Permite el micrófono en el navegador.');
+    else if (e.error !== 'aborted' && e.error !== 'no-speech') toast('Micrófono: ' + e.error);
+    // Si el micro se encendió solo y no dijiste nada, se apaga sin molestar.
+    if (e.error === 'no-speech' && !wasAuto) toast('No escuché nada claro. Intenta de nuevo.');
+    stopRecUI();
+  };
+  rec.onend = () => {
+    clearTimeout(silenceTimer);
+    stopRecUI();
+    $('note').textContent = '';
+    const text = final.trim();
+    if (!text) return;
+    if (recTarget === 'practice') { checkPractice(text); return; }
+    if (recTarget === 'vr') { vrCheck(text); return; }
+    send(text, true);
+  };
+  rec.start();
+  $('note').textContent = '🎙️ Te escucho... (toca el micro para terminar)';
+  if (target === 'chat') $('mic').classList.add('rec');
+  else if (target === 'vr') { const m = $('vrMic'); if (m) m.textContent = '⏹ PARAR'; }
+  else $('pMic').textContent = '⏹ PARAR';
+}
+
+function stopRecUI() {
+  rec = null;
+  $('mic').classList.remove('rec');
+  $('pMic').textContent = '🎙️ DECIRLA';
+  const m = $('vrMic'); if (m) m.textContent = '🎙️ DECIRLA';
+}
+function stopRec() { if (rec) rec.stop(); }
+
+// ------------------------------------------------------------------ pintar chat
+function esc(s) { const d = document.createElement('span'); d.textContent = s; return d.innerHTML; }
+
+function addBubble(role, text, hint) {
+  const row = document.createElement('div');
+  row.className = 'row ' + (role === 'user' ? 'user' : '');
+  const hintHtml = hint ? `<div class="hint-es">${esc(hint)}</div>` : '';
+  if (role === 'enzo') {
+    row.innerHTML = `<div class="avatar">E</div>
+      <div class="bubble enzo">${esc(text)}${hintHtml}</div>
+      <button class="speak-btn" title="Escuchar">🔊</button>`;
+    row.querySelector('.speak-btn').onclick = () => speak(text);
+  } else {
+    row.innerHTML = `<div class="bubble user">${esc(text)}${hintHtml}</div>`;
+  }
+  chat.appendChild(row);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function addCard(cls, lines) {
+  const items = lines.filter(Boolean);
+  if (!items.length) return;
+  const holder = document.createElement('div');
+  holder.className = 'card-holder';
+  holder.style.display = 'flex'; holder.style.justifyContent = 'flex-end';
+  holder.innerHTML = `<div class="card ${cls}">${items.map(l => `<div>${l}</div>`).join('')}</div>`;
+  chat.appendChild(holder);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+let typingEl = null;
+function showTyping(on, label = 'Enzo está pensando...') {
+  if (typingEl) { typingEl.remove(); typingEl = null; }
+  if (on) {
+    typingEl = document.createElement('div');
+    typingEl.className = 'typing';
+    typingEl.innerHTML = `<div class="spinner"></div>${esc(label)}`;
+    chat.appendChild(typingEl);
+    chat.scrollTop = chat.scrollHeight;
+  }
+}
+
+function toast(msg) { addCard('err', [esc(msg)]); }
+
+// ------------------------------------------------------------------ enviar
+function setBusy(b) {
+  S.busy = b;
+  refreshInputs();
+  showTyping(b);
+}
+
+// Bloquea entrada si está pensando o si hay práctica pendiente (modo estricto).
+function refreshInputs() {
+  const lock = S.busy || S.blocked;
+  $('text').disabled = lock;
+  $('send').disabled = lock;
+  $('mic').disabled = lock || !SR;
+}
+
+// Enciende el micro del chat solo (manos libres) si procede.
+function autoChatMic() {
+  if (S.voiceMode && !S.blocked && !S.busy && !rec) startRec('chat', true);
+}
+
+async function send(text, spoken = false) {
+  text = text.trim();
+  if (!text || S.busy || S.blocked) return;
+  S.voiceMode = spoken;
+  $('text').value = '';
+  addBubble('user', text);
+  S.msgs.push({role: 'user', content: (spoken ? '[VOZ] ' : '') + text});
+  setBusy(true);
+  try {
+    const d = await ollamaChat(S.msgs);
+    const reply = d.reply || '...';
+    S.msgs.push({role: 'assistant', content: reply});
+
+    // Tarjeta de feedback bajo el mensaje del usuario.
+    addCard('warn', [
+      d.correction ? '✏️ ' + esc(d.correction) : null,
+      d.better_phrase ? '💡 Más natural: "' + esc(d.better_phrase) + '"' : null,
+      spoken && d.accent_tip_es ? '🗣️ ' + esc(d.accent_tip_es) : null,
+    ]);
+
+    addBubble('enzo', reply, d.translation_hint);
+    setBusy(false);
+
+    // Modo estricto: si hubo error, no se avanza hasta decir bien la frase.
+    if (S.strict && d.practice_phrase) {
+      startPractice(d.practice_phrase, d.pronunciation_tip_es || '', reply);
+    } else {
+      // Al terminar de hablar Enzo, el micro se enciende solo (manos libres).
+      speak(reply, 1.0, autoChatMic);
+    }
+  } catch (e) {
+    setBusy(false);
+    toast('No pude hablar con Ollama: ' + e.message);
+  }
+}
+
+// ------------------------------------------------------------------ modo estricto
+function startPractice(phrase, tip, replyText = null) {
+  S.blocked = true;
+  S.practice = {phrase, tip, attempts: 0};
+  $('practice').classList.add('show');
+  $('practice').classList.remove('passed');
+  $('practiceTitle').textContent = '🔒 MODO ESTRICTO — REPITE LA FRASE PARA CONTINUAR';
+  $('practicePhrase').textContent = '“' + phrase + '”';
+  $('practiceTip').textContent = tip ? '🗣️ ' + tip : '';
+  $('pAttempts').textContent = '';
+  $('pChips').innerHTML = '';
+  $('pSkip').style.display = 'none';
+  refreshInputs();
+  // Enzo dice su respuesta, luego la frase a practicar, y abre el micro solo.
+  const sayPhrase = () =>
+    speak(phrase, 0.85, () => { if (S.practice && !rec) startRec('practice', true); });
+  if (replyText) speak(replyText, 1.0, sayPhrase);
+  else sayPhrase();
+}
+
+const norm = s => s.toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean);
+
+function checkPractice(heard) {
+  const p = S.practice; if (!p) return;
+  p.attempts++;
+  const target = norm(p.phrase), said = new Set(norm(heard));
+  const words = target.map(w => ({w, ok: said.has(w)}));
+  const ratio = words.filter(x => x.ok).length / Math.max(1, words.length);
+
+  $('pChips').innerHTML = words
+    .map(x => `<span class="chip ${x.ok ? 'ok' : 'ko'}">${x.ok ? '✅' : '❌'} ${esc(x.w)}</span>`)
+    .join('');
+
+  if (ratio >= 0.85) {
+    const phrase = p.phrase;
+    S.voiceMode = true; // acaba de hablar: seguimos en manos libres
+    $('practice').classList.add('passed');
+    $('practiceTitle').textContent = '🎉 ¡PERFECTO! ASÍ SE DICE';
+    $('pAttempts').textContent = '';
+    setTimeout(() => {
+      $('practice').classList.remove('show');
+      S.blocked = false; S.practice = null;
+      refreshInputs();
+      $('text').focus();
+      // Enzo felicita y retoma la conversación él solo.
+      continueAfterPractice(phrase);
+    }, 1200);
+  } else {
+    $('pAttempts').textContent =
+      `Intento ${p.attempts} · Escuché: "${heard}" — di las palabras en rojo`;
+    if (p.attempts >= 4) $('pSkip').style.display = 'inline';
+    // Repite la frase despacio y vuelve a abrir el micro para otro intento.
+    speak(p.phrase, 0.7,
+        () => { if (S.practice && !rec) startRec('practice', true); });
+  }
+}
+
+// Tras superar la práctica, Enzo felicita y sigue la conversación donde iba.
+async function continueAfterPractice(phrase) {
+  S.msgs.push({
+    role: 'user',
+    content: `[SISTEMA] El estudiante acaba de repetir correctamente en voz alta: "${phrase}". ` +
+      'Felicítalo con UNA frase corta y CONTINÚA la conversación donde iba, ' +
+      'con una pregunta. Este mensaje no es del estudiante: no lo corrijas.',
+  });
+  setBusy(true);
+  try {
+    const d = await ollamaChat(S.msgs);
+    const reply = d.reply || 'Great job! Let\'s keep going.';
+    S.msgs.push({role: 'assistant', content: reply});
+    addBubble('enzo', reply, d.translation_hint);
+    setBusy(false);
+    speak(reply, 1.0, autoChatMic);
+  } catch (e) {
+    setBusy(false);
+    toast('No pude hablar con Ollama: ' + e.message);
+  }
+}
+
+$('pListen').onclick = () => S.practice && speak(S.practice.phrase, 0.9);
+$('pSlow').onclick = () => S.practice && speak(S.practice.phrase, 0.55);
+$('pMic').onclick = () => rec ? stopRec() : startRec('practice');
+$('pSkip').onclick = () => {
+  $('practice').classList.remove('show');
+  S.blocked = false; S.practice = null;
+  refreshInputs();
+};
+
+// ------------------------------------------------------------------ controles
+document.querySelectorAll('#levels .pill').forEach(b => b.onclick = () => {
+  document.querySelectorAll('#levels .pill').forEach(x => x.classList.remove('sel'));
+  b.classList.add('sel');
+  S.level = b.dataset.level;
+  localStorage.setItem('level', S.level);
+});
+
+function paintStrict() {
+  $('strict').classList.toggle('on', S.strict);
+  $('strictState').textContent = S.strict ? 'ON' : 'OFF';
+}
+$('strict').onclick = () => {
+  S.strict = !S.strict;
+  localStorage.setItem('strict', S.strict ? '1' : '0');
+  paintStrict();
+};
+
+$('model').onchange = () => { S.model = $('model').value; localStorage.setItem('model', S.model); };
+$('send').onclick = () => send($('text').value);
+$('text').onkeydown = e => { if (e.key === 'Enter') send($('text').value); };
+$('mic').onclick = () => rec ? stopRec() : startRec('chat');
+
+// ------------------------------------------------------------------ VRChat
+// Analiza las conversaciones REALES guardadas por vrchat-subtitulos
+// (web/vrchat/<semana>.json) y genera práctica en pares con la IA local.
+const VR = {open: false, weeks: [], phrases: [], analysis: null,
+            pairs: null, i: 0, tries: 0};
+
+const VR_STOP = new Set(('the,a,an,and,or,but,so,to,of,in,on,at,is,are,was,' +
+  'were,am,be,been,being,it,its,i,you,he,she,we,they,me,him,her,us,them,my,' +
+  'your,his,hers,their,our,mine,yours,this,that,these,those,with,for,from,' +
+  'as,do,does,did,done,doing,not,no,yes,yeah,yep,nah,ok,okay,oh,uh,um,hmm,' +
+  'like,just,have,has,had,having,can,cant,could,will,would,should,shall,' +
+  'may,might,must,what,when,where,who,whom,whose,why,how,if,then,than,' +
+  'there,here,about,up,down,out,into,over,under,again,more,most,less,all,' +
+  'some,any,each,few,other,another,such,only,own,same,very,too,also,even,' +
+  'still,ever,never,always,because,while,until,against,between,through,' +
+  'during,before,after,above,below,off,once,dont,didnt,doesnt,isnt,wasnt,' +
+  'im,ive,ill,id,youre,youve,youll,youd,hes,shes,weve,theyre,theyve,thats,' +
+  'theres,whats,lets,gonna,wanna,gotta,kinda,sorta,really,right,now,get,' +
+  'got,gets,getting,go,going,goes,went,know,knows,knew,think,thinks,' +
+  'thought,say,says,said,see,sees,saw,one,two,three,thing,things,stuff,' +
+  'people,guy,guys,man,dude,bro,lot,bit,way,mean,means,actually,basically,' +
+  'literally,maybe,something,someone,anything,everyone,everything,nothing,' +
+  'somebody,anybody,want,wants,wanted,need,needs,make,makes,made,good,' +
+  'nice,cool,great,time,day,today,little,big,new,old,first,last,much,' +
+  'many,back,come,comes,came,look,looks,looking,yea,huh,hey,hi,hello,' +
+  'thanks,thank,please,sorry').split(','));
+
+const vrTok = s => s.toLowerCase().replace(/[’']/g, '')
+  .replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter(w => w.length > 1);
+
+function vrAnalyze(phrases) {
+  const words = new Map(), grams = new Map(), speakers = new Set();
+  for (const p of phrases) {
+    speakers.add(p.speaker);
+    const t = vrTok(p.text);
+    for (const w of t) if (!VR_STOP.has(w)) words.set(w, (words.get(w) || 0) + 1);
+    for (let n = 2; n <= 3; n++)
+      for (let i = 0; i + n <= t.length; i++) {
+        const g = t.slice(i, i + n);
+        if (g.every(w => VR_STOP.has(w))) continue;
+        grams.set(g.join(' '), (grams.get(g.join(' ')) || 0) + 1);
+      }
+  }
+  const top = m => [...m.entries()].sort((a, b) => b[1] - a[1]);
+  return {total: phrases.length, speakers: speakers.size,
+          words: top(words).slice(0, 18),
+          grams: top(grams).filter(([, c]) => c >= 2).slice(0, 10)};
+}
+
+function vrToggle(show) {
+  VR.open = show;
+  $('vr').style.display = show ? 'block' : 'none';
+  chat.style.display = show ? 'none' : 'block';
+  document.querySelector('footer').style.display = show ? 'none' : 'block';
+  $('practice').style.display = show ? 'none' : '';
+  if (show) { vrLoadIndex(); }
+  else { speechSynthesis.cancel(); if (rec && recTarget === 'vr') stopRec(); }
+}
+
+async function vrLoadIndex() {
+  $('vrBody').innerHTML = '<div class="typing"><div class="spinner"></div>Cargando conversaciones...</div>';
+  try {
+    const r = await fetch('vrchat/index.json?t=' + Date.now());
+    if (!r.ok) throw new Error();
+    VR.weeks = (await r.json()).weeks || [];
+  } catch { VR.weeks = []; }
+  if (!VR.weeks.length) {
+    $('vrWeek').innerHTML = '';
+    $('vrBody').innerHTML = '<div class="vr-box">Aún no hay conversaciones ' +
+      'guardadas. Abre VRChat con <b>vrchat-subtitulos</b> corriendo y las ' +
+      'frases de la gente se guardarán aquí solas, semana a semana. 🎧</div>';
+    return;
+  }
+  $('vrWeek').innerHTML = VR.weeks.map(w =>
+    `<option value="${esc(w.file)}">${esc(w.week)} · ${w.phrases} frases</option>`).join('');
+  vrLoadWeek();
+}
+
+async function vrLoadWeek() {
+  const file = $('vrWeek').value || VR.weeks[0].file;
+  $('vrBody').innerHTML = '<div class="typing"><div class="spinner"></div>Analizando...</div>';
+  try {
+    const r = await fetch('vrchat/' + file + '?t=' + Date.now());
+    VR.phrases = (await r.json()).phrases || [];
+  } catch { VR.phrases = []; }
+  VR.analysis = vrAnalyze(VR.phrases);
+  VR.pairs = null;
+  vrRenderStats();
+}
+
+function vrRenderStats() {
+  const a = VR.analysis;
+  $('vrBody').innerHTML = `
+    <div class="vr-box"><div class="vr-stats">
+      <span><b>${a.total}</b> frases oídas</span>
+      <span><b>${a.speakers}</b> personas</span>
+      <span><b>${a.words.length}</b> palabras clave</span>
+    </div></div>
+    <div class="vr-box"><h3>🔤 Palabras más usadas</h3>
+      <div class="vr-chips">${a.words.map(([w, c]) =>
+        `<span class="vr-word">${esc(w)} <small>×${c}</small></span>`).join('') ||
+        'Todavía muy pocas frases.'}</div></div>
+    <div class="vr-box"><h3>💬 Expresiones repetidas</h3>
+      <div class="vr-chips">${a.grams.map(([g, c]) =>
+        `<span class="vr-word vr-gram">${esc(g)} <small>×${c}</small></span>`).join('') ||
+        'Aún no se repite ninguna expresión.'}</div></div>
+    <div class="vr-box">
+      <h3>🎯 Práctica (pares: te dicen algo → tú contestas)</h3>
+      <button class="btn" id="vrGen" ${a.total < 3 ? 'disabled' : ''}>
+        🎮 Crear sesión de práctica con estas palabras</button>
+      <div id="vrPractice" style="margin-top:12px"></div>
+    </div>`;
+  const g = $('vrGen'); if (g) g.onclick = vrGenPractice;
+}
+
+const VR_PRACTICE_SYS = `Eres profesor de inglés para un estudiante
+hispanohablante. Con el vocabulario REAL que el estudiante escuchó en VRChat,
+crea EXACTAMENTE 6 pares de práctica (grupos de 2). En cada par, un jugador de
+VRChat le dice algo — una PREGUNTA o una ORACIÓN típica — y el estudiante
+contesta con una respuesta o afirmación corta y natural (máximo 10 palabras).
+USA las palabras y expresiones frecuentes que se te dan. Responde SOLO un
+objeto JSON válido con esta forma exacta:
+{"pairs":[{"say_en":"lo que le dicen (inglés)","say_es":"su traducción",
+"reply_en":"lo que debe contestar (inglés)","reply_es":"su traducción",
+"phon_es":"fonética española de reply_en (ej: ai lav dis uérld)"}]}`;
+
+async function vrGenPractice() {
+  const a = VR.analysis;
+  const sample = VR.phrases.slice(-40).filter(p => vrTok(p.text).length > 2)
+    .slice(-10).map(p => '- ' + p.text).join('\n');
+  $('vrPractice').innerHTML = '<div class="typing"><div class="spinner"></div>La IA está creando tu sesión...</div>';
+  try {
+    const r = await fetch(S.url + '/api/chat', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        model: S.model, stream: false, format: 'json', think: false,
+        options: {temperature: 0.7},
+        messages: [
+          {role: 'system', content: VR_PRACTICE_SYS},
+          {role: 'user', content:
+            'Palabras más usadas: ' + a.words.map(([w]) => w).join(', ') +
+            '\nExpresiones repetidas: ' + (a.grams.map(([g]) => g).join(' | ') || '(ninguna)') +
+            '\nFrases reales oídas:\n' + sample},
+        ],
+      }),
+    });
+    if (!r.ok) throw new Error('Ollama respondió ' + r.status);
+    const d = JSON.parse((await r.json()).message.content);
+    VR.pairs = (d.pairs || []).filter(p => p.say_en && p.reply_en).slice(0, 6);
+    if (!VR.pairs.length) throw new Error('la IA no devolvió pares');
+    VR.i = 0;
+    vrShowPair();
+  } catch (e) {
+    $('vrPractice').innerHTML = `<div class="card err">No pude crear la sesión: ${esc(e.message)}</div>
+      <button class="btn outline" onclick="vrGenPractice()">Reintentar</button>`;
+  }
+}
+
+function vrShowPair() {
+  const p = VR.pairs[VR.i];
+  VR.tries = 0;
+  $('vrPractice').innerHTML = `
+    <div style="display:flex; align-items:center; margin-bottom:8px">
+      <span style="font:800 13px 'Nunito'; color:var(--ink-soft)">TE DICEN:</span>
+      <span class="vr-progress">Par ${VR.i + 1} / ${VR.pairs.length}</span>
+    </div>
+    <div class="vr-pair-say">“${esc(p.say_en)}”</div>
+    <div class="vr-pair-es">${esc(p.say_es || '')}</div>
+    <div class="vr-reply">
+      <div style="font:800 11.5px 'Nunito'; color:var(--green-text); letter-spacing:.5px">TÚ CONTESTAS — DILA EN VOZ ALTA:</div>
+      <div class="en">“${esc(p.reply_en)}”</div>
+      <div class="es">${esc(p.reply_es || '')}</div>
+      ${p.phon_es ? `<div class="ph">🗣 ${esc(p.phon_es)}</div>` : ''}
+    </div>
+    <div class="practice-row">
+      <button class="btn outline" id="vrSay">🔊 Oír pregunta</button>
+      <button class="btn outline" id="vrAns">🐢 Oír respuesta</button>
+      <button class="btn" id="vrMic">🎙️ DECIRLA</button>
+      <button class="btn outline" id="vrSkipBtn">Saltar</button>
+      <span id="vrTries" style="font:700 12.5px 'Nunito'; color:var(--ink-soft)"></span>
+    </div>
+    <div class="chips" id="vrChips" style="margin-top:10px"></div>`;
+  $('vrSay').onclick = () => speak(p.say_en, 0.95);
+  $('vrAns').onclick = () => speak(p.reply_en, 0.7);
+  $('vrMic').onclick = () => rec ? stopRec() : startRec('vr');
+  $('vrSkipBtn').onclick = vrNext;
+  speak(p.say_en, 1.0, () => { if (VR.open && !rec) startRec('vr', true); });
+}
+
+function vrCheck(heard) {
+  const p = VR.pairs && VR.pairs[VR.i]; if (!p || !VR.open) return;
+  VR.tries++;
+  const target = norm(p.reply_en), said = new Set(norm(heard));
+  const words = target.map(w => ({w, ok: said.has(w)}));
+  const ratio = words.filter(x => x.ok).length / Math.max(1, words.length);
+  $('vrChips').innerHTML = words.map(x =>
+    `<span class="chip ${x.ok ? 'ok' : 'ko'}">${x.ok ? '✅' : '❌'} ${esc(x.w)}</span>`).join('');
+  if (ratio >= 0.75) {
+    $('vrTries').textContent = '🎉 ¡Perfecto!';
+    speak('Perfect!', 1.0);
+    setTimeout(vrNext, 1300);
+  } else {
+    $('vrTries').textContent = `Intento ${VR.tries} · Escuché: "${heard}" — di las palabras en rojo`;
+    speak(p.reply_en, 0.7, () => { if (VR.open && !rec) startRec('vr', true); });
+  }
+}
+
+function vrNext() {
+  speechSynthesis.cancel();
+  VR.i++;
+  if (VR.i >= VR.pairs.length) {
+    $('vrPractice').innerHTML = `
+      <div class="card" style="background:var(--green-bg); border:2px solid var(--green-border); color:var(--green-text); max-width:none">
+        🏆 ¡Sesión completada! Practicaste ${VR.pairs.length} pares con las palabras reales de VRChat.</div>
+      <button class="btn" onclick="vrGenPractice()">🎮 Otra sesión</button>`;
+    speak('Amazing job! You finished the session.', 1.0);
+  } else vrShowPair();
+}
+
+$('vrBtn').onclick = () => vrToggle(true);
+$('vrClose').onclick = () => vrToggle(false);
+$('vrReload').onclick = vrLoadIndex;
+$('vrWeek').onchange = vrLoadWeek;
+
+// ------------------------------------------------------------------ arranque
+const GREETING = "Hey! I'm Enzo, your English buddy. How are you doing today?";
+const GREETING_ES = '¡Hola! Soy Enzo, tu compañero de inglés. ¿Cómo estás hoy?';
+
+(async function init() {
+  document.querySelectorAll('#levels .pill').forEach(b =>
+    b.classList.toggle('sel', b.dataset.level === S.level));
+  paintStrict();
+  try {
+    const models = await ollamaTags();
+    $('model').innerHTML = models.map(m => `<option>${esc(m)}</option>`).join('');
+    if (!S.model || !models.includes(S.model)) S.model = models[0] || '';
+    $('model').value = S.model;
+    $('dot').classList.add('ok');
+    $('dot').title = 'Ollama conectado';
+  } catch (e) {
+    $('dot').classList.add('bad');
+    $('dot').title = 'Sin conexión con Ollama';
+    toast('No encuentro Ollama en ' + S.url + ' — ¿está corriendo? (' + e.message + ')');
+  }
+  addBubble('enzo', GREETING, GREETING_ES);
+  S.msgs.push({role: 'assistant', content: GREETING});
+  // El navegador exige un gesto del usuario antes de reproducir audio:
+  const once = () => { speak(GREETING); document.removeEventListener('click', once); };
+  document.addEventListener('click', once);
+})();
+</script>
+</body>
+</html>
