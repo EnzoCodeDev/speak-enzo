@@ -20,8 +20,9 @@ from . import config as config_mod
 from . import osc
 
 MAX_LINES = 20
-LINE_TTL = 18.0  # segundos que vive un subtítulo
-HISTORY = 12     # líneas de contexto para la IA
+LINE_TTL = 18.0        # segundos que vive un subtítulo
+TRANSLATION_TTL = 10.0  # al llegar su traducción, vive al menos esto más
+HISTORY = 12           # líneas de contexto para la IA
 
 
 class Bridge(QObject):
@@ -33,7 +34,7 @@ class Bridge(QObject):
     suggestion_gloss = Signal(str)
     suggestion_pron = Signal(str)         # fonética «en español»
     suggestion_failed = Signal(str)
-    hk_translate = Signal()               # tecla rápida: traducir últimas 5
+    hk_translate = Signal()               # tecla rápida: traducir pantalla
     hk_suggest = Signal()                 # tecla rápida: respuesta sugerida
 
 
@@ -217,6 +218,10 @@ class SubtitleOverlay(QWidget):
         sub.translating = False
         if spanish:
             sub.translation = spanish
+            # que la traducción se alcance a leer: la línea vive al menos
+            # TRANSLATION_TTL segundos más a partir de ahora
+            sub.timestamp = max(sub.timestamp,
+                                time.time() + TRANSLATION_TTL - LINE_TTL)
         for s, label in self.lines:
             if s is sub:
                 try:
@@ -260,18 +265,18 @@ class SubtitleOverlay(QWidget):
         if text.startswith("Escuchando"):
             tk = self.cfg.get("hotkey_translate", "9")
             sk = self.cfg.get("hotkey_suggest", "0")
-            n = self.cfg.get("translate_last_n", 10)
-            text += (f"   ·   [{tk}] traducir últimas {n}"
+            text += (f"   ·   [{tk}] traducir pantalla"
                      f"   [{sk}] respuesta")
         self.status_label.setText(text)
 
     # ---------- teclas rápidas globales ----------
-    def translate_last(self, n=5):
-        """Traducir las últimas n frases (tecla rápida)."""
+    def translate_last(self, n=None):
+        """Traducir lo que está en pantalla (todo, o las últimas n frases)."""
         if not self.lines:
             self.set_status("No hay frases que traducir todavía")
             return
-        subs = [s for s, _lb in self.lines[-n:]]
+        subs = [s for s, _lb in (self.lines if n is None
+                                 else self.lines[-n:])]
         pending = [s for s in subs
                    if not s.translation
                    and not getattr(s, "translating", False)]

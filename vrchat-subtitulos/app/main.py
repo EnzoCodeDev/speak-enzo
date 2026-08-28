@@ -63,8 +63,7 @@ def main():
             lambda t: print(f"[sugerencia] {t}", flush=True))
 
     # teclas rápidas globales: funcionan aunque VRChat tenga el foco
-    bridge.hk_translate.connect(
-        lambda: overlay.translate_last(cfg.get("translate_last_n", 10)))
+    bridge.hk_translate.connect(lambda: overlay.translate_last())
     bridge.hk_suggest.connect(overlay.suggest_latest)
     hotkeys = GlobalHotkeys(
         cfg.get("hotkey_translate", "9"), cfg.get("hotkey_suggest", "0"),

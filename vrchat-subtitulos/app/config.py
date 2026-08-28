@@ -13,12 +13,12 @@ DEFAULTS = {
     "font_size": 15,
     "overlay_width": 780,             # tamaño FIJO de la ventana
     "overlay_height": 370,
-    "hotkey_translate": "9",          # tecla global: traducir últimas 5
+    "hotkey_translate": "9",          # tecla global: traducir pantalla
     "hotkey_suggest": "0",            # tecla global: respuesta sugerida
     "min_volume": 0.012,              # ignora voces por debajo (lejanas);
                                       # sube a 0.02 para ser más estricto
     "pron_model": "qwen3.5:4b",       # modelo para la fonética en español
-    "translate_last_n": 10,           # cuántas frases traduce la tecla 9
+    "translate_last_n": 10,           # (ya no se usa: la tecla 9 traduce todo)
     # dónde se guardan las conversaciones por semana (las lee Enzo Speak):
     # <repo enzo-speak>/web/vrchat, relativo a esta app dentro del repo
     "transcript_dir": str(Path(__file__).resolve().parent.parent.parent

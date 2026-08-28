@@ -35,6 +35,11 @@ Una sola función, bien hecha: **conversación con Enzo, tu tutor de inglés**.
   cómo pronunciarla (aproximación fonética en español)... y **no te deja
   seguir la conversación hasta que la digas bien** — cada intento te marca
   en verde/rojo palabra por palabra.
+- 🎵 **Canciones**: busca por título y artista en un catálogo de letras normales
+  o sincronizadas; Enzo traduce sus frases y te guía una por una. Este recorrido es
+  siempre estricto: no hay botón para saltar y solo avanzas al pronunciar la
+  frase actual correctamente. Las canciones importadas, sus URL, frases y
+  traducciones quedan guardadas en `web/songs/index.json`.
 
 ## 📁 Estructura
 

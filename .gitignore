@@ -10,6 +10,9 @@ vrchat-subtitulos/lib/
 # Conversaciones guardadas de VRChat (DATOS PERSONALES: nunca al repo)
 web/vrchat/
 
+# Canciones, letras y traducciones guardadas localmente
+web/songs/
+
 # Backend legado: configuración local del usuario
 backend/data/settings.json
 backend/data/tts/

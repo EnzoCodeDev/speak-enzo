@@ -158,16 +158,68 @@
     background:var(--sel-bg); border:2px solid var(--sel-border); color:var(--sel-text)}
   .vr-word small{font-weight:700; opacity:.65}
   .vr-gram{background:var(--green-bg); border-color:var(--green-border); color:var(--green-text)}
+  .vr-common{background:var(--yellow-bg); border-color:var(--yellow-border); color:var(--yellow-text)}
+  /* dos columnas: palabras a la izquierda, plan de cards a la derecha */
+  .vr-more summary{cursor:pointer; font:800 12px 'Nunito'; color:var(--indigo);
+    margin:8px 0 6px; user-select:none}
+  .vr-more .vr-chips{margin-top:6px}
+  .vr-cols{display:grid; grid-template-columns:minmax(280px, 360px) 1fr;
+    gap:14px; align-items:start}
+  @media (max-width:900px){.vr-cols{grid-template-columns:1fr}}
   .vr-stats{display:flex; gap:18px; flex-wrap:wrap; font:700 13.5px 'Nunito'; color:var(--ink-soft)}
   .vr-stats b{color:var(--ink); font-size:19px; display:block}
-  .vr-pair-say{font:800 19px 'Nunito'; color:var(--ink); margin-bottom:2px}
-  .vr-pair-es{font:600 13px 'Nunito'; font-style:italic; color:var(--ink-soft); margin-bottom:10px}
-  .vr-reply{background:var(--green-bg); border:2px solid var(--green-border);
-    border-radius:12px; padding:10px 13px; margin-bottom:10px}
-  .vr-reply .en{font:800 17px 'Nunito'; color:var(--green-text)}
-  .vr-reply .es{font:600 12.5px 'Nunito'; font-style:italic; color:var(--ink-soft)}
-  .vr-reply .ph{font:700 13px 'Nunito'; color:#C28E02; margin-top:3px}
+  /* card de conversación en dos partes: la activa resaltada, la lista en verde */
+  .vr-part{border:2px solid var(--line); border-radius:12px; padding:10px 13px;
+    margin-bottom:10px; opacity:.5; transition:all .2s}
+  .vr-part.active{opacity:1; background:var(--sel-bg); border-color:var(--sel-border)}
+  .vr-part.done{opacity:1; background:var(--green-bg); border-color:var(--green-border)}
+  .vr-part .tag{font:800 11.5px 'Nunito'; letter-spacing:.5px; color:var(--ink-soft)}
+  .vr-part.active .tag{color:var(--indigo)}
+  .vr-part.done .tag{color:var(--green-text)}
+  .vr-part .en{font:800 18px 'Nunito'; color:var(--ink)}
+  .vr-part.done .en{color:var(--green-text)}
+  .vr-part .es{font:600 12.5px 'Nunito'; font-style:italic; color:var(--ink-soft)}
+  .vr-part .ph{font:700 13px 'Nunito'; color:#C28E02; margin-top:3px}
   .vr-progress{font:800 12.5px 'Nunito'; color:var(--ink-soft); margin-left:auto}
+  /* ------------------------------------------------ canciones */
+  #songs{display:none; flex:1; overflow-y:auto; padding:18px; background:var(--bg-soft)}
+  /* ------------------------------------------------ 1000 palabras */
+  #words1k{display:none; flex:1; overflow-y:auto; padding:18px; background:var(--bg-soft)}
+  .p1k-row{display:flex; align-items:center; gap:10px; padding:7px 9px;
+    border-radius:10px; cursor:pointer; border:2px solid transparent}
+  .p1k-row:hover{background:var(--sel-bg)}
+  .p1k-row.p1k-done{background:var(--green-bg)}
+  .p1k-num{font:800 11.5px 'Nunito'; color:var(--hint); min-width:34px; text-align:right}
+  .p1k-texts{flex:1; min-width:0; display:flex; flex-direction:column}
+  .p1k-texts b{font:800 14.5px 'Nunito'; color:var(--ink)}
+  .p1k-texts small{font:600 12px 'Nunito'; font-style:italic; color:var(--ink-soft)}
+  .p1k-count{font:800 12px 'Nunito'; color:var(--green-text); white-space:nowrap}
+  .song-import{display:flex; gap:9px; flex-wrap:wrap; margin-top:12px}
+  .song-import input{flex:1; min-width:260px; border:2px solid var(--line); border-radius:14px;
+    padding:11px 14px; font:600 14px 'Nunito'; outline:none}
+  .song-card{max-width:760px; margin:18px auto; background:#fff; border:2px solid var(--line);
+    border-radius:18px; box-shadow:0 4px 0 var(--line); padding:22px}
+  .song-counter{font:800 12.5px 'Nunito'; color:var(--ink-soft); margin-bottom:14px}
+  .song-line{font:900 24px 'Nunito'; line-height:1.35; color:var(--ink); margin-bottom:7px}
+  .song-es{font:700 15px 'Nunito'; color:var(--indigo); margin-bottom:18px}
+  .song-phon{font:800 14px 'Nunito'; color:var(--yellow-text); margin:-10px 0 18px}
+  .song-rule{background:var(--red-bg); border:2px solid var(--red-border); color:var(--red-text);
+    border-radius:12px; padding:9px 12px; font:800 12.5px 'Nunito'; margin-bottom:15px}
+  .song-progress{height:8px; border-radius:8px; background:var(--line); overflow:hidden; margin-top:8px}
+  .song-progress span{display:block; height:100%; background:var(--green); transition:width .25s}
+  .song-result{display:flex; align-items:center; gap:12px; padding:12px 14px; margin-bottom:9px;
+    background:#fff; border:2px solid var(--line); border-radius:14px}
+  .song-result-info{flex:1; min-width:0}
+  .song-result-title{font:900 16px 'Nunito'; color:var(--ink)}
+  .song-result-meta{font:600 12.5px 'Nunito'; color:var(--ink-soft)}
+  .songs-layout{display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:14px; align-items:start}
+  .songs-library{position:sticky; top:0}
+  .songs-library .song-result{padding:10px; flex-wrap:wrap}
+  @media (max-width:900px){.songs-layout{grid-template-columns:1fr}.songs-library{position:static}}
+  .practice-word{display:inline-block; border:0; border-radius:7px; padding:1px 4px; margin:1px;
+    background:transparent; color:inherit; font:inherit; cursor:pointer}
+  .practice-word:hover{background:var(--sel-bg); color:var(--indigo)}
+  .practice-word.selected{background:var(--yellow-bg); color:var(--yellow-text); outline:2px solid var(--yellow-border)}
 </style>
 </head>
 <body>
@@ -175,20 +227,36 @@
 <header>
   <span class="wordmark">speak enzo</span>
   <span class="spacer"></span>
-  <div class="pill-group" id="levels">
-    <button class="pill sel" data-level="beginner">🌱 Principiante</button>
-    <button class="pill" data-level="intermediate">🌿 Intermedio</button>
-    <button class="pill" data-level="advanced">🌳 Avanzado</button>
-  </div>
-  <button class="strict" id="strict" title="No avanzas hasta pronunciar bien la corrección">
-    🔒 Modo estricto: <span id="strictState">OFF</span>
-  </button>
+  <button class="pill" id="songsBtn" title="Busca letras y practica canciones">🎵 Canciones</button>
   <button class="pill" id="vrBtn" title="Practica con las palabras reales que escuchaste en VRChat">🎮 VRChat</button>
+  <button class="pill" id="wordsBtn" title="Practica las 1000 frases más usadas del inglés cotidiano">📚 1000 frases</button>
   <select id="model" title="Modelo de Ollama"></select>
   <span class="dot" id="dot" title="Estado de Ollama"></span>
 </header>
 
 <main id="chat"></main>
+
+<section id="songs">
+  <div class="vr-head">
+    <span class="vr-title">🎵 Practicar una canción</span>
+    <span class="spacer"></span>
+    <button class="btn outline" id="songsClose">✕ Volver al chat</button>
+  </div>
+  <div class="songs-layout">
+    <div>
+      <div class="vr-box" id="songImporter">
+        <h3>Buscar letra o subtítulos</h3>
+        <div>Escribe el nombre y el artista. Enzo buscará la letra y preparará la práctica.</div>
+        <div class="song-import">
+          <input id="songUrl" type="search" placeholder="Ejemplo: Imagine Dragons Believer">
+          <button class="btn" id="songLoad">Buscar canción</button>
+        </div>
+      </div>
+      <div id="songBody"></div>
+    </div>
+    <aside class="vr-box songs-library"><h3>🎵 Canciones guardadas</h3><div id="songLibrary"></div></aside>
+  </div>
+</section>
 
 <section id="vr">
   <div class="vr-head">
@@ -199,6 +267,15 @@
     <button class="btn outline" id="vrClose">✕ Volver al chat</button>
   </div>
   <div id="vrBody"></div>
+</section>
+
+<section id="words1k">
+  <div class="vr-head">
+    <span class="vr-title">📚 Las 1000 frases más usadas — inglés cotidiano</span>
+    <span class="spacer"></span>
+    <button class="btn outline" id="wordsClose">✕ Volver al chat</button>
+  </div>
+  <div id="wordsBody"></div>
 </section>
 
 <div id="practice">
@@ -226,6 +303,7 @@
   </div>
 </footer>
 
+<script src="frases1k.js"></script>
 <script>
 'use strict';
 
@@ -234,7 +312,7 @@ const S = {
   url: localStorage.getItem('ollama_url') || 'http://localhost:11434',
   model: localStorage.getItem('model') || '',
   level: localStorage.getItem('level') || 'beginner',
-  strict: localStorage.getItem('strict') === '1',
+  strict: true,        // modo estricto SIEMPRE activado
   msgs: [],            // historial para el modelo [{role, content}]
   busy: false,         // esperando respuesta del modelo
   blocked: false,      // modo estricto: práctica pendiente
@@ -342,9 +420,9 @@ function startRec(target, auto = false) {
   // Modo continuo: no corta a la primera pausa. Paras tú con el botón,
   // o solo tras varios segundos de silencio habiendo dicho algo.
   rec.lang = 'en-US';
-  rec.interimResults = true; rec.continuous = true;
+  rec.interimResults = true; rec.continuous = true; rec.maxAlternatives = 5;
   recTarget = target;
-  let final = '';
+  let final = '', alternatives = [];
   const armSilence = () => {
     clearTimeout(silenceTimer);
     if (final.trim()) silenceTimer = setTimeout(() => { try { rec && rec.stop(); } catch (_) {} }, SILENCE_MS);
@@ -352,7 +430,14 @@ function startRec(target, auto = false) {
   rec.onresult = e => {
     let interim = '';
     final = '';
-    for (const res of e.results) (res.isFinal ? final += res[0].transcript + ' ' : interim += res[0].transcript);
+    for (const res of e.results) {
+      if (res.isFinal) final += res[0].transcript + ' ';
+      else interim += res[0].transcript;
+    }
+    // Para una frase/palabra corta Chrome suele ofrecer varias interpretaciones.
+    // Guardarlas evita castigar "too" cuando la primera opción fue "true".
+    if (e.results.length === 1 && e.results[0].isFinal)
+      alternatives = Array.from(e.results[0]).map(option => option.transcript.trim()).filter(Boolean);
     $('note').textContent = '🎙️ ' + ((final + interim).trim() || 'Te escucho... (toca el micro para terminar)');
     armSilence();
   };
@@ -370,14 +455,19 @@ function startRec(target, auto = false) {
     $('note').textContent = '';
     const text = final.trim();
     if (!text) return;
-    if (recTarget === 'practice') { checkPractice(text); return; }
-    if (recTarget === 'vr') { vrCheck(text); return; }
+    const options = [...new Set([text, ...alternatives])];
+    if (recTarget === 'practice') { checkPractice(text, options); return; }
+    if (recTarget === 'song') { songCheck(text, options); return; }
+    if (recTarget === 'vr') { vrCheck(text, options); return; }
+    if (recTarget === 'p1k') { p1kCheck(text, options); return; }
     send(text, true);
   };
   rec.start();
   $('note').textContent = '🎙️ Te escucho... (toca el micro para terminar)';
   if (target === 'chat') $('mic').classList.add('rec');
   else if (target === 'vr') { const m = $('vrMic'); if (m) m.textContent = '⏹ PARAR'; }
+  else if (target === 'song') { const m = $('songMic'); if (m) m.textContent = '⏹ PARAR'; }
+  else if (target === 'p1k') { const m = $('p1kMic'); if (m) m.textContent = '⏹ PARAR'; }
   else $('pMic').textContent = '⏹ PARAR';
 }
 
@@ -386,11 +476,18 @@ function stopRecUI() {
   $('mic').classList.remove('rec');
   $('pMic').textContent = '🎙️ DECIRLA';
   const m = $('vrMic'); if (m) m.textContent = '🎙️ DECIRLA';
+  const sm = $('songMic'); if (sm) sm.textContent = '🎙️ DECIRLA';
+  const km = $('p1kMic'); if (km) km.textContent = '🎙️ DECIRLA';
 }
 function stopRec() { if (rec) rec.stop(); }
 
 // ------------------------------------------------------------------ pintar chat
 function esc(s) { const d = document.createElement('span'); d.textContent = s; return d.innerHTML; }
+
+function practiceWords(text, cls, selected = '') {
+  return norm(text).map(word => `<button class="practice-word ${cls}${word === selected ? ' selected' : ''}" ` +
+    `data-word="${esc(word)}" title="Escuchar y practicar esta palabra">${esc(word)}</button>`).join(' ');
+}
 
 function addBubble(role, text, hint) {
   const row = document.createElement('div');
@@ -511,12 +608,54 @@ function startPractice(phrase, tip, replyText = null) {
 
 const norm = s => s.toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean);
 
-function checkPractice(heard) {
+// Alinea en orden: no acepta palabras dichas desordenadas ni reutiliza una
+// sola palabra para cubrir repeticiones de la frase objetivo.
+function comparePhrase(targetText, heardText) {
+  const target = norm(targetText), heard = norm(heardText);
+  const table = Array.from({length: target.length + 1}, () =>
+    Array(heard.length + 1).fill(0));
+  for (let i = 1; i <= target.length; i++)
+    for (let j = 1; j <= heard.length; j++)
+      table[i][j] = target[i - 1] === heard[j - 1]
+        ? table[i - 1][j - 1] + 1 : Math.max(table[i - 1][j], table[i][j - 1]);
+  const matched = new Set();
+  for (let i = target.length, j = heard.length; i && j; ) {
+    if (target[i - 1] === heard[j - 1]) { matched.add(--i); j--; }
+    else if (table[i - 1][j] >= table[i][j - 1]) i--; else j--;
+  }
+  return {
+    words: target.map((w, i) => ({w, ok: matched.has(i)})),
+    ratio: table[target.length][heard.length] / Math.max(1, target.length, heard.length),
+  };
+}
+
+const SOUND_ALIKES = [
+  ['to', 'too', 'two'], ['there', 'their', "they're"],
+  ['for', 'four'], ['know', 'no'], ['right', 'write'], ['one', 'won'],
+  ['see', 'sea'], ['hear', 'here'],
+];
+
+function compareAttempts(target, attempts, wordMode = false) {
+  let best = null;
+  for (const heard of attempts && attempts.length ? attempts : ['']) {
+    const result = comparePhrase(target, heard);
+    result.heard = heard;
+    if (!best || result.ratio > best.ratio) best = result;
+  }
+  if (wordMode) {
+    const wanted = norm(target)[0], actual = norm(best.heard)[0];
+    if (wanted && actual && SOUND_ALIKES.some(group => group.includes(wanted) && group.includes(actual))) {
+      best.ratio = 1;
+      best.words = [{w: wanted, ok: true}];
+    }
+  }
+  return best;
+}
+
+function checkPractice(heard, attempts = [heard]) {
   const p = S.practice; if (!p) return;
   p.attempts++;
-  const target = norm(p.phrase), said = new Set(norm(heard));
-  const words = target.map(w => ({w, ok: said.has(w)}));
-  const ratio = words.filter(x => x.ok).length / Math.max(1, words.length);
+  const {words, ratio, heard: bestHeard} = compareAttempts(p.phrase, attempts);
 
   $('pChips').innerHTML = words
     .map(x => `<span class="chip ${x.ok ? 'ok' : 'ko'}">${x.ok ? '✅' : '❌'} ${esc(x.w)}</span>`)
@@ -538,7 +677,7 @@ function checkPractice(heard) {
     }, 1200);
   } else {
     $('pAttempts').textContent =
-      `Intento ${p.attempts} · Escuché: "${heard}" — di las palabras en rojo`;
+      `Intento ${p.attempts} · Escuché: "${bestHeard}" — di las palabras en rojo`;
     if (p.attempts >= 4) $('pSkip').style.display = 'inline';
     // Repite la frase despacio y vuelve a abrir el micro para otro intento.
     speak(p.phrase, 0.7,
@@ -578,33 +717,221 @@ $('pSkip').onclick = () => {
 };
 
 // ------------------------------------------------------------------ controles
-document.querySelectorAll('#levels .pill').forEach(b => b.onclick = () => {
-  document.querySelectorAll('#levels .pill').forEach(x => x.classList.remove('sel'));
-  b.classList.add('sel');
-  S.level = b.dataset.level;
-  localStorage.setItem('level', S.level);
-});
-
-function paintStrict() {
-  $('strict').classList.toggle('on', S.strict);
-  $('strictState').textContent = S.strict ? 'ON' : 'OFF';
-}
-$('strict').onclick = () => {
-  S.strict = !S.strict;
-  localStorage.setItem('strict', S.strict ? '1' : '0');
-  paintStrict();
-};
+// los niveles y el interruptor de modo estricto se quitaron de la interfaz:
+// el modo estricto queda SIEMPRE activado.
 
 $('model').onchange = () => { S.model = $('model').value; localStorage.setItem('model', S.model); };
 $('send').onclick = () => send($('text').value);
 $('text').onkeydown = e => { if (e.key === 'Enter') send($('text').value); };
 $('mic').onclick = () => rec ? stopRec() : startRec('chat');
 
+// ------------------------------------------------------------------ canciones
+const SONG = {open: false, title: '', songId: '', url: '', source: '',
+              lines: [], results: [], library: [], i: 0, tries: 0, wordTarget: ''};
+
+function songToggle(show) {
+  SONG.open = show;
+  $('songs').style.display = show ? 'block' : 'none';
+  chat.style.display = show ? 'none' : 'block';
+  $('vr').style.display = 'none'; VR.open = false;
+  $('words1k').style.display = 'none'; P1K_UI.open = false;
+  document.querySelector('footer').style.display = show ? 'none' : 'block';
+  $('practice').style.display = show ? 'none' : '';
+  if (show) songLoadLibrary();
+  else { speechSynthesis.cancel(); if (rec && recTarget === 'song') stopRec(); }
+}
+
+async function songLoadLibrary() {
+  try {
+    const r = await fetch('/api/songs?t=' + Date.now());
+    SONG.library = (await r.json()).songs || [];
+    $('songLibrary').innerHTML = SONG.library.length ? SONG.library.map((song, i) =>
+      `<div class="song-result"><div class="song-result-info"><div class="song-result-title">${esc(song.title)}</div>` +
+      `<div class="song-result-meta">${song.lines.length} frases</div></div>` +
+      `<button class="btn outline song-resume" data-index="${i}">Abrir</button></div>`).join('') :
+      '<div class="song-result-meta">Las canciones que prepares aparecerán aquí.</div>';
+    document.querySelectorAll('.song-resume').forEach(button =>
+      button.onclick = () => songResume(Number(button.dataset.index)));
+  } catch { $('songLibrary').textContent = 'No pude cargar la biblioteca.'; }
+}
+
+function songResume(index) {
+  const saved = SONG.library[index]; if (!saved) return;
+  SONG.title = saved.title; SONG.songId = saved.song_id; SONG.url = saved.url; SONG.source = saved.source;
+  SONG.lines = saved.lines.map(line => ({...line, es: line.translation_es, phon_es: line.pronunciation_es}));
+  SONG.i = Math.min(Number(localStorage.getItem('songProgress:' + SONG.songId)) || 0, SONG.lines.length);
+  SONG.wordTarget = '';
+  songShow();
+}
+
+async function translateSong(lines) {
+  const translated = [], pronunciations = [];
+  const ask = async (messages) => {
+    const r = await fetch(S.url + '/api/chat', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({model: S.model, stream: false, format: 'json', think: false,
+        options: {temperature: 0.1}, messages})
+    });
+    if (!r.ok) throw new Error('Ollama respondió ' + r.status);
+    const raw = (await r.json()).message.content;
+    try { return JSON.parse(raw); }
+    catch { throw new Error('Ollama no devolvió una traducción válida.'); }
+  };
+  for (let start = 0; start < lines.length; start += 8) {
+    const current = lines.slice(start, start + 8);
+    $('songBody').innerHTML = `<div class="typing"><div class="spinner"></div>` +
+      `Traduciendo ${Math.min(start + current.length, lines.length)} de ${lines.length} frases...</div>`;
+    const items = current.map((line, i) => ({id: String(i), text: line.text}));
+    const data = await ask([{role: 'system', content:
+      'Para cada frase: tradúcela al español natural y escribe cómo pronunciar el inglés usando sonidos ' +
+      'fáciles para un hispanohablante (no IPA; ejemplo: "What are you doing?" → "uát ar yu dúin"). ' +
+      'No unas ni omitas elementos y copia cada id exactamente. Responde SOLO JSON válido: ' +
+      '{"translations":{"0":"traducción"},"pronunciations":{"0":"pronunciación española"}}.'},
+      {role: 'user', content: JSON.stringify(items)}]);
+    const values = Array(current.length).fill('');
+    const phonetics = Array(current.length).fill('');
+    if (Array.isArray(data.translations))
+      data.translations.forEach((value, i) => { if (i < values.length) values[i] = String(value || ''); });
+    else if (data.translations && typeof data.translations === 'object')
+      values.forEach((_, i) => { values[i] = String(data.translations[String(i)] || ''); });
+    if (Array.isArray(data.pronunciations))
+      data.pronunciations.forEach((value, i) => { if (i < phonetics.length) phonetics[i] = String(value || ''); });
+    else if (data.pronunciations && typeof data.pronunciations === 'object')
+      phonetics.forEach((_, i) => { phonetics[i] = String(data.pronunciations[String(i)] || ''); });
+
+    // Los modelos pequeños ocasionalmente omiten una entrada. Solo esa frase
+    // se vuelve a pedir, evitando tirar toda la importación por un lote parcial.
+    for (let i = 0; i < values.length; i++) {
+      if (values[i].trim() && phonetics[i].trim()) continue;
+      $('songBody').innerHTML = `<div class="typing"><div class="spinner"></div>` +
+        `Completando la traducción de la frase ${start + i + 1}...</div>`;
+      const retry = await ask([{role: 'system', content:
+        'Traduce esta frase al español y escribe cómo pronunciar el inglés con sonidos españoles, sin IPA. ' +
+        'Responde SOLO JSON: {"translation":"...","pronunciation_es":"..."}.'},
+        {role: 'user', content: current[i].text}]);
+      if (!values[i].trim()) values[i] = String(retry.translation || '').trim();
+      if (!phonetics[i].trim()) phonetics[i] = String(retry.pronunciation_es || '').trim();
+      if (!values[i] || !phonetics[i])
+        throw new Error(`No pude preparar completamente la frase ${start + i + 1}. Intenta nuevamente.`);
+    }
+    translated.push(...values);
+    pronunciations.push(...phonetics);
+  }
+  return lines.map((line, i) => ({...line, es: translated[i], phon_es: pronunciations[i]}));
+}
+
+async function songLoad() {
+  const query = $('songUrl').value.trim(); if (!query) return;
+  $('songLoad').disabled = true;
+  $('songBody').innerHTML = '<div class="typing"><div class="spinner"></div>Buscando letras...</div>';
+  try {
+    const r = await fetch('/api/lyrics/search?q=' + encodeURIComponent(query));
+    if (!(r.headers.get('content-type') || '').includes('application/json'))
+      throw new Error('Está activo el servidor anterior. Cierra Enzo Speak y vuelve a ejecutar ./start.sh.');
+    const data = await r.json(); if (!r.ok) throw new Error(data.error || 'No pude buscar la canción.');
+    SONG.results = data.results || [];
+    if (!SONG.results.length) throw new Error('No encontré una letra para esa búsqueda. Prueba agregando el artista.');
+    $('songBody').innerHTML = `<div class="vr-box"><h3>Elige la versión correcta</h3>` +
+      SONG.results.map((song, i) => `<div class="song-result"><div class="song-result-info">
+        <div class="song-result-title">${esc(song.title)}</div>
+        <div class="song-result-meta">${esc(song.artist)}${song.album ? ' · ' + esc(song.album) : ''} · ` +
+          `${song.lines.length} frases ${song.synced ? '· sincronizada' : ''}</div></div>
+        <button class="btn outline song-pick" data-index="${i}">Practicar</button></div>`).join('') + '</div>';
+    document.querySelectorAll('.song-pick').forEach(button => button.onclick = () => songChoose(Number(button.dataset.index)));
+  } catch (e) {
+    $('songBody').innerHTML = `<div class="card err" style="max-width:none">${esc(e.message)}</div>`;
+  } finally { $('songLoad').disabled = false; }
+}
+
+async function songChoose(index) {
+  const selected = SONG.results[index]; if (!selected) return;
+  document.querySelectorAll('.song-pick').forEach(button => button.disabled = true);
+  try {
+    SONG.title = `${selected.title} — ${selected.artist}`;
+    SONG.songId = 'lrclib-' + selected.id;
+    SONG.url = 'https://lrclib.net/api/get/' + selected.id;
+    SONG.source = 'lrclib';
+    SONG.lines = await translateSong(selected.lines);
+    const saved = await fetch('/api/songs', {method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({title: SONG.title, song_id: SONG.songId, url: SONG.url,
+        source: SONG.source, lines: SONG.lines})});
+    if (!(saved.headers.get('content-type') || '').includes('application/json'))
+      throw new Error('El servidor actual no permite guardar canciones. Reinicia con ./start.sh.');
+    const savedData = await saved.json();
+    if (!saved.ok) throw new Error(savedData.error || 'No pude guardar la canción en el JSON.');
+    songLoadLibrary();
+    SONG.i = Math.min(Number(localStorage.getItem('songProgress:' + SONG.songId)) || 0, SONG.lines.length);
+    songShow();
+  } catch (e) {
+    $('songBody').innerHTML = `<div class="card err" style="max-width:none">${esc(e.message)}</div>`;
+  }
+}
+
+function songShow() {
+  if (SONG.i >= SONG.lines.length) {
+    $('songBody').innerHTML = `<div class="song-card"><div class="song-line">🏆 ¡Canción completada!</div>` +
+      `<div class="song-es">Pronunciaste correctamente todas sus frases.</div></div>`;
+    return;
+  }
+  const line = SONG.lines[SONG.i]; SONG.tries = 0; SONG.wordTarget = '';
+  $('songBody').innerHTML = `<div class="song-card">
+    <div class="song-counter">${esc(SONG.title)} · FRASE ${SONG.i + 1} DE ${SONG.lines.length}
+      <div class="song-progress"><span style="width:${100 * SONG.i / SONG.lines.length}%"></span></div></div>
+    <div class="song-line">“${practiceWords(line.text, 'song-word')}”</div><div class="song-es">🇪🇸 ${esc(line.es)}</div>
+    <div class="song-phon">🗣️ Suena como: ${esc(line.phon_es || '')}</div>
+    <div class="song-rule">🔒 MODO ESTRICTO: esta frase no se puede saltar. La siguiente se desbloquea al decirla correctamente.</div>
+    <div class="practice-row"><button class="btn outline" id="songListen">🔊 Escuchar</button>
+      <button class="btn outline" id="songSlow">🐢 Lento</button><button class="btn" id="songMic">🎙️ DECIRLA</button>
+      <span id="songTries" style="font:700 12.5px 'Nunito'; color:var(--ink-soft)"></span></div>
+    <div class="chips" id="songChips"></div></div>`;
+  const listenThenRecord = rate => speak(line.text, rate,
+    () => { if (SONG.open && !rec) startRec('song', true); });
+  $('songListen').onclick = () => listenThenRecord(0.9);
+  $('songSlow').onclick = () => listenThenRecord(0.38);
+  $('songMic').onclick = () => rec ? stopRec() : startRec('song');
+  document.querySelectorAll('.song-word').forEach(button => button.onclick = () => {
+    SONG.wordTarget = button.dataset.word;
+    document.querySelectorAll('.song-word').forEach(word => word.classList.toggle('selected', word === button));
+    $('songTries').textContent = `Palabra seleccionada: “${SONG.wordTarget}” — escúchala y repítela`;
+    speak(SONG.wordTarget, 0.55, () => { if (SONG.open && !rec) startRec('song', true); });
+  });
+  listenThenRecord(0.85);
+}
+
+function songCheck(heard, attempts = [heard]) {
+  const line = SONG.lines[SONG.i]; if (!line) return;
+  SONG.tries++;
+  const target = SONG.wordTarget || line.text;
+  const {words, ratio, heard: bestHeard} = compareAttempts(target, attempts, Boolean(SONG.wordTarget));
+  $('songChips').innerHTML = words.map(x =>
+    `<span class="chip ${x.ok ? 'ok' : 'ko'}">${x.ok ? '✅' : '❌'} ${esc(x.w)}</span>`).join('');
+  if (ratio >= 0.9 && SONG.wordTarget) {
+    $('songTries').textContent = `✅ Pronunciaste bien “${SONG.wordTarget}”. Ahora continúa con la frase completa.`;
+    SONG.wordTarget = '';
+    document.querySelectorAll('.song-word').forEach(word => word.classList.remove('selected'));
+    speak('Good!', 0.9);
+  } else if (ratio >= 0.9) {
+    $('songTries').textContent = '✅ ¡Correcto! Desbloqueando la siguiente frase...';
+    SONG.i++; localStorage.setItem('songProgress:' + SONG.songId, SONG.i);
+    speak('Perfect!', 1, () => setTimeout(songShow, 450));
+  } else {
+    $('songTries').textContent = `Intento ${SONG.tries} · Escuché: "${bestHeard}" — repite las palabras en rojo`;
+    speak(target, 0.48, () => { if (SONG.open && !rec) startRec('song', true); });
+  }
+}
+
+$('songsBtn').onclick = () => songToggle(true);
+$('songsClose').onclick = () => songToggle(false);
+$('songLoad').onclick = songLoad;
+$('songUrl').onkeydown = e => { if (e.key === 'Enter') songLoad(); };
+
 // ------------------------------------------------------------------ VRChat
 // Analiza las conversaciones REALES guardadas por vrchat-subtitulos
 // (web/vrchat/<semana>.json) y genera práctica en pares con la IA local.
 const VR = {open: false, weeks: [], phrases: [], analysis: null,
-            pairs: null, i: 0, tries: 0};
+            pairs: null, i: 0, part: 1, tries: 0, done: 0,
+            building: false, waitingMore: false, wordTarget: ''};
+const VR_PLAN_TARGET = 50;   // el plan crea POR LO MENOS estas cards
 
 const VR_STOP = new Set(('the,a,an,and,or,but,so,to,of,in,on,at,is,are,was,' +
   'were,am,be,been,being,it,its,i,you,he,she,we,they,me,him,her,us,them,my,' +
@@ -627,31 +954,47 @@ const VR_STOP = new Set(('the,a,an,and,or,but,so,to,of,in,on,at,is,are,was,' +
   'many,back,come,comes,came,look,looks,looking,yea,huh,hey,hi,hello,' +
   'thanks,thank,please,sorry').split(','));
 
-const vrTok = s => s.toLowerCase().replace(/[’']/g, '')
-  .replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter(w => w.length > 1);
+// conserva el apóstrofe para que "i'll", "don't"… se reporten tal cual
+const vrTok = s => s.toLowerCase().replace(/[’‘]/g, "'")
+  .replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/)
+  .map(w => w.replace(/^'+|'+$/g, ''))
+  .filter(w => w.length > 1 || w === 'i' || w === 'a');
+
+// las contracciones están en VR_STOP sin apóstrofe (ill, dont, im…)
+const vrIsCommon = w => VR_STOP.has(w.replace(/'/g, ''));
 
 function vrAnalyze(phrases) {
-  const words = new Map(), grams = new Map(), speakers = new Set();
+  // words = vocabulario del tema; common = palabras que arman las oraciones
+  // (it, you, the…): también cuentan, se muestran en su propio grupo
+  const words = new Map(), common = new Map(), grams = new Map(),
+        speakers = new Set();
   for (const p of phrases) {
     speakers.add(p.speaker);
     const t = vrTok(p.text);
-    for (const w of t) if (!VR_STOP.has(w)) words.set(w, (words.get(w) || 0) + 1);
+    for (const w of t) {
+      const m = vrIsCommon(w) ? common : words;
+      m.set(w, (m.get(w) || 0) + 1);
+    }
     for (let n = 2; n <= 3; n++)
       for (let i = 0; i + n <= t.length; i++) {
         const g = t.slice(i, i + n);
-        if (g.every(w => VR_STOP.has(w))) continue;
+        if (g.every(vrIsCommon)) continue;
         grams.set(g.join(' '), (grams.get(g.join(' ')) || 0) + 1);
       }
   }
   const top = m => [...m.entries()].sort((a, b) => b[1] - a[1]);
+  // reporte COMPLETO: todas las palabras con su conteo, sin recortar
   return {total: phrases.length, speakers: speakers.size,
-          words: top(words).slice(0, 18),
-          grams: top(grams).filter(([, c]) => c >= 2).slice(0, 10)};
+          words: top(words),
+          common: top(common),
+          grams: top(grams).filter(([, c]) => c >= 2)};
 }
 
 function vrToggle(show) {
   VR.open = show;
   $('vr').style.display = show ? 'block' : 'none';
+  $('songs').style.display = 'none'; SONG.open = false;
+  $('words1k').style.display = 'none'; P1K_UI.open = false;
   chat.style.display = show ? 'none' : 'block';
   document.querySelector('footer').style.display = show ? 'none' : 'block';
   $('practice').style.display = show ? 'none' : '';
@@ -690,148 +1033,508 @@ async function vrLoadWeek() {
   vrRenderStats();
 }
 
+// top visible + desplegable con el resto: el reporte queda COMPLETO
+function vrChips(list, cls, empty, n) {
+  const chip = ([w, c]) =>
+    `<span class="vr-word ${cls}">${esc(w)} <small>×${c}</small></span>`;
+  if (!list || !list.length) return empty;
+  let html = `<div class="vr-chips">${list.slice(0, n).map(chip).join('')}</div>`;
+  if (list.length > n)
+    html += `<details class="vr-more"><summary>Ver el reporte completo
+      (${list.length} en total)</summary>
+      <div class="vr-chips">${list.slice(n).map(chip).join('')}</div></details>`;
+  return html;
+}
+
 function vrRenderStats() {
   const a = VR.analysis;
+  const plan = vrLoadPlan();   // plan guardado de esta semana (si existe)
   $('vrBody').innerHTML = `
-    <div class="vr-box"><div class="vr-stats">
-      <span><b>${a.total}</b> frases oídas</span>
-      <span><b>${a.speakers}</b> personas</span>
-      <span><b>${a.words.length}</b> palabras clave</span>
-    </div></div>
-    <div class="vr-box"><h3>🔤 Palabras más usadas</h3>
-      <div class="vr-chips">${a.words.map(([w, c]) =>
-        `<span class="vr-word">${esc(w)} <small>×${c}</small></span>`).join('') ||
-        'Todavía muy pocas frases.'}</div></div>
-    <div class="vr-box"><h3>💬 Expresiones repetidas</h3>
-      <div class="vr-chips">${a.grams.map(([g, c]) =>
-        `<span class="vr-word vr-gram">${esc(g)} <small>×${c}</small></span>`).join('') ||
-        'Aún no se repite ninguna expresión.'}</div></div>
+  <div class="vr-cols">
+    <div>
+      <div class="vr-box"><div class="vr-stats">
+        <span><b>${a.total}</b> frases oídas</span>
+        <span><b>${a.speakers}</b> personas</span>
+        <span><b>${a.words.length}</b> palabras clave</span>
+        <span><b>${(a.common || []).length}</b> comunes</span>
+      </div></div>
+      <div class="vr-box"><h3>🔤 Palabras más usadas</h3>
+        ${vrChips(a.words, '', 'Todavía muy pocas frases.', 18)}</div>
+      <div class="vr-box"><h3>🧱 Palabras que arman las oraciones</h3>
+        ${vrChips(a.common, 'vr-common', 'Todavía muy pocas frases.', 18)}</div>
+      <div class="vr-box"><h3>💬 Expresiones repetidas</h3>
+        ${vrChips(a.grams, 'vr-gram', 'Aún no se repite ninguna expresión.', 10)}</div>
+    </div>
     <div class="vr-box">
-      <h3>🎯 Práctica (pares: te dicen algo → tú contestas)</h3>
-      <button class="btn" id="vrGen" ${a.total < 3 ? 'disabled' : ''}>
-        🎮 Crear sesión de práctica con estas palabras</button>
+      <h3>🎯 Plan de práctica — ${VR_PLAN_TARGET} conversaciones, una por una</h3>
+      ${plan && plan.i < plan.pairs.length ? `
+      <button class="btn" id="vrCont">▶ Continuar plan — vas en la
+        ${plan.i + 1} de ${plan.pairs.length} (✅ ${plan.done || 0} hechas)</button>` : ''}
+      <button class="btn ${plan && plan.i < plan.pairs.length ? 'outline' : ''}"
+        id="vrGen" ${a.total < 3 ? 'disabled' : ''}>
+        🎮 Crear plan nuevo con estas palabras</button>
       <div id="vrPractice" style="margin-top:12px"></div>
-    </div>`;
-  const g = $('vrGen'); if (g) g.onclick = vrGenPractice;
+    </div>
+  </div>`;
+  const g = $('vrGen'); if (g) g.onclick = () => vrBuildPlan(true);
+  const c = $('vrCont');
+  if (c) c.onclick = () => {
+    VR.pairs = plan.pairs; VR.i = plan.i; VR.done = plan.done || 0;
+    vrShowPair();
+    if (VR.pairs.length < VR_PLAN_TARGET) vrBuildPlan(false); // seguir armándolo
+  };
 }
 
 const VR_PRACTICE_SYS = `Eres profesor de inglés para un estudiante
 hispanohablante. Con el vocabulario REAL que el estudiante escuchó en VRChat,
-crea EXACTAMENTE 6 pares de práctica (grupos de 2). En cada par, un jugador de
-VRChat le dice algo — una PREGUNTA o una ORACIÓN típica — y el estudiante
-contesta con una respuesta o afirmación corta y natural (máximo 10 palabras).
-USA las palabras y expresiones frecuentes que se te dan. Responde SOLO un
-objeto JSON válido con esta forma exacta:
-{"pairs":[{"say_en":"lo que le dicen (inglés)","say_es":"su traducción",
-"reply_en":"lo que debe contestar (inglés)","reply_es":"su traducción",
-"phon_es":"fonética española de reply_en (ej: ai lav dis uérld)"}]}`;
+crea EXACTAMENTE 6 conversaciones de práctica de DOS partes. En cada una, un
+jugador de VRChat dice algo — una PREGUNTA o una ORACIÓN típica — y luego se
+contesta con una respuesta corta y natural (máximo 10 palabras). El estudiante
+pronunciará EN VOZ ALTA las DOS partes, así que ambas deben ser naturales y
+pronunciables. USA las palabras y expresiones frecuentes que se te dan,
+INCLUYENDO las palabras comunes (it, you, that…): son las que arman las
+oraciones. Responde SOLO un objeto JSON válido: {"pairs":[…]} donde cada par
+tiene OBLIGATORIAMENTE estos 6 campos — say_es es la traducción al español de
+say_en, y reply_es la de reply_en, NO las confundas. Ejemplo de un par bien
+hecho:
+{"say_en":"Where are you from?","say_es":"¿De dónde eres?",
+"phon_say_es":"uér ar yu from","reply_en":"I am from Colombia.",
+"reply_es":"Soy de Colombia.","phon_es":"ai am from colombia"}`;
 
-async function vrGenPractice() {
-  const a = VR.analysis;
-  const sample = VR.phrases.slice(-40).filter(p => vrTok(p.text).length > 2)
-    .slice(-10).map(p => '- ' + p.text).join('\n');
-  $('vrPractice').innerHTML = '<div class="typing"><div class="spinner"></div>La IA está creando tu sesión...</div>';
+// ---- plan de práctica: se arma por LOTES hasta llegar a 50+ cards ----
+// El progreso (cards, por cuál vas, cuántas hiciste) se guarda por semana
+// en el navegador, así puedes irlas pasando de a poco.
+const vrPlanKey = () =>
+  'vrPlan:' + ($('vrWeek').value || (VR.weeks[0] && VR.weeks[0].file) || '');
+
+function vrLoadPlan() {
   try {
-    const r = await fetch(S.url + '/api/chat', {
-      method: 'POST', headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        model: S.model, stream: false, format: 'json', think: false,
-        options: {temperature: 0.7},
-        messages: [
-          {role: 'system', content: VR_PRACTICE_SYS},
-          {role: 'user', content:
-            'Palabras más usadas: ' + a.words.map(([w]) => w).join(', ') +
-            '\nExpresiones repetidas: ' + (a.grams.map(([g]) => g).join(' | ') || '(ninguna)') +
-            '\nFrases reales oídas:\n' + sample},
-        ],
-      }),
-    });
-    if (!r.ok) throw new Error('Ollama respondió ' + r.status);
-    const d = JSON.parse((await r.json()).message.content);
-    VR.pairs = (d.pairs || []).filter(p => p.say_en && p.reply_en).slice(0, 6);
-    if (!VR.pairs.length) throw new Error('la IA no devolvió pares');
-    VR.i = 0;
-    vrShowPair();
-  } catch (e) {
-    $('vrPractice').innerHTML = `<div class="card err">No pude crear la sesión: ${esc(e.message)}</div>
-      <button class="btn outline" onclick="vrGenPractice()">Reintentar</button>`;
+    const p = JSON.parse(localStorage.getItem(vrPlanKey()) || 'null');
+    if (p && Array.isArray(p.pairs)) {
+      // descarta cards viejas incompletas (sin alguna traducción)
+      p.pairs = p.pairs.filter(c =>
+        c.say_en && c.reply_en && c.say_es && c.reply_es);
+      p.i = Math.min(p.i || 0, p.pairs.length);
+      if (p.pairs.length) return p;
+    }
+  } catch {}
+  return null;
+}
+
+function vrSavePlan() {
+  try {
+    localStorage.setItem(vrPlanKey(), JSON.stringify(
+      {pairs: VR.pairs, i: VR.i, done: VR.done}));
+  } catch {}
+}
+
+// un lote de 6 cards; k rota las palabras/frases para que cada lote varíe
+async function vrBatch(k) {
+  const a = VR.analysis;
+  const rot = (arr, n) => arr.length
+    ? arr.slice(n % arr.length).concat(arr.slice(0, n % arr.length)) : arr;
+  const sample = VR.phrases.filter(p => vrTok(p.text).length > 2);
+  const from = sample.length ? (k * 7) % sample.length : 0;
+  const frases = sample.slice(from, from + 8).map(p => '- ' + p.text).join('\n');
+  const hechas = VR.pairs.slice(-8).map(p => p.say_en).join(' | ');
+  const r = await fetch(S.url + '/api/chat', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      model: S.model, stream: false, format: 'json', think: false,
+      options: {temperature: 0.9},
+      messages: [
+        {role: 'system', content: VR_PRACTICE_SYS},
+        {role: 'user', content:
+          'Palabras más usadas: ' +
+            rot(a.words.map(([w]) => w), k * 5).slice(0, 18).join(', ') +
+          '\nPalabras comunes más oídas (úsalas para armar las oraciones): ' +
+            (rot((a.common || []).map(([w]) => w), k * 3).slice(0, 14)
+              .join(', ') || '(ninguna)') +
+          '\nExpresiones repetidas: ' +
+            (rot(a.grams.map(([g]) => g), k * 2).slice(0, 10)
+              .join(' | ') || '(ninguna)') +
+          (frases ? '\nFrases reales oídas:\n' + frases : '') +
+          (hechas ? '\nYa existen estas conversaciones, crea unas DIFERENTES: '
+            + hechas : '')},
+      ],
+    }),
+  });
+  if (!r.ok) throw new Error('Ollama respondió ' + r.status);
+  const d = JSON.parse((await r.json()).message.content);
+  // solo cards completas: con las DOS frases y las DOS traducciones
+  return (d.pairs || []).filter(p =>
+    p.say_en && p.reply_en && p.say_es && p.reply_es);
+}
+
+async function vrBuildPlan(fresh) {
+  if (VR.building) { toast('La IA todavía está armando el plan…'); return; }
+  if (fresh || !VR.pairs) { VR.pairs = []; VR.i = 0; VR.done = 0; }
+  const key = vrPlanKey();
+  VR.building = true;
+  let fallos = 0, k = Math.ceil(VR.pairs.length / 6);
+  if (!VR.pairs.length)
+    $('vrPractice').innerHTML = '<div class="typing"><div class="spinner">' +
+      '</div>La IA está creando tu plan… empiezas con las primeras cards ' +
+      'y el resto se arman solas mientras practicas.</div>';
+  while (VR.open && VR.pairs && vrPlanKey() === key
+         && VR.pairs.length < VR_PLAN_TARGET && fallos < 4) {
+    try {
+      const lote = await vrBatch(k++);
+      if (!VR.open || !VR.pairs || vrPlanKey() !== key) break;
+      const vistas = new Set(VR.pairs.map(p => norm(p.say_en).join(' ')));
+      const nuevas = lote.filter(p => !vistas.has(norm(p.say_en).join(' ')));
+      if (!nuevas.length) { fallos++; continue; }
+      fallos = 0;
+      const primeras = !VR.pairs.length;
+      VR.pairs.push(...nuevas);
+      vrSavePlan();
+      if (primeras) vrShowPair();
+      else if (VR.waitingMore) { VR.waitingMore = false; vrShowPair(); }
+      else vrPaintPlanInfo();
+    } catch (e) {
+      fallos++;
+      if (!VR.pairs.length && fallos >= 4) {
+        VR.building = false;
+        $('vrPractice').innerHTML =
+          `<div class="card err">No pude crear el plan: ${esc(e.message)}</div>
+          <button class="btn outline" onclick="vrBuildPlan(true)">Reintentar</button>`;
+        return;
+      }
+    }
   }
+  VR.building = false;
+  // si el estudiante quedó esperando más cards y ya no vienen: cerrar plan
+  if (VR.waitingMore) { VR.waitingMore = false; vrAfterAdvance(); }
+  else vrPaintPlanInfo();
+}
+
+function vrPaintPlanInfo() {
+  const el = $('vrPlanInfo');
+  if (!el || !VR.pairs) return;
+  el.textContent = `Card ${VR.i + 1} / ${VR.pairs.length}` +
+    (VR.building ? ' · creando más… ⏳' : '') + ` · ✅ ${VR.done}`;
+}
+
+// La conversación se practica en modo ESTRICTO siempre: el estudiante
+// pronuncia la parte 1 y, solo cuando la dice bien, pasa a la parte 2.
+const vrTarget = () => {
+  if (VR.wordTarget) return VR.wordTarget;
+  const p = VR.pairs[VR.i];
+  return VR.part === 1 ? p.say_en : p.reply_en;
+};
+
+function vrPaintParts() {
+  $('vrP1').className = 'vr-part' + (VR.part === 1 ? ' active' : ' done');
+  $('vrP2').className = 'vr-part' + (VR.part === 2 ? ' active' : '');
 }
 
 function vrShowPair() {
   const p = VR.pairs[VR.i];
+  VR.part = 1;
   VR.tries = 0;
+  VR.wordTarget = '';
   $('vrPractice').innerHTML = `
     <div style="display:flex; align-items:center; margin-bottom:8px">
-      <span style="font:800 13px 'Nunito'; color:var(--ink-soft)">TE DICEN:</span>
-      <span class="vr-progress">Par ${VR.i + 1} / ${VR.pairs.length}</span>
+      <span style="font:800 13px 'Nunito'; color:var(--ink-soft)">CONVERSACIÓN — PRONUNCIA LAS DOS PARTES, EN ORDEN:</span>
+      <span class="vr-progress" id="vrPlanInfo"></span>
     </div>
-    <div class="vr-pair-say">“${esc(p.say_en)}”</div>
-    <div class="vr-pair-es">${esc(p.say_es || '')}</div>
-    <div class="vr-reply">
-      <div style="font:800 11.5px 'Nunito'; color:var(--green-text); letter-spacing:.5px">TÚ CONTESTAS — DILA EN VOZ ALTA:</div>
-      <div class="en">“${esc(p.reply_en)}”</div>
+    <div class="vr-part" id="vrP1">
+      <div class="tag">PARTE 1 · EL JUGADOR DICE — DILA EN VOZ ALTA:</div>
+      <div class="en">“${practiceWords(p.say_en, 'vr-word')}”</div>
+      <div class="es">${esc(p.say_es || '')}</div>
+      ${p.phon_say_es ? `<div class="ph">🗣 ${esc(p.phon_say_es)}</div>` : ''}
+    </div>
+    <div class="vr-part" id="vrP2">
+      <div class="tag">PARTE 2 · TÚ CONTESTAS — DILA EN VOZ ALTA:</div>
+      <div class="en">“${practiceWords(p.reply_en, 'vr-word')}”</div>
       <div class="es">${esc(p.reply_es || '')}</div>
       ${p.phon_es ? `<div class="ph">🗣 ${esc(p.phon_es)}</div>` : ''}
     </div>
     <div class="practice-row">
-      <button class="btn outline" id="vrSay">🔊 Oír pregunta</button>
-      <button class="btn outline" id="vrAns">🐢 Oír respuesta</button>
+      <button class="btn outline" id="vrSay">🔊 Oírla</button>
+      <button class="btn outline" id="vrAns">🐢 Despacio</button>
       <button class="btn" id="vrMic">🎙️ DECIRLA</button>
-      <button class="btn outline" id="vrSkipBtn">Saltar</button>
+      <button class="btn outline" id="vrSkipBtn" style="display:none">Saltar</button>
       <span id="vrTries" style="font:700 12.5px 'Nunito'; color:var(--ink-soft)"></span>
     </div>
     <div class="chips" id="vrChips" style="margin-top:10px"></div>`;
-  $('vrSay').onclick = () => speak(p.say_en, 0.95);
-  $('vrAns').onclick = () => speak(p.reply_en, 0.7);
+  const vrListenThenRecord = rate => speak(vrTarget(), rate,
+    () => { if (VR.open && !rec) startRec('vr', true); });
+  $('vrSay').onclick = () => vrListenThenRecord(0.9);
+  $('vrAns').onclick = () => vrListenThenRecord(0.38);
   $('vrMic').onclick = () => rec ? stopRec() : startRec('vr');
-  $('vrSkipBtn').onclick = vrNext;
-  speak(p.say_en, 1.0, () => { if (VR.open && !rec) startRec('vr', true); });
+  $('vrSkipBtn').onclick = () => { speechSynthesis.cancel(); vrNextPart(); };
+  document.querySelectorAll('.vr-word').forEach(button => button.onclick = () => {
+    VR.wordTarget = button.dataset.word;
+    document.querySelectorAll('.vr-word').forEach(word => word.classList.toggle('selected', word === button));
+    $('vrTries').textContent = `Palabra seleccionada: “${VR.wordTarget}” — escúchala y repítela`;
+    speak(VR.wordTarget, 0.55, () => { if (VR.open && !rec) startRec('vr', true); });
+  });
+  vrPaintParts();
+  vrPaintPlanInfo();
+  // modela la parte 1 y abre el micro para que el estudiante la repita
+  speak(vrTarget(), 0.85, () => { if (VR.open && !rec) startRec('vr', true); });
 }
 
-function vrCheck(heard) {
+function vrNextPart() {
+  if (!VR.open || !VR.pairs) return;
+  if (VR.part === 1) {
+    VR.part = 2;
+    VR.tries = 0;
+    VR.wordTarget = '';
+    vrPaintParts();
+    $('vrChips').innerHTML = '';
+    $('vrTries').textContent = '';
+    $('vrSkipBtn').style.display = 'none';
+    speak(vrTarget(), 0.85, () => { if (VR.open && !rec) startRec('vr', true); });
+  } else vrNext();
+}
+
+function vrCheck(heard, attempts = [heard]) {
   const p = VR.pairs && VR.pairs[VR.i]; if (!p || !VR.open) return;
   VR.tries++;
-  const target = norm(p.reply_en), said = new Set(norm(heard));
-  const words = target.map(w => ({w, ok: said.has(w)}));
-  const ratio = words.filter(x => x.ok).length / Math.max(1, words.length);
+  const {words, ratio, heard: bestHeard} = compareAttempts(vrTarget(), attempts, Boolean(VR.wordTarget));
   $('vrChips').innerHTML = words.map(x =>
     `<span class="chip ${x.ok ? 'ok' : 'ko'}">${x.ok ? '✅' : '❌'} ${esc(x.w)}</span>`).join('');
-  if (ratio >= 0.75) {
-    $('vrTries').textContent = '🎉 ¡Perfecto!';
-    speak('Perfect!', 1.0);
-    setTimeout(vrNext, 1300);
+  if (ratio >= 0.85 && VR.wordTarget) {
+    $('vrTries').textContent = `✅ Pronunciaste bien “${VR.wordTarget}”. Ahora continúa con la parte completa.`;
+    VR.wordTarget = '';
+    document.querySelectorAll('.vr-word').forEach(word => word.classList.remove('selected'));
+    speak('Good!', 0.9);
+  } else if (ratio >= 0.85) {   // estricto: igual de exigente que la práctica del chat
+    if (VR.part === 1) {
+      $('vrTries').textContent = '✅ ¡Parte 1 lista! Ahora la respuesta';
+      speak('Good!', 1.0);
+      setTimeout(vrNextPart, 1100);
+    } else {
+      $('vrTries').textContent = '🎉 ¡Conversación completa!';
+      VR.done++;
+      vrSavePlan();
+      speak('Perfect!', 1.0);
+      setTimeout(vrNext, 1300);
+    }
   } else {
-    $('vrTries').textContent = `Intento ${VR.tries} · Escuché: "${heard}" — di las palabras en rojo`;
-    speak(p.reply_en, 0.7, () => { if (VR.open && !rec) startRec('vr', true); });
+    $('vrTries').textContent = `Intento ${VR.tries} · Escuché: "${bestHeard}" — di las palabras en rojo`;
+    if (VR.tries >= 4) $('vrSkipBtn').style.display = '';
+    speak(vrTarget(), 0.7, () => { if (VR.open && !rec) startRec('vr', true); });
   }
 }
 
 function vrNext() {
   speechSynthesis.cancel();
   VR.i++;
-  if (VR.i >= VR.pairs.length) {
-    $('vrPractice').innerHTML = `
-      <div class="card" style="background:var(--green-bg); border:2px solid var(--green-border); color:var(--green-text); max-width:none">
-        🏆 ¡Sesión completada! Practicaste ${VR.pairs.length} pares con las palabras reales de VRChat.</div>
-      <button class="btn" onclick="vrGenPractice()">🎮 Otra sesión</button>`;
-    speak('Amazing job! You finished the session.', 1.0);
-  } else vrShowPair();
+  vrSavePlan();
+  vrAfterAdvance();
+}
+
+function vrAfterAdvance() {
+  if (VR.i < VR.pairs.length) { vrShowPair(); return; }
+  if (VR.building) {
+    // se acabaron las que hay, pero la IA sigue creando: esperar la próxima
+    VR.waitingMore = true;
+    $('vrPractice').innerHTML = '<div class="typing"><div class="spinner">' +
+      '</div>¡Vas volando! La IA está creando más cards…</div>';
+    return;
+  }
+  $('vrPractice').innerHTML = `
+    <div class="card" style="background:var(--green-bg); border:2px solid var(--green-border); color:var(--green-text); max-width:none">
+      🏆 ¡Plan completado! Dijiste bien ${VR.done} de ${VR.pairs.length}
+      conversaciones con las palabras reales de VRChat.</div>
+    <button class="btn" id="vrAgain">🎮 Crear plan nuevo</button>`;
+  $('vrAgain').onclick = () => vrBuildPlan(true);
+  speak('Amazing job! You finished your plan.', 1.0);
 }
 
 $('vrBtn').onclick = () => vrToggle(true);
 $('vrClose').onclick = () => vrToggle(false);
+$('wordsBtn').onclick = () => p1kToggle(true);
+$('wordsClose').onclick = () => p1kToggle(false);
 $('vrReload').onclick = vrLoadIndex;
 $('vrWeek').onchange = vrLoadWeek;
+
+// ------------------------------------------------- 1000 frases
+// Las 1000 frases más usadas del inglés cotidiano (frases1k.js) se practican
+// UNA POR UNA, en modo estricto, con la misma mecánica de las canciones.
+// Se guarda cuántas veces dijiste bien cada frase y por cuál vas.
+const P1K_UI = {open: false, i: 0, tries: 0, wordTarget: '', practicing: false};
+const p1kStats = (() => {
+  try { return JSON.parse(localStorage.getItem('p1kStats') || '{}'); }
+  catch { return {}; }
+})();
+function p1kSave() {
+  try {
+    localStorage.setItem('p1kStats', JSON.stringify(p1kStats));
+    localStorage.setItem('p1kPos', P1K_UI.i);
+  } catch {}
+}
+
+function p1kToggle(show) {
+  P1K_UI.open = show;
+  $('words1k').style.display = show ? 'block' : 'none';
+  $('vr').style.display = 'none'; VR.open = false;
+  $('songs').style.display = 'none'; SONG.open = false;
+  chat.style.display = show ? 'none' : 'block';
+  document.querySelector('footer').style.display = show ? 'none' : 'block';
+  $('practice').style.display = show ? 'none' : '';
+  if (show) {
+    P1K_UI.i = Math.min(Number(localStorage.getItem('p1kPos')) || 0, P1K.length - 1);
+    p1kRenderList();
+  } else { speechSynthesis.cancel(); if (rec && recTarget === 'p1k') stopRec(); }
+}
+
+function p1kRow(i) {
+  const n = p1kStats[i] || 0;
+  return `<div class="p1k-row${n ? ' p1k-done' : ''}" data-i="${i}">
+    <span class="p1k-num">${i + 1}</span>
+    <span class="p1k-texts"><b>${esc(P1K[i][0])}</b>
+      <small>${esc(P1K[i][1])}</small></span>
+    <span class="p1k-count">${n ? '✅ ×' + n : ''}</span></div>`;
+}
+
+function p1kRenderList() {
+  P1K_UI.practicing = false;
+  const done = Object.values(p1kStats).filter(n => n > 0).length;
+  const reps = Object.values(p1kStats).reduce((s, n) => s + n, 0);
+  $('wordsBody').innerHTML = `
+    <div class="vr-box"><div class="vr-stats">
+      <span><b>${done}</b> de ${P1K.length} frases practicadas</span>
+      <span><b>${reps}</b> frases bien dichas en total</span>
+      <span><b>${P1K.length - done}</b> por practicar</span>
+    </div></div>
+    <div class="vr-box"><div class="practice-row">
+      <button class="btn" id="p1kGo">▶ Practicar — vas en la frase ${P1K_UI.i + 1}</button>
+      <input id="p1kSearch" type="search" placeholder="Buscar una frase… (clic en una para practicarla)"
+        style="flex:1; min-width:220px; border:2px solid var(--line);
+        border-radius:12px; padding:9px 13px; font:700 14px 'Nunito';
+        color:var(--ink); background:var(--bg-soft); outline:none">
+    </div></div>
+    <div class="vr-box"><div id="p1kList"></div></div>`;
+  $('p1kGo').onclick = () => p1kShow();
+  $('p1kSearch').oninput = p1kPaintList;
+  $('p1kList').onclick = ev => {
+    const row = ev.target.closest('[data-i]');
+    if (row) { P1K_UI.i = Number(row.dataset.i); p1kSave(); p1kShow(); }
+  };
+  p1kPaintList();
+}
+
+function p1kPaintList() {
+  const q = $('p1kSearch').value.trim().toLowerCase();
+  const idx = [];
+  for (let i = 0; i < P1K.length; i++)
+    if (!q || P1K[i][0].toLowerCase().includes(q)
+        || P1K[i][1].toLowerCase().includes(q)) idx.push(i);
+  $('p1kList').innerHTML = idx.map(p1kRow).join('') ||
+    'Ninguna frase coincide con la búsqueda.';
+}
+
+function p1kShow() {
+  if (P1K_UI.i >= P1K.length) {
+    $('wordsBody').innerHTML = `<div class="song-card">
+      <div class="song-line">🏆 ¡Completaste las 1000 frases!</div>
+      <div class="song-es">Puedes repasarlas desde la lista cuando quieras.</div>
+      <button class="btn" onclick="P1K_UI.i=0; p1kSave(); p1kRenderList()">Volver a la lista</button></div>`;
+    return;
+  }
+  const idx = P1K_UI.i;
+  const en = P1K[idx][0], es = P1K[idx][1];
+  P1K_UI.practicing = true; P1K_UI.tries = 0; P1K_UI.wordTarget = '';
+  const n = p1kStats[idx] || 0;
+  $('wordsBody').innerHTML = `<div class="song-card">
+    <div class="song-counter">FRASE ${idx + 1} DE ${P1K.length}
+      · la has dicho bien ${n} ${n === 1 ? 'vez' : 'veces'}
+      <div class="song-progress"><span style="width:${100 * idx / P1K.length}%"></span></div></div>
+    <div class="song-line">“${practiceWords(en, 'song-word')}”</div>
+    <div class="song-es">🇪🇸 ${esc(es)}</div>
+    <div class="song-phon" id="p1kPhon"></div>
+    <div class="song-rule">🔒 MODO ESTRICTO: la siguiente frase se desbloquea al decir esta correctamente.</div>
+    <div class="practice-row">
+      <button class="btn outline" id="p1kListen">🔊 Escuchar</button>
+      <button class="btn outline" id="p1kSlow">🐢 Lento</button>
+      <button class="btn" id="p1kMic">🎙️ DECIRLA</button>
+      <button class="btn outline" id="p1kBack">📋 Lista</button>
+      <span id="p1kTries" style="font:700 12.5px 'Nunito'; color:var(--ink-soft)"></span></div>
+    <div class="chips" id="p1kChips"></div></div>`;
+  const listenThenRecord = rate => speak(en, rate,
+    () => { if (P1K_UI.open && P1K_UI.practicing && !rec) startRec('p1k', true); });
+  $('p1kListen').onclick = () => listenThenRecord(0.9);
+  $('p1kSlow').onclick = () => listenThenRecord(0.38);
+  $('p1kMic').onclick = () => rec ? stopRec() : startRec('p1k');
+  $('p1kBack').onclick = () => { speechSynthesis.cancel();
+    if (rec && recTarget === 'p1k') stopRec(); p1kRenderList(); };
+  document.querySelectorAll('.song-word').forEach(button => button.onclick = () => {
+    P1K_UI.wordTarget = button.dataset.word;
+    document.querySelectorAll('.song-word').forEach(word =>
+      word.classList.toggle('selected', word === button));
+    $('p1kTries').textContent =
+      `Palabra seleccionada: “${P1K_UI.wordTarget}” — escúchala y repítela`;
+    speak(P1K_UI.wordTarget, 0.55,
+      () => { if (P1K_UI.open && !rec) startRec('p1k', true); });
+  });
+  p1kPhonics(idx, en);
+  listenThenRecord(0.85);
+}
+
+// fonética española de la frase: la genera la IA una vez y queda guardada
+async function p1kPhonics(idx, en) {
+  let ph = '';
+  try { ph = localStorage.getItem('p1kPhon:' + idx) || ''; } catch {}
+  if (!ph) {
+    try {
+      const r = await fetch(S.url + '/api/chat', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({model: S.model, stream: false, format: 'json',
+          think: false, options: {temperature: 0.1},
+          messages: [{role: 'system', content: 'Escribe cómo pronunciar la ' +
+            'frase en inglés usando sonidos fáciles para un hispanohablante, ' +
+            'sin IPA (ej: "What are you doing?" → "uát ar yu dúin"). Responde ' +
+            'SOLO JSON: {"pronunciation_es":"..."}.'},
+            {role: 'user', content: en}]}),
+      });
+      ph = String(JSON.parse((await r.json()).message.content)
+        .pronunciation_es || '').trim();
+      if (ph) try { localStorage.setItem('p1kPhon:' + idx, ph); } catch {}
+    } catch {}
+  }
+  const el = $('p1kPhon');
+  if (el && P1K_UI.practicing && P1K_UI.i === idx)
+    el.textContent = ph ? '🗣️ Suena como: ' + ph : '';
+}
+
+function p1kCheck(heard, attempts = [heard]) {
+  if (!P1K_UI.practicing || P1K_UI.i >= P1K.length) return;
+  const en = P1K[P1K_UI.i][0];
+  P1K_UI.tries++;
+  const target = P1K_UI.wordTarget || en;
+  const {words, ratio, heard: bestHeard} =
+    compareAttempts(target, attempts, Boolean(P1K_UI.wordTarget));
+  $('p1kChips').innerHTML = words.map(x =>
+    `<span class="chip ${x.ok ? 'ok' : 'ko'}">${x.ok ? '✅' : '❌'} ${esc(x.w)}</span>`).join('');
+  if (ratio >= 0.9 && P1K_UI.wordTarget) {
+    $('p1kTries').textContent =
+      `✅ Pronunciaste bien “${P1K_UI.wordTarget}”. Ahora la frase completa.`;
+    P1K_UI.wordTarget = '';
+    document.querySelectorAll('.song-word').forEach(word =>
+      word.classList.remove('selected'));
+    speak('Good!', 0.9);
+  } else if (ratio >= 0.9) {
+    p1kStats[P1K_UI.i] = (p1kStats[P1K_UI.i] || 0) + 1;
+    P1K_UI.i++;
+    p1kSave();
+    $('p1kTries').textContent = '✅ ¡Correcto! Desbloqueando la siguiente frase...';
+    speak('Perfect!', 1, () => setTimeout(p1kShow, 450));
+  } else {
+    $('p1kTries').textContent =
+      `Intento ${P1K_UI.tries} · Escuché: "${bestHeard}" — repite las palabras en rojo`;
+    speak(target, 0.48, () => { if (P1K_UI.open && !rec) startRec('p1k', true); });
+  }
+}
 
 // ------------------------------------------------------------------ arranque
 const GREETING = "Hey! I'm Enzo, your English buddy. How are you doing today?";
 const GREETING_ES = '¡Hola! Soy Enzo, tu compañero de inglés. ¿Cómo estás hoy?';
 
 (async function init() {
-  document.querySelectorAll('#levels .pill').forEach(b =>
-    b.classList.toggle('sel', b.dataset.level === S.level));
-  paintStrict();
   try {
     const models = await ollamaTags();
     $('model').innerHTML = models.map(m => `<option>${esc(m)}</option>`).join('');
@@ -846,8 +1549,10 @@ const GREETING_ES = '¡Hola! Soy Enzo, tu compañero de inglés. ¿Cómo estás 
   }
   addBubble('enzo', GREETING, GREETING_ES);
   S.msgs.push({role: 'assistant', content: GREETING});
-  // El navegador exige un gesto del usuario antes de reproducir audio:
-  const once = () => { speak(GREETING); document.removeEventListener('click', once); };
+  vrToggle(true);   // arrancar siempre en la pantalla de VRChat
+  // El navegador exige un gesto del usuario antes de reproducir audio
+  // (el saludo solo se dice si ya volvió al chat):
+  const once = () => { if (!VR.open) speak(GREETING); document.removeEventListener('click', once); };
   document.addEventListener('click', once);
 })();
 </script>
