@@ -68,7 +68,7 @@ La joya del proyecto: un ciclo completo entre **jugar** y **aprender**.
 
 ### 1. Mientras juegas — subtítulos en tiempo real
 
-`vrchat-subtitulos` pone una ventana flotante sobre el juego que subtitula
+`vrchat-subs` pone una ventana flotante sobre el juego que subtitula
 **en inglés** a las personas que hablan en VRChat:
 
 ![Overlay de subtítulos de VRChat](docs/capturas/overlay-vrchat.png)
@@ -228,7 +228,7 @@ enzo-speak/
 | "No encuentro Ollama" en la web | `./start.sh` lo arranca solo; si falla, mira `/tmp/speak_enzo_ollama.log` o ejecuta `ollama serve` a mano. |
 | El puerto 8180 está ocupado | Cierra el programa que lo usa y vuelve a ejecutar `./start.sh`. |
 | Enzo tarda mucho en responder | Cambia al modelo pequeño (`qwen3.5:2b`) en el selector de arriba a la derecha: `ollama pull qwen3.5:2b`. |
-| Subtítulos lentos con el juego abierto | Normal: si VRChat llena la GPU, Whisper pasa a CPU (~1 s por frase). Puedes probar `vrchat-subtitulos --model tiny`. |
+| Subtítulos lentos con el juego abierto | Normal: si VRChat llena la GPU, Whisper pasa a CPU (~1 s por frase). Puedes probar `vrchat-subs --model tiny`. |
 | Subtitula murmullos lejanos (o no oye a alguien) | Ajusta `min_volume` en `~/.config/vrchat-subtitulos/config.json` (súbelo a `0.02` para ser más estricto, bájalo a `0.008` para oír más lejos). |
 
 ---

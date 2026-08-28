@@ -18,17 +18,18 @@ audio ni texto a ningún servicio externo.
 ## Un solo comando
 
 ```bash
-vrchat-subtitulos
+vrchat-subs
 ```
 
 Ese único comando **instala todo lo que falte y ejecuta**: si no hay entorno
 de Python lo crea, si faltan dependencias las instala, si faltan modelos los
-descarga, y arranca. En una máquina nueva basta con copiar la carpeta del
-proyecto y correr `./vrchat-subtitulos`.
+descarga, y arranca. (El alias `vrchat-subs` lo crea el `./start.sh` del
+repo; también puedes ejecutar directo `./vrchat-subtitulos` desde esta
+carpeta — es lo mismo.)
 
 ## Cómo usarlo
 
-1. Abre VRChat y lanza `vrchat-subtitulos` (el orden da igual: la app se
+1. Abre VRChat y lanza `vrchat-subs` (el orden da igual: la app se
    engancha sola al audio de VRChat cuando lo detecta; también arranca
    Ollama solo si está apagado).
 2. Aparece una ventana flotante de tamaño fijo abajo de la pantalla.
@@ -84,8 +85,8 @@ Aunque VRChat tenga el foco, sin tocar la ventana:
 ### Opciones de terminal
 
 ```bash
-vrchat-subtitulos --model medium   # Whisper más preciso (tiny/base/small/medium/large-v3)
-vrchat-subtitulos --debug          # imprime estado, subtítulos y sugerencias en la terminal
+vrchat-subs --model medium   # Whisper más preciso (tiny/base/small/medium/large-v3)
+vrchat-subs --debug          # imprime estado, subtítulos y sugerencias en la terminal
 ```
 
 ## Cómo funciona
@@ -129,8 +130,8 @@ contestas en voz alta.
 
 ## Archivos
 
-- `vrchat-subtitulos` — ejecutable auto-instalable (también en `~/.local/bin`
-  y en el menú de aplicaciones como «Subtítulos VRChat»).
+- `vrchat-subtitulos` — el ejecutable auto-instalable (el comando
+  `vrchat-subs` que crea `../start.sh` apunta aquí).
 - `app/` — código (captura, pipeline, hablantes, IA local, OSC, overlay).
 - `models/` — modelos ONNX (se descargan solos si faltan).
 - `~/.config/vrchat-subtitulos/` — configuración y voces aprendidas.
