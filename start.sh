@@ -47,18 +47,31 @@ if ! command -v python3 >/dev/null 2>&1; then
   sudo apt-get update -y && sudo apt-get install -y python3
 fi
 
-# ---------------------------------------- 5. alias del overlay de VRChat
-# Crea (una sola vez) el comando `vrchat-subs` para abrir los subtítulos
-# desde cualquier terminal. El overlay usa el mismo Ollama local de arriba.
+# ---------------------------------------- 5. comando del overlay de VRChat
+# Registra `vrchat-subs` tanto en Bash como en PowerShell. Se reescribe en cada
+# arranque para que siga apuntando al proyecto aunque este cambie de carpeta.
+VRCHAT_SUBS="$(pwd)/vrchat-subtitulos/vrchat-subtitulos"
+
 BASHRC="$HOME/.bashrc"
-if [ -f "$BASHRC" ] && ! grep -q "alias vrchat-subs=" "$BASHRC"; then
+touch "$BASHRC"
+sed -i '/^# Subtítulos VRChat (Speak Enzo)$/d; /^alias vrchat-subs=/d' "$BASHRC"
+{
+  printf '\n# Subtítulos VRChat (Speak Enzo)\n'
+  printf "alias vrchat-subs='%s'\n" "$VRCHAT_SUBS"
+} >> "$BASHRC"
+
+if command -v pwsh >/dev/null 2>&1; then
+  POWERSHELL_PROFILE="$(pwsh -NoLogo -NoProfile -Command '$PROFILE.CurrentUserAllHosts')"
+  mkdir -p "$(dirname "$POWERSHELL_PROFILE")"
+  touch "$POWERSHELL_PROFILE"
+  sed -i '/^# Subtítulos VRChat (Speak Enzo)$/d; /^function global:vrchat-subs /d' "$POWERSHELL_PROFILE"
   {
-    echo ""
-    echo "# Subtítulos VRChat (Speak Enzo)"
-    echo "alias vrchat-subs='$(pwd)/vrchat-subtitulos/vrchat-subtitulos'"
-  } >> "$BASHRC"
-  say "Alias creado: escribe 'vrchat-subs' en una terminal NUEVA para abrir los subtítulos de VRChat"
+    printf '\n# Subtítulos VRChat (Speak Enzo)\n'
+    printf "function global:vrchat-subs { & '%s' @args }\n" "$VRCHAT_SUBS"
+  } >> "$POWERSHELL_PROFILE"
 fi
+
+say "Comando 'vrchat-subs' configurado para Bash y PowerShell (disponible en terminales nuevas)"
 
 # --------------------------------------------------- 6. ¿ya estaba corriendo?
 abrir() {
