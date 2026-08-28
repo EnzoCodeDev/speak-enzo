@@ -1,5 +1,10 @@
 # Enzo Speak — Backend (FastAPI)
 
+> ⏸️ **PAUSADO**: esta fue una versión anterior del proyecto (FastAPI +
+> proveedores de IA en la nube). La versión activa es la app web local de
+> [`../web/`](../web/) con Ollama — ver el [README principal](../README.md).
+> Se conserva como referencia; no hace falta para usar Speak Enzo.
+
 ## Correr en Ubuntu (servicio systemd) ⭐
 
 ```bash

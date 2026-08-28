@@ -6,8 +6,14 @@ color — las voces nunca se mezclan. Con tu IA local (Ollama) puede además
 **traducir al español** (solo si tú lo activas) y **sugerirte respuestas en
 inglés** al hacer clic sobre una conversación.
 
+![Overlay de subtítulos de VRChat](../docs/capturas/overlay-vrchat.png)
+
+*(La ventana real del overlay, renderizada con una conversación de ejemplo.)*
+
 Todo corre **localmente en tu PC** (Whisper en tu GPU + Ollama): no se envía
 audio ni texto a ningún servicio externo.
+
+> ⚠️ **Solo Ubuntu/Linux** (con PipeWire). No funciona en Windows ni macOS.
 
 ## Un solo comando
 
@@ -115,8 +121,8 @@ de VR (OVR Toolkit, o `wlx-overlay-s` en Linux) y ancla la ventana
 ## Conexión con Enzo Speak 🎮💙
 
 Todas las conversaciones se guardan **literal, por semana**, en
-`/home/sergio/proyectos/enzo-speak/web/vrchat/<año>-W<semana>.json`
-(configurable con `transcript_dir`). En Enzo Speak, el botón **🎮 VRChat**
+`<repo>/web/vrchat/<año>-W<semana>.json`
+(configurable con `transcript_dir` en `~/.config/vrchat-subtitulos/config.json`). En Enzo Speak, el botón **🎮 VRChat**
 analiza esas frases (palabras y expresiones más usadas) y crea sesiones de
 práctica en pares con la IA local: te dicen algo típico de VRChat y tú
 contestas en voz alta.
